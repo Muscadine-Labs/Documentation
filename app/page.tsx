@@ -49,7 +49,9 @@ export default function Home() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <h1 className="text-2xl font-bold">Muscadine Labs</h1>
+              <a href="https://muscadine.box" target="_blank" rel="noopener noreferrer" className="text-2xl font-bold hover:text-primary transition-colors">
+                Muscadine Labs
+              </a>
               <span className="text-sm text-muted-foreground">Documentation</span>
             </div>
           </div>
