@@ -134,14 +134,6 @@ npm start
 
 ## Configuration
 
-### Environment Variables
-
-Create a `.env.local` file for local development:
-
-```env
-# Add any required environment variables here
-```
-
 ### Customization
 
 - **Styling**: Modify `tailwind.config.ts` and `app/globals.css`
