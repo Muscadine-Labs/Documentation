@@ -10,62 +10,46 @@ const feeTopics = [
     icon: TrendingUp,
   },
   {
-    title: "Fee Splitter",
-    description: "Understanding how fees are distributed",
-    href: "/fees/fee-splitter",
-    icon: DollarSign,
+    title: "Why Fees Exist",
+    description: "Understanding the necessity and purpose of fees in DeFi",
+    href: "/fees/why-fees-exist",
+    icon: Shield,
   },
   {
-    title: "How Fees Accrue",
-    description: "The mechanics of fee accumulation",
-    href: "/fees/how-fees-accrue",
+    title: "Fee Splitter",
+    description: "Details on how fees are distributed among stakeholders",
+    href: "/fees/fee-splitter",
     icon: Calculator,
   },
   {
-    title: "Why Fees Exist",
-    description: "The purpose and necessity of fees in DeFi",
-    href: "/fees/why-fees-exist",
-    icon: Shield,
+    title: "How Fees Accrue",
+    description: "Mechanism of fee accumulation and calculation",
+    href: "/fees/how-fees-accrue",
+    icon: DollarSign,
+  },
+  {
+    title: "Example Flows",
+    description: "Illustrative examples of fee collection and distribution",
+    href: "/fees/example-flows",
+    icon: DollarSign,
   },
 ];
 
 export default function FeesPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <a href="https://muscadine.box" target="_blank" rel="noopener noreferrer" className="text-2xl font-bold hover:text-primary transition-colors">
-                Muscadine Labs
-              </a>
-              <span className="text-sm text-muted-foreground">Documentation</span>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Hero Section */}
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-5xl font-bold tracking-tight mb-6">
             Fees & Economics
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Understanding Muscadine Labs&apos; transparent fee structure and economic model.
+            A transparent look into Muscadine Labs' fee structure and economic model.
           </p>
-        </div>
-      </section>
-
-      {/* Fee Topics */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Fee Structure</h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="flex flex-wrap justify-center gap-4">
             {feeTopics.map((topic) => (
               <Link key={topic.href} href={topic.href}>
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+                <Card className="w-80 hover:shadow-lg transition-shadow cursor-pointer">
                   <CardHeader className="text-left">
                     <div className="flex items-center space-x-3">
                       <topic.icon className="h-6 w-6 text-primary" />
@@ -80,7 +64,6 @@ export default function FeesPage() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="border-t py-12">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">

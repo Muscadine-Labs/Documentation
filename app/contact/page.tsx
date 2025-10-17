@@ -172,7 +172,7 @@ export default function ContactPage() {
         </p>
         <ul>
           <li><a href="/welcome">Welcome Guide</a> - Getting started</li>
-          <li><a href="/products/vaults">Vault Overview</a> - How vaults work</li>
+          <li><a href="/products">Vault Overview</a> - How vaults work</li>
           <li><a href="/fees/performance-fee">Fee Structure</a> - Understanding fees</li>
           <li><a href="/contracts">Contract Addresses</a> - Technical details</li>
           <li><a href="/faq">FAQ</a> - Common questions</li>

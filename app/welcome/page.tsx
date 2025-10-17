@@ -45,13 +45,13 @@ export default function WelcomePage() {
         <p>Ready to explore our documentation? Here are some recommended starting points:</p>
         <ul>
           <li><Link href="/products/overview">Products Overview</Link> - Learn about our vault offerings</li>
-          <li><Link href="/products/vaults">What are Vaults?</Link> - Understand how our automated strategies work</li>
-          <li><Link href="/defi/what-is-defi">DeFi 101</Link> - Get familiar with decentralized finance basics</li>
+          <li><Link href="/products">What are Vaults?</Link> - Understand how our automated strategies work</li>
+          <li><Link href="/defi">DeFi 101</Link> - Get familiar with decentralized finance basics</li>
           <li><Link href="/fees/performance-fee">Fees & Economics</Link> - Understand our transparent fee structure</li>
         </ul>
 
         <Callout type="info">
-          <strong>New to DeFi?</strong> We recommend starting with our <Link href="/defi/what-is-defi">DeFi 101</Link> section to understand the fundamentals before diving into our specific products.
+          <strong>New to DeFi?</strong> We recommend starting with our <Link href="/defi">DeFi 101</Link> section to understand the fundamentals before diving into our specific products.
         </Callout>
 
         <h2>Contact & Support</h2>

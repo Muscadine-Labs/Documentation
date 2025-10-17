@@ -80,7 +80,7 @@ export default function ProductsOverviewPage() {
         </Callout>
 
         <h2>Risk Considerations</h2>
-        <p>All DeFi strategies carry inherent risks. Please review our <Link href="/risk/framework">Risk Framework</Link> before investing and ensure you understand:</p>
+        <p>All DeFi strategies carry inherent risks. Please review our <Link href="/risk">Risk Framework</Link> before investing and ensure you understand:</p>
         <ul>
           <li>Smart contract risks</li>
           <li>Market volatility</li>

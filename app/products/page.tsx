@@ -10,62 +10,46 @@ const productTopics = [
     icon: TrendingUp,
   },
   {
+    title: "Vaults",
+    description: "Automated yield strategies that optimize returns",
+    href: "/products/vaults",
+    icon: Coins,
+  },
+  {
+    title: "Supported Assets",
+    description: "List of cryptocurrencies supported by our vaults",
+    href: "/products/supported-assets",
+    icon: BarChart3,
+  },
+  {
     title: "Risk Tiers",
-    description: "Understanding different risk levels and strategies",
+    description: "Understanding the risk profiles of different products",
     href: "/products/risk-tiers",
     icon: Shield,
   },
   {
-    title: "Supported Assets",
-    description: "Assets and tokens supported by our vaults",
-    href: "/products/supported-assets",
-    icon: Coins,
-  },
-  {
     title: "Yield Strategy",
-    description: "How our yield optimization strategies work",
+    description: "Deep dive into our yield generation mechanisms",
     href: "/products/yield-strategy",
-    icon: BarChart3,
+    icon: TrendingUp,
   },
 ];
 
 export default function ProductsPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <a href="https://muscadine.box" target="_blank" rel="noopener noreferrer" className="text-2xl font-bold hover:text-primary transition-colors">
-                Muscadine Labs
-              </a>
-              <span className="text-sm text-muted-foreground">Documentation</span>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Hero Section */}
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-5xl font-bold tracking-tight mb-6">
-            Products
+            Our Products
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Explore Muscadine Labs&apos; DeFi products, vaults, and yield strategies.
+            Explore the range of DeFi products and services offered by Muscadine Labs.
           </p>
-        </div>
-      </section>
-
-      {/* Product Topics */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Product Information</h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="flex flex-wrap justify-center gap-4">
             {productTopics.map((topic) => (
               <Link key={topic.href} href={topic.href}>
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+                <Card className="w-80 hover:shadow-lg transition-shadow cursor-pointer">
                   <CardHeader className="text-left">
                     <div className="flex items-center space-x-3">
                       <topic.icon className="h-6 w-6 text-primary" />
@@ -80,7 +64,6 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="border-t py-12">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
