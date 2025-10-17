@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { SearchComponent } from "@/components/Search";
 import { Shield, TrendingUp, Coins } from "lucide-react";
 
 const quickLinks = [
@@ -52,9 +51,6 @@ export default function Home() {
             <div className="flex items-center space-x-4">
               <h1 className="text-2xl font-bold">Muscadine Labs</h1>
               <span className="text-sm text-muted-foreground">Documentation</span>
-            </div>
-            <div className="flex items-center space-x-4">
-              <SearchComponent docs={[]} />
             </div>
           </div>
         </div>
