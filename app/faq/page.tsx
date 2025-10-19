@@ -166,7 +166,7 @@ export default function FAQPage() {
         </p>
         <ul>
           <li>Browse our comprehensive documentation</li>
-          <li>Email us at <a href="mailto:contact@muscadine.box">contact@muscadine.box</a></li>
+          <li>Email us at <a href="mailto:contact@muscadine.io">contact@muscadine.io</a></li>
           <li>Join our community channels</li>
           <li>Check our GitHub repository for technical issues</li>
         </ul>
@@ -179,7 +179,7 @@ export default function FAQPage() {
 
         <h3>How do I report bugs or issues?</h3>
         <p>
-          Report security issues privately to <a href="mailto:contact@muscadine.box">contact@muscadine.box</a>. 
+          Report security issues privately to <a href="mailto:contact@muscadine.io">contact@muscadine.io</a>. 
           For general bugs, use our GitHub repository.
         </p>
 
@@ -267,7 +267,7 @@ export default function FAQPage() {
 
         <Callout type="info">
           <strong>Still have questions?</strong> Don&apos;t hesitate to reach out to us at 
-          <a href="mailto:contact@muscadine.box">contact@muscadine.box</a> for personalized assistance.
+          <a href="mailto:contact@muscadine.io">contact@muscadine.io</a> for personalized assistance.
         </Callout>
 
         <RiskAlert type="warning" title="Important Disclaimer">

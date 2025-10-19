@@ -138,7 +138,7 @@ export default function PerformanceFeePage() {
         </ul>
 
         <Callout type="info">
-          <strong>Questions about fees?</strong> Our fee structure is designed to be transparent and fair. If you have specific questions about fee calculations, please contact us at <a href="mailto:contact@muscadine.box">contact@muscadine.box</a>.
+          <strong>Questions about fees?</strong> Our fee structure is designed to be transparent and fair. If you have specific questions about fee calculations, please contact us at <a href="mailto:contact@muscadine.io">contact@muscadine.io</a>.
         </Callout>
       </div>
     </article>

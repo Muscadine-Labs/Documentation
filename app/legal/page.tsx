@@ -170,7 +170,7 @@ export default function LegalDisclosurePage() {
           For questions about this legal disclosure or other legal matters, please contact:
         </p>
         <ul>
-          <li><strong>Email</strong>: <a href="mailto:contact@muscadine.box">contact@muscadine.box</a></li>
+          <li><strong>Email</strong>: <a href="mailto:contact@muscadine.io">contact@muscadine.io</a></li>
           <li><strong>Legal Inquiries</strong>: Please include "Legal Inquiry" in the subject line</li>
         </ul>
 

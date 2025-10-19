@@ -104,7 +104,7 @@ export function Sidebar() {
       {/* Header */}
       <div className="p-6 border-b border-sidebar-border">
         <a 
-          href="https://muscadine.box" 
+          href="https://muscadine.io" 
           target="_blank" 
           rel="noopener noreferrer"
           className="text-xl font-bold hover:text-sidebar-primary transition-colors"

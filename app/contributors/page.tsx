@@ -7,7 +7,7 @@ const contributors = [
     name: "Muscadine Labs Team",
     role: "Core Development",
     description: "Core team responsible for vault development and strategy implementation",
-    contact: "contact@muscadine.box",
+    contact: "contact@muscadine.io",
   },
   {
     name: "Community Contributors",
@@ -46,7 +46,7 @@ export default function ContributorsPage() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <a href="https://muscadine.box" target="_blank" rel="noopener noreferrer" className="text-2xl font-bold hover:text-primary transition-colors">
+              <a href="https://muscadine.io" target="_blank" rel="noopener noreferrer" className="text-2xl font-bold hover:text-primary transition-colors">
                 Muscadine Labs
               </a>
               <span className="text-sm text-muted-foreground">Documentation</span>
@@ -132,13 +132,13 @@ export default function ContributorsPage() {
               <Link href="/risk" className="text-sm text-muted-foreground hover:text-foreground">
                 Risk Framework
               </Link>
-              <a href="https://muscadine.box" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
+              <a href="https://muscadine.io" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
                 Main Website
               </a>
-              <a href="https://app.muscadine.box" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
+              <a href="https://app.muscadine.io" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
                 App
               </a>
-              <a href="mailto:contact@muscadine.box" className="text-sm text-muted-foreground hover:text-foreground">
+              <a href="mailto:contact@muscadine.io" className="text-sm text-muted-foreground hover:text-foreground">
                 Contact
               </a>
             </div>

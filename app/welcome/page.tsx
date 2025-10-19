@@ -57,7 +57,7 @@ export default function WelcomePage() {
         <h2>Contact & Support</h2>
         <p>Have questions or need help? We're here to assist:</p>
         <ul>
-          <li><strong>Email</strong>: <a href="mailto:contact@muscadine.box">contact@muscadine.box</a></li>
+          <li><strong>Email</strong>: <a href="mailto:contact@muscadine.io">contact@muscadine.io</a></li>
           <li><strong>Documentation</strong>: Browse our comprehensive guides and FAQs</li>
           <li><strong>Contracts</strong>: All our smart contracts are publicly auditable on-chain</li>
         </ul>

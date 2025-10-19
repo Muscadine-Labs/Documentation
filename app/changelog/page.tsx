@@ -255,7 +255,7 @@ export default function ChangelogPage() {
 
         <Callout type="info">
           <strong>Have feedback?</strong> We welcome your input on our updates and features. 
-          Contact us at <a href="mailto:contact@muscadine.box">contact@muscadine.box</a> 
+          Contact us at <a href="mailto:contact@muscadine.io">contact@muscadine.io</a> 
           with your suggestions and feedback.
         </Callout>
 

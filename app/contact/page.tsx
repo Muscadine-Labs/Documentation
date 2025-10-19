@@ -33,10 +33,10 @@ export default function ContactPage() {
             </CardHeader>
             <CardContent>
               <a 
-                href="mailto:contact@muscadine.box" 
+                href="mailto:contact@muscadine.io" 
                 className="text-primary hover:underline font-medium"
               >
-                contact@muscadine.box
+                contact@muscadine.io
               </a>
               <p className="text-sm text-muted-foreground mt-2">
                 We typically respond within 24-48 hours
@@ -56,10 +56,10 @@ export default function ContactPage() {
             </CardHeader>
             <CardContent>
               <a 
-                href="mailto:contact@muscadine.box" 
+                href="mailto:contact@muscadine.io" 
                 className="text-primary hover:underline font-medium"
               >
-                contact@muscadine.box
+                contact@muscadine.io
               </a>
               <p className="text-sm text-muted-foreground mt-2">
                 Include &quot;Technical Issue&quot; in the subject line
@@ -140,14 +140,14 @@ export default function ContactPage() {
         <h3>Security Issues</h3>
         <p>
           If you discover a security vulnerability or have concerns about vault security, 
-          please report it privately to <a href="mailto:contact@muscadine.box">contact@muscadine.box</a> 
+          please report it privately to <a href="mailto:contact@muscadine.io">contact@muscadine.io</a> 
           with &quot;Security Issue&quot; in the subject line.
         </p>
 
         <h3>Business Inquiries</h3>
         <p>
           For partnership opportunities, integrations, or business development inquiries, 
-          please contact us at <a href="mailto:contact@muscadine.box">contact@muscadine.box</a> 
+          please contact us at <a href="mailto:contact@muscadine.io">contact@muscadine.io</a> 
           with &quot;Business Inquiry&quot; in the subject line.
         </p>
 
@@ -194,7 +194,7 @@ export default function ContactPage() {
         <h3>Feature Requests</h3>
         <p>
           We welcome feedback and suggestions for improving our vaults and platform. 
-          Please share your ideas at <a href="mailto:contact@muscadine.box">contact@muscadine.box</a> 
+          Please share your ideas at <a href="mailto:contact@muscadine.io">contact@muscadine.io</a> 
           with &quot;Feature Request&quot; in the subject line.
         </p>
 
@@ -215,7 +215,7 @@ export default function ContactPage() {
         <Callout type="warning">
           <strong>Emergency Situations</strong>: For critical security issues or emergency 
           situations that could affect user funds, please contact us immediately at 
-          <a href="mailto:contact@muscadine.box">contact@muscadine.box</a> with 
+          <a href="mailto:contact@muscadine.io">contact@muscadine.io</a> with 
           &quot;EMERGENCY&quot; in the subject line.
         </Callout>
 
@@ -252,7 +252,7 @@ export default function ContactPage() {
 
         <p>
           If you&apos;re interested in partnering with Muscadine Labs, please contact us 
-          at <a href="mailto:contact@muscadine.box">contact@muscadine.box</a> with 
+          at <a href="mailto:contact@muscadine.io">contact@muscadine.io</a> with 
           &quot;Partnership&quot; in the subject line.
         </p>
 

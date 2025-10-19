@@ -6,14 +6,14 @@ const quickLinks = [
   {
     title: "Main Website",
     description: "Official Muscadine Labs website with company information",
-    href: "https://muscadine.box",
+    href: "https://muscadine.io",
     external: true,
     icon: Globe,
   },
   {
     title: "App",
     description: "Main application for interacting with DeFi products",
-    href: "https://app.muscadine.box",
+    href: "https://app.muscadine.io",
     external: true,
     icon: ExternalLink,
   },
@@ -27,7 +27,7 @@ const quickLinks = [
   {
     title: "Contact Support",
     description: "Get help and support from our team",
-    href: "mailto:contact@muscadine.box",
+    href: "mailto:contact@muscadine.io",
     external: true,
     icon: Mail,
   },
@@ -68,7 +68,7 @@ export default function QuickLinksPage() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <a href="https://muscadine.box" target="_blank" rel="noopener noreferrer" className="text-2xl font-bold hover:text-primary transition-colors">
+              <a href="https://muscadine.io" target="_blank" rel="noopener noreferrer" className="text-2xl font-bold hover:text-primary transition-colors">
                 Muscadine Labs
               </a>
               <span className="text-sm text-muted-foreground">Documentation</span>
@@ -155,13 +155,13 @@ export default function QuickLinksPage() {
               <Link href="/risk" className="text-sm text-muted-foreground hover:text-foreground">
                 Risk Framework
               </Link>
-              <a href="https://muscadine.box" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
+              <a href="https://muscadine.io" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
                 Main Website
               </a>
-              <a href="https://app.muscadine.box" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
+              <a href="https://app.muscadine.io" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
                 App
               </a>
-              <a href="mailto:contact@muscadine.box" className="text-sm text-muted-foreground hover:text-foreground">
+              <a href="mailto:contact@muscadine.io" className="text-sm text-muted-foreground hover:text-foreground">
                 Contact
               </a>
             </div>

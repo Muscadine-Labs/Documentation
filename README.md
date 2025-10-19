@@ -34,7 +34,7 @@ A modern, production-ready documentation site for Muscadine Labs built with Next
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd docs.muscadine.box
+   cd docs.muscadine.io
    ```
 
 2. **Install dependencies**
@@ -157,14 +157,14 @@ This project is licensed under the MIT License.
 
 This documentation site is part of the broader Muscadine ecosystem:
 
-- **📚 [docs.muscadine.box](https://docs.muscadine.box)** - This documentation site
-- **🌐 [muscadine.box](https://muscadine.box)** - Official website with comprehensive information about our company, team, and mission
-- **📱 [app.muscadine.box](https://app.muscadine.box)** - Main application for interacting with our DeFi products
+- **📚 [docs.muscadine.io](https://docs.muscadine.io)** - This documentation site
+- **🌐 [muscadine.io](https://muscadine.io)** - Official website with comprehensive information about our company, team, and mission
+- **📱 [app.muscadine.io](https://app.muscadine.io)** - Main application for interacting with our DeFi products
 
 ## Support
 
 For questions or support:
-- **Email**: [contact@muscadine.box](mailto:contact@muscadine.box)
+- **Email**: [contact@muscadine.io](mailto:contact@muscadine.io)
 - **Documentation**: This site
 - **Issues**: GitHub Issues
 

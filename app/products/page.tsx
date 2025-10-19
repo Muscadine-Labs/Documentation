@@ -79,13 +79,13 @@ export default function ProductsPage() {
               <Link href="/risk" className="text-sm text-muted-foreground hover:text-foreground">
                 Risk Framework
               </Link>
-              <a href="https://muscadine.box" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
+              <a href="https://muscadine.io" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
                 Main Website
               </a>
-              <a href="https://app.muscadine.box" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
+              <a href="https://app.muscadine.io" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
                 App
               </a>
-              <a href="mailto:contact@muscadine.box" className="text-sm text-muted-foreground hover:text-foreground">
+              <a href="mailto:contact@muscadine.io" className="text-sm text-muted-foreground hover:text-foreground">
                 Contact
               </a>
             </div>
