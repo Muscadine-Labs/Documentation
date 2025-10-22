@@ -10,16 +10,22 @@ const defiTopics = [
     icon: BookOpen,
   },
   {
-    title: "Yield Vaults",
-    description: "Understanding automated yield generation strategies",
-    href: "/defi/yield-vaults",
-    icon: Coins,
+    title: "Core Concepts",
+    description: "Understanding the fundamental concepts of DeFi",
+    href: "/defi/core-concepts",
+    icon: BookOpen,
   },
   {
-    title: "Key Risks",
+    title: "Risks",
     description: "Important risks to understand before participating in DeFi",
-    href: "/defi/key-risks",
+    href: "/defi/risks",
     icon: Zap,
+  },
+  {
+    title: "Wallet Setup",
+    description: "Learn how to set up and secure your DeFi wallet",
+    href: "/defi/wallet-setup",
+    icon: Coins,
   },
 ];
 
@@ -94,7 +100,7 @@ export default function DefiPage() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <p className="text-sm text-muted-foreground">
-                © 2024 Muscadine Labs. All rights reserved.
+                © 2025 Muscadine Labs. All rights reserved.
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-6">

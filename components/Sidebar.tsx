@@ -2,27 +2,33 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { 
   Users, 
-  Globe, 
   Link as LinkIcon, 
   TrendingUp, 
   Shield, 
   DollarSign, 
   Info,
   Building2,
-  Coins,
   BarChart3,
   FileText,
-  HelpCircle,
   Scale,
-  Settings
+  Settings,
+  BookOpen,
+  Wallet,
+  HardDrive,
+  Calendar,
+  FileCheck,
+  Phone,
+  ChevronDown,
+  ChevronRight
 } from "lucide-react";
 
 const navigation = {
-  discover: [
+  introduction: [
     {
-      name: "About Muscadine",
+      name: "About",
       href: "/welcome",
       icon: Info,
     },
@@ -32,72 +38,192 @@ const navigation = {
       icon: Users,
     },
     {
-      name: "Network",
-      href: "/network",
-      icon: Globe,
-    },
-    {
       name: "Quick Links",
       href: "/quick-links",
       icon: LinkIcon,
     },
   ],
-  muscadine: [
+  defi101: [
     {
-      name: "Getting Started",
-      href: "/welcome/philosophy",
+      name: "What Is DeFi?",
+      href: "/defi/what-is-defi",
+      icon: BookOpen,
+    },
+    {
+      name: "Core Concepts",
+      href: "/defi/core-concepts",
       icon: TrendingUp,
     },
     {
-      name: "Vaults",
-      href: "/products",
-      icon: Building2,
-    },
-    {
-      name: "Products",
-      href: "/products/overview",
-      icon: Coins,
-    },
-    {
-      name: "Fees",
-      href: "/fees",
-      icon: DollarSign,
-    },
-    {
-      name: "Risk Framework",
-      href: "/risk",
+      name: "Risks",
+      href: "/defi/risks",
       icon: Shield,
     },
     {
-      name: "Contracts",
-      href: "/contracts",
-      icon: FileText,
+      name: "Wallet Setup",
+      href: "/defi/wallet-setup",
+      icon: Wallet,
+    },
+  ],
+  vaults: {
+    name: "Vaults",
+    icon: BarChart3,
+    items: [
+      {
+        name: "Fees",
+        href: "/fees",
+        icon: DollarSign,
+      },
+      {
+        name: "Vault Architecture",
+        href: "/vault-architecture/how-vaults-work",
+        icon: BarChart3,
+      },
+      {
+        name: "Roles & Security",
+        href: "/roles-security/role-system",
+        icon: Settings,
+      },
+      {
+        name: "Contracts",
+        href: "/contracts",
+        icon: FileText,
+      },
+    ],
+  },
+  selfCustody: {
+    name: "Self-Custody Solutions",
+    icon: Shield,
+    items: [
+      {
+        name: "Bitcoin",
+        href: "/self-custody/bitcoin",
+        icon: Building2,
+      },
+      {
+        name: "DeFi Wallet",
+        href: "/self-custody/defi-wallet",
+        icon: Wallet,
+      },
+      {
+        name: "Recovery",
+        href: "/self-custody/recovery",
+        icon: HardDrive,
+      },
+    ],
+  },
+  roadmap: [
+    {
+      name: "Upcoming Features",
+      href: "/roadmap/features",
+      icon: Calendar,
     },
     {
-      name: "Roles & Security",
-      href: "/roles-security/role-system",
-      icon: Settings,
+      name: "Governance & Community",
+      href: "/roadmap/governance",
+      icon: Users,
     },
+  ],
+  legalCompliance: [
     {
-      name: "Vault Architecture",
-      href: "/vault-architecture/how-vaults-work",
-      icon: BarChart3,
-    },
-    {
-      name: "FAQ",
-      href: "/faq",
-      icon: HelpCircle,
-    },
-    {
-      name: "Legal",
-      href: "/legal",
+      name: "Terms of Use",
+      href: "/legal/terms",
       icon: Scale,
+    },
+    {
+      name: "Risk Disclosures",
+      href: "/legal/risk-disclosures",
+      icon: Shield,
+    },
+    {
+      name: "Privacy Policy",
+      href: "/legal/privacy",
+      icon: FileCheck,
+    },
+    {
+      name: "Contact",
+      href: "/contact",
+      icon: Phone,
     },
   ],
 };
 
 export function Sidebar() {
   const pathname = usePathname();
+  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
+    vaults: true,
+    selfCustody: true,
+  });
+
+  const toggleSection = (section: string) => {
+    setExpandedSections(prev => ({
+      ...prev,
+      [section]: !prev[section]
+    }));
+  };
+
+  interface NavigationItem {
+    name: string;
+    href: string;
+    icon: React.ComponentType<{ className?: string }>;
+  }
+
+  interface CollapsibleSectionType {
+    name: string;
+    icon: React.ComponentType<{ className?: string }>;
+    items: NavigationItem[];
+  }
+
+  const CollapsibleSection = ({ sectionKey, section }: { sectionKey: string, section: CollapsibleSectionType }) => {
+    const isExpanded = expandedSections[sectionKey];
+    const hasActiveChild = section.items.some((item: NavigationItem) => 
+      pathname === item.href || pathname.startsWith(item.href + "/")
+    );
+
+    return (
+      <div>
+        <button
+          onClick={() => toggleSection(sectionKey)}
+          className={`flex items-center justify-between w-full px-3 py-2 rounded-md text-sm transition-colors ${
+            hasActiveChild
+              ? "bg-sidebar-accent text-sidebar-accent-foreground"
+              : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
+          }`}
+        >
+          <div className="flex items-center space-x-3">
+            <section.icon className="h-4 w-4" />
+            <span>{section.name}</span>
+          </div>
+          {isExpanded ? (
+            <ChevronDown className="h-4 w-4" />
+          ) : (
+            <ChevronRight className="h-4 w-4" />
+          )}
+        </button>
+        {isExpanded && (
+          <nav className="ml-6 mt-2 space-y-1">
+            {section.items.map((item: NavigationItem) => {
+              const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`flex items-center space-x-3 px-3 py-2 rounded-md text-sm transition-colors ${
+                    isActive
+                      ? "bg-sidebar-accent text-sidebar-accent-foreground"
+                      : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
+                  }`}
+                >
+                  <item.icon className="h-4 w-4" />
+                  <span>{item.name}</span>
+                </Link>
+              );
+            })}
+          </nav>
+        )}
+      </div>
+    );
+  };
 
   return (
     <div className="flex flex-col h-full bg-sidebar text-sidebar-foreground">
@@ -116,13 +242,13 @@ export function Sidebar() {
 
       {/* Navigation */}
       <div className="flex-1 overflow-y-auto">
-        {/* Discover Section */}
+        {/* Introduction & Overview Section */}
         <div className="p-6">
           <h3 className="text-xs font-semibold text-sidebar-foreground/70 uppercase tracking-wider mb-4">
-            DISCOVER
+            Introduction & Overview
           </h3>
           <nav className="space-y-2">
-            {navigation.discover.map((item) => {
+            {navigation.introduction.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
@@ -142,13 +268,82 @@ export function Sidebar() {
           </nav>
         </div>
 
-        {/* Muscadine Overview Section */}
+        {/* DeFi 101 Section */}
         <div className="p-6">
           <h3 className="text-xs font-semibold text-sidebar-foreground/70 uppercase tracking-wider mb-4">
-            MUSCADINE OVERVIEW
+            DeFi 101
           </h3>
           <nav className="space-y-2">
-            {navigation.muscadine.map((item) => {
+            {navigation.defi101.map((item) => {
+              const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`flex items-center space-x-3 px-3 py-2 rounded-md text-sm transition-colors ${
+                    isActive
+                      ? "bg-sidebar-accent text-sidebar-accent-foreground"
+                      : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
+                  }`}
+                >
+                  <item.icon className="h-4 w-4" />
+                  <span>{item.name}</span>
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
+
+        {/* Vaults Section */}
+        <div className="p-6">
+          <h3 className="text-xs font-semibold text-sidebar-foreground/70 uppercase tracking-wider mb-4">
+            Products
+          </h3>
+          <nav className="space-y-2">
+            <CollapsibleSection sectionKey="vaults" section={navigation.vaults} />
+          </nav>
+        </div>
+
+        {/* Self-Custody Solutions Section */}
+        <div className="p-6">
+          <nav className="space-y-2">
+            <CollapsibleSection sectionKey="selfCustody" section={navigation.selfCustody} />
+          </nav>
+        </div>
+
+        {/* Roadmap Section */}
+        <div className="p-6">
+          <h3 className="text-xs font-semibold text-sidebar-foreground/70 uppercase tracking-wider mb-4">
+            Roadmap
+          </h3>
+          <nav className="space-y-2">
+            {navigation.roadmap.map((item) => {
+              const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`flex items-center space-x-3 px-3 py-2 rounded-md text-sm transition-colors ${
+                    isActive
+                      ? "bg-sidebar-accent text-sidebar-accent-foreground"
+                      : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
+                  }`}
+                >
+                  <item.icon className="h-4 w-4" />
+                  <span>{item.name}</span>
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
+
+        {/* Legal & Compliance Section */}
+        <div className="p-6">
+          <h3 className="text-xs font-semibold text-sidebar-foreground/70 uppercase tracking-wider mb-4">
+            Legal & Compliance
+          </h3>
+          <nav className="space-y-2">
+            {navigation.legalCompliance.map((item) => {
               const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
               return (
                 <Link
@@ -169,15 +364,6 @@ export function Sidebar() {
         </div>
       </div>
 
-      {/* Footer */}
-      <div className="p-6 border-t border-sidebar-border">
-        <div className="bg-sidebar-accent/50 rounded-lg p-4">
-          <div className="flex items-center space-x-2 text-sm text-sidebar-foreground/70">
-            <Globe className="h-4 w-4" />
-            <span>Powered by Muscadine Labs</span>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
