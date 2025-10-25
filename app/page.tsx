@@ -30,10 +30,13 @@ export default function Home() {
               <Badge variant="outline" className="mb-4">About Us</Badge>
               <h2 className="text-3xl font-bold mb-6">What is Muscadine Labs?</h2>
               <p className="text-xl text-muted-foreground mb-8">
-                At Muscadine Labs, we're building tools for financial self-sovereignty — empowering individuals to take back control of their financial future. We believe financial independence should belong to everyone, not just institutions. Through Bitcoin security, self-custody, and accessible DeFi solutions, we help people become their own bank and thrive in a system without middlemen.
+                At Muscadine Labs, we build tools for financial self-sovereignty, empowering individuals to take full control of their financial future. We believe financial independence should belong to everyone, not just institutions. Through Bitcoin security, self-custody, and accessible decentralized finance (DeFi) solutions, we help people become their own bank and participate directly in the emerging financial system—without intermediaries.
               </p>
               <p className="text-xl text-muted-foreground mb-8">
-                We curate and manage risk on Morpho vault infrastructure on the blockchain, lending tokens to overcollateralized markets in return for variable interest. Unlike traditional financial systems that use undercollateralization (which is inherently riskier than DeFi lending and borrowing), you can only borrow as much as you have collateralized. We also create self-custody solutions for clients, enabling them to securely own their wealth through running their own nodes, paper keys, and key systems for optimal safety, security, and ownership.
+                We curate and manage risk through Morpho vault infrastructure, deploying capital into overcollateralized lending markets that provide variable returns. Unlike traditional financial systems that rely on undercollateralized credit, our approach ensures borrowers maintain collateral equal to or greater than their debt, minimizing systemic risk. In parallel, we design self-custody frameworks that enable clients to securely own and manage their wealth through node operation, paper key systems, and advanced key management solutions emphasizing security and sovereignty.
+              </p>
+              <p className="text-xl text-muted-foreground mb-8">
+                Muscadine Labs differentiates itself through transparency, efficiency, and accessibility. We operate with one of the lowest fees in the industry—a 2% performance fee—eliminating the layers of cost that have re-emerged as DeFi increasingly mimics traditional finance. Our objective is to restore the original ethos of crypto: open access, fair participation, and genuine ownership. Anyone can access our vaults to earn competitive yields across the most liquid on-chain markets. Beyond yield generation, our mission is to advance financial literacy and technological empowerment, helping individuals understand, control, and grow their wealth through decentralized systems.
               </p>
             </div>
           </div>
