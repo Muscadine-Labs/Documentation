@@ -16,9 +16,9 @@ export default function DefiRisksPage() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-8">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Major DeFi Risk Categories</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Major DeFi Risk Categories</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="hover:shadow-lg transition-shadow border-red-200">
               <CardHeader>
@@ -87,38 +87,9 @@ export default function DefiRisksPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-red-50 dark:bg-red-950/20">
+      <section className="py-8">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <AlertCircle className="h-16 w-16 text-red-600 mx-auto mb-6" />
-            <h2 className="text-3xl font-bold mb-8 text-red-600">Critical Risk Warnings</h2>
-            <div className="space-y-6 text-left">
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-semibold mb-3 text-red-600">Impermanent Loss</h3>
-                <p className="text-muted-foreground">
-                  When providing liquidity to AMMs, you may experience impermanent loss if the price ratio of your tokens changes significantly. This can result in losses compared to simply holding the tokens.
-                </p>
-              </div>
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-semibold mb-3 text-red-600">Rug Pulls</h3>
-                <p className="text-muted-foreground">
-                  Malicious developers can abandon projects, drain liquidity, or manipulate token prices, leaving investors with worthless tokens.
-                </p>
-              </div>
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-semibold mb-3 text-red-600">Oracle Manipulation</h3>
-                <p className="text-muted-foreground">
-                  Price feeds can be manipulated to trigger liquidations or enable arbitrage attacks, potentially causing significant losses.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Risk Mitigation Strategies</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Risk Mitigation Strategies</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader className="text-center">
@@ -159,11 +130,11 @@ export default function DefiRisksPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-muted/30">
+      <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">Muscadine Labs Risk Management</h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <h2 className="text-3xl font-bold mb-6">Muscadine Labs Risk Management</h2>
+            <p className="text-xl text-muted-foreground mb-6">
               We implement comprehensive risk management strategies to protect our users' funds.
             </p>
             <div className="grid md:grid-cols-2 gap-8 text-left">
@@ -176,7 +147,7 @@ export default function DefiRisksPage() {
               <div>
                 <h3 className="text-xl font-semibold mb-4">Continuous Monitoring</h3>
                 <p className="text-muted-foreground">
-                  We monitor all positions 24/7 and have automated systems to respond to market changes and protocol updates.
+                  We monitor all positions and have automated systems to respond to market changes and protocol updates.
                 </p>
               </div>
               <div>
@@ -191,43 +162,6 @@ export default function DefiRisksPage() {
                   All our operations are transparent and auditable on-chain, allowing users to verify our strategies.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">Learn More</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Continue your DeFi education with our comprehensive guides.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/defi/what-is-defi">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer p-6">
-                  <CardHeader className="text-center">
-                    <CardTitle>What is DeFi?</CardTitle>
-                    <CardDescription>Back to DeFi basics</CardDescription>
-                  </CardHeader>
-                </Card>
-              </Link>
-              <Link href="/defi/core-concepts">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer p-6">
-                  <CardHeader className="text-center">
-                    <CardTitle>Core Concepts</CardTitle>
-                    <CardDescription>Understand DeFi fundamentals</CardDescription>
-                  </CardHeader>
-                </Card>
-              </Link>
-              <Link href="/defi/wallet-setup">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer p-6">
-                  <CardHeader className="text-center">
-                    <CardTitle>Wallet Setup</CardTitle>
-                    <CardDescription>Secure your DeFi journey</CardDescription>
-                  </CardHeader>
-                </Card>
-              </Link>
             </div>
           </div>
         </div>

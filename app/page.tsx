@@ -32,6 +32,9 @@ export default function Home() {
               <p className="text-xl text-muted-foreground mb-8">
                 At Muscadine Labs, we're building tools for financial self-sovereignty — empowering individuals to take back control of their financial future. We believe financial independence should belong to everyone, not just institutions. Through Bitcoin security, self-custody, and accessible DeFi solutions, we help people become their own bank and thrive in a system without middlemen.
               </p>
+              <p className="text-xl text-muted-foreground mb-8">
+                We curate and manage risk on Morpho vault infrastructure on the blockchain, lending tokens to overcollateralized markets in return for variable interest. Unlike traditional financial systems that use undercollateralization (which is inherently riskier than DeFi lending and borrowing), you can only borrow as much as you have collateralized. We also create self-custody solutions for clients, enabling them to securely own their wealth through running their own nodes, paper keys, and key systems for optimal safety, security, and ownership.
+              </p>
             </div>
           </div>
         </div>

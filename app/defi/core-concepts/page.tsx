@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { TrendingUp, Shield, Zap, Coins, Globe, BookOpen } from "lucide-react";
+import { TrendingUp, Shield, Zap, Coins, Globe, BookOpen, AlertTriangle } from "lucide-react";
 
 export default function CoreConceptsPage() {
   return (
@@ -27,7 +27,7 @@ export default function CoreConceptsPage() {
                   <CardTitle>Smart Contracts</CardTitle>
                 </div>
                 <CardDescription className="text-base">
-                  Self-executing contracts with terms directly written into code. They automatically execute when predetermined conditions are met, eliminating the need for intermediaries.
+                  Self-executing contracts with terms directly written into code. They automatically execute when predetermined conditions are met, eliminating the need for intermediaries. Smart contracts are immutable once deployed and run on blockchain networks, ensuring transparency and reducing counterparty risk. They enable complex financial operations like automated lending, yield farming, and decentralized exchanges without human intervention.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -36,10 +36,10 @@ export default function CoreConceptsPage() {
               <CardHeader>
                 <div className="flex items-center space-x-3 mb-4">
                   <Coins className="h-6 w-6 text-primary" />
-                  <CardTitle>Liquidity Pools</CardTitle>
+                  <CardTitle>Liquidity Pools & AMMs</CardTitle>
                 </div>
                 <CardDescription className="text-base">
-                  Collections of tokens locked in smart contracts that enable decentralized trading. Users provide liquidity and earn fees from trading activity.
+                  Collections of tokens locked in smart contracts that enable decentralized trading through Automated Market Makers. Users provide liquidity and earn fees from trading activity. AMMs use mathematical formulas (like x*y=k) to automatically adjust prices as trades occur - when someone buys a token, the price increases; when they sell, it decreases. This creates a continuous market that's always available, unlike traditional exchanges that rely on order books. Popular AMM formulas include Constant Product (Uniswap), Stable Swap (Curve), and Weighted Pools (Balancer). Higher liquidity means better prices and lower slippage for traders.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -47,11 +47,11 @@ export default function CoreConceptsPage() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="flex items-center space-x-3 mb-4">
-                  <TrendingUp className="h-6 w-6 text-primary" />
-                  <CardTitle>Automated Market Makers (AMMs)</CardTitle>
+                  <Zap className="h-6 w-6 text-primary" />
+                  <CardTitle>Other DeFi Applications</CardTitle>
                 </div>
                 <CardDescription className="text-base">
-                  Algorithms that determine token prices based on supply and demand ratios in liquidity pools, enabling decentralized trading without order books.
+                  DeFi extends beyond basic lending and trading to include advanced financial instruments. Perpetual futures (perps) allow leveraged trading without expiration dates. Derivatives enable exposure to asset prices without owning the underlying assets. Prediction markets let users bet on future events and outcomes. Insurance protocols provide coverage against smart contract risks and hacks. Yield aggregators automatically optimize returns across multiple protocols. Real World Assets (RWAs) tokenize physical assets like real estate, commodities, and bonds, bringing traditional assets onto the blockchain. These innovations (many more unmentioned) expand DeFi's utility beyond traditional finance capabilities.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -63,7 +63,7 @@ export default function CoreConceptsPage() {
                   <CardTitle>Collateralization</CardTitle>
                 </div>
                 <CardDescription className="text-base">
-                  The practice of locking up assets as security for loans or other financial activities. Over-collateralization is common in DeFi to manage risk.
+                  The practice of locking up assets as security for loans or other financial activities. Over-collateralization is common in DeFi to manage risk. Unlike traditional financial systems that use undercollateralization (which is inherently riskier than DeFi lending and borrowing), you can only borrow as much as you have collateralized. This creates a safety buffer that protects lenders and reduces systemic risk. For example, to borrow $100, you need to deposit $150+ worth of collateral. If your collateral drops in value, you can be liquidated to protect the protocol - this goes to pay back the lenders.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -85,7 +85,7 @@ export default function CoreConceptsPage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-base">
-                    Muscadine Labs creates automated yield strategies that optimize returns across multiple DeFi protocols while managing risk through smart contract automation.
+                    We curate and manage risk on Morpho vault infrastructure on the blockchain, lending tokens to overcollateralized markets in return for variable interest.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -99,7 +99,7 @@ export default function CoreConceptsPage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-base">
-                    We provide secure self-custody solutions that give you complete control over your Bitcoin and crypto assets while accessing DeFi opportunities.
+                    We create self-custody solutions for clients, enabling them to securely own their wealth through running their own nodes, paper keys, and key systems for optimal safety, security, and ownership.
                   </CardDescription>
                 </CardContent>
               </Card>

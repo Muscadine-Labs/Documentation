@@ -27,7 +27,7 @@ export default function WalletSetupPage() {
                 </div>
                 <CardTitle>Mobile Wallets</CardTitle>
                 <CardDescription>
-                  Convenient for daily use and smaller transactions. Examples: MetaMask Mobile, Trust Wallet, Rainbow.
+                  Convenient for daily use and smaller transactions. Examples: MetaMask Mobile, Coinbase Wallet, Rabby.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -39,7 +39,7 @@ export default function WalletSetupPage() {
                 </div>
                 <CardTitle>Browser Extensions</CardTitle>
                 <CardDescription>
-                  Easy integration with DeFi websites. Examples: MetaMask, Coinbase Wallet, Phantom.
+                  Easy integration with DeFi websites. Examples: Rabby, MetaMask, Coinbase Wallet, Phantom.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -51,7 +51,7 @@ export default function WalletSetupPage() {
                 </div>
                 <CardTitle>Hardware Wallets</CardTitle>
                 <CardDescription>
-                  Maximum security for large amounts. Examples: Ledger, Trezor, KeepKey.
+                  Maximum security for large amounts. Examples: Ledger, Trezor.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -62,41 +62,48 @@ export default function WalletSetupPage() {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Step-by-Step Setup Guide</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">Muscadine Recommendations</h2>
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">1</div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Choose Your Wallet</h3>
-                  <p className="text-muted-foreground">Select a wallet that fits your needs. For beginners, we recommend MetaMask for its ease of use and wide DeFi compatibility.</p>
+                  <h3 className="text-xl font-semibold mb-2">Choose Your Wallet Type</h3>
+                  <p className="text-muted-foreground">Select a hot wallet for small amounts or a cold wallet for large amounts. If you're not tech-savvy, consider Coinbase Smart Wallet where your wallet is your email account or a passkey on your phone.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">2</div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Download and Install</h3>
-                  <p className="text-muted-foreground">Download from official sources only. Never use third-party download links to avoid malicious software.</p>
+                  <h3 className="text-xl font-semibold mb-2">Secure Your Private Keys</h3>
+                  <p className="text-muted-foreground">Always securely enter or receive your private keys and write them down on paper. Never share your private keys with anyone or store them digitally.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">3</div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Create or Import Wallet</h3>
-                  <p className="text-muted-foreground">Create a new wallet or import an existing one using your seed phrase. Never share your seed phrase with anyone.</p>
+                  <h3 className="text-xl font-semibold mb-2">Use Your Public Address</h3>
+                  <p className="text-muted-foreground">Only share your public address for receiving funds. This is safe to share publicly and is how others can send you cryptocurrency.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">4</div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Secure Your Seed Phrase</h3>
-                  <p className="text-muted-foreground">Write down your seed phrase on paper and store it securely offline. Never store it digitally or share it with anyone.</p>
+                  <h3 className="text-xl font-semibold mb-2">Double-Check Addresses</h3>
+                  <p className="text-muted-foreground">Always double-check when sending or receiving that you're using the correct address. One wrong character can result in permanent loss of funds.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">5</div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Add Networks</h3>
-                  <p className="text-muted-foreground">Add the blockchain networks you plan to use (Ethereum, Base, Arbitrum, etc.) to your wallet.</p>
+                  <h3 className="text-xl font-semibold mb-2">Add BASE Network</h3>
+                  <p className="text-muted-foreground">Muscadine uses the BASE network. Add BASE to your wallet and ensure you have ETH for gas fees to interact with our vaults.</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">6</div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Test with Small Amounts</h3>
+                  <p className="text-muted-foreground">Start with small amounts to test your setup and familiarize yourself with the process before committing larger sums.</p>
                 </div>
               </div>
             </div>
@@ -143,130 +150,6 @@ export default function WalletSetupPage() {
                 </CardDescription>
               </CardHeader>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Popular Wallet Recommendations</h2>
-            <div className="space-y-6">
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3">
-                    <Wallet className="h-6 w-6 text-primary" />
-                    <CardTitle>MetaMask</CardTitle>
-                  </div>
-                  <CardDescription>
-                    <strong>Best for:</strong> Beginners and DeFi users<br />
-                    <strong>Features:</strong> Browser extension, mobile app, easy DeFi integration<br />
-                    <strong>Security:</strong> Good for moderate amounts, consider hardware wallet for large amounts
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3">
-                    <Shield className="h-6 w-6 text-primary" />
-                    <CardTitle>Ledger Hardware Wallet</CardTitle>
-                  </div>
-                  <CardDescription>
-                    <strong>Best for:</strong> Large amounts and maximum security<br />
-                    <strong>Features:</strong> Offline storage, PIN protection, recovery phrase<br />
-                    <strong>Security:</strong> Highest level of security for crypto storage
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3">
-                    <Smartphone className="h-6 w-6 text-primary" />
-                    <CardTitle>Trust Wallet</CardTitle>
-                  </div>
-                  <CardDescription>
-                    <strong>Best for:</strong> Mobile-first users<br />
-                    <strong>Features:</strong> Multi-chain support, built-in DEX, staking<br />
-                    <strong>Security:</strong> Good mobile security, biometric authentication
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">Getting Started with Muscadine</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Once your wallet is set up, you can start using Muscadine Labs' DeFi vaults.
-            </p>
-            <div className="grid md:grid-cols-2 gap-8 text-left">
-              <div>
-                <h3 className="text-xl font-semibold mb-4">Connect Your Wallet</h3>
-                <p className="text-muted-foreground">
-                  Visit our app and connect your wallet to start using our automated yield strategies.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-4">Start Small</h3>
-                <p className="text-muted-foreground">
-                  Begin with small amounts to familiarize yourself with the platform before committing larger sums.
-                </p>
-              </div>
-            </div>
-            <div className="mt-8">
-              <a 
-                href="https://app.muscadine.io" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
-              >
-                <Wallet className="h-5 w-5 mr-2" />
-                Launch Muscadine App
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">Learn More</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Continue your DeFi education with our comprehensive guides.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/defi/what-is-defi">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer p-6">
-                  <CardHeader className="text-center">
-                    <CardTitle>What is DeFi?</CardTitle>
-                    <CardDescription>Back to DeFi basics</CardDescription>
-                  </CardHeader>
-                </Card>
-              </Link>
-              <Link href="/defi/core-concepts">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer p-6">
-                  <CardHeader className="text-center">
-                    <CardTitle>Core Concepts</CardTitle>
-                    <CardDescription>Understand DeFi fundamentals</CardDescription>
-                  </CardHeader>
-                </Card>
-              </Link>
-              <Link href="/defi/risks">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer p-6">
-                  <CardHeader className="text-center">
-                    <CardTitle>DeFi Risks</CardTitle>
-                    <CardDescription>Understand the risks involved</CardDescription>
-                  </CardHeader>
-                </Card>
-              </Link>
-            </div>
           </div>
         </div>
       </section>
