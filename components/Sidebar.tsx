@@ -33,7 +33,7 @@ const navigation = {
     items: [
       {
         name: "About",
-        href: "/overview/about",
+        href: "/",
         icon: Info,
       },
       {
@@ -49,27 +49,27 @@ const navigation = {
     ],
   },
   defi101: {
-    name: "Crypto 101",
+    name: "DeFi 101",
     icon: BookOpen,
     items: [
       {
-        name: "What Is Crypto?",
-        href: "/crypto/what-is-crypto",
+        name: "What Is DeFi?",
+        href: "/defi/what-is-defi",
         icon: BookOpen,
       },
       {
         name: "Core Concepts",
-        href: "/crypto/core-concepts",
+        href: "/defi/core-concepts",
         icon: TrendingUp,
       },
       {
         name: "Risks",
-        href: "/crypto/risks",
+        href: "/defi/risks",
         icon: Shield,
       },
       {
         name: "Wallet Setup",
-        href: "/crypto/wallet-setup",
+        href: "/defi/wallet-setup",
         icon: Wallet,
       },
     ],

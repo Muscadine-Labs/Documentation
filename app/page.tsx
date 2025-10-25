@@ -1,109 +1,176 @@
-import Link from "next/link";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Callout } from "@/components/Callout";
 import { PageLayout } from "@/components/PageLayout";
 import { Footer } from "@/components/Footer";
-import { Shield, TrendingUp, Coins, ArrowRight } from "lucide-react";
-
-const quickLinks = [
-  {
-    title: "About",
-    description: "Learn about Muscadine Labs and our mission",
-    href: "/overview/about",
-    icon: TrendingUp,
-  },
-  {
-    title: "DeFi 101",
-    description: "Understanding decentralized finance basics",
-    href: "/defi/what-is-defi",
-    icon: Coins,
-  },
-  {
-    title: "Vaults",
-    description: "Automated yield strategies and vault architecture",
-    href: "/vault/about",
-    icon: Shield,
-  },
-];
-
-const featureCards = [
-  {
-    title: "Vaults",
-    description: "Automated yield strategies that optimize returns across DeFi protocols while managing risk.",
-    icon: "🏦",
-  },
-  {
-    title: "DeFi",
-    description: "Decentralized finance protocols that enable permissionless lending, borrowing, and trading.",
-    icon: "🌐",
-  },
-  {
-    title: "Lending",
-    description: "Supply assets to earn yield or borrow against collateral to access liquidity.",
-    icon: "💰",
-  },
-];
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+import { 
+  Shield, 
+  Eye, 
+  Zap, 
+  Users, 
+  ArrowRight, 
+  Mail, 
+  FileText, 
+  Code,
+  CheckCircle
+} from "lucide-react";
 
 export default function Home() {
   return (
     <PageLayout 
-      title="Muscadine Labs Documentation"
-      description="Learn about our DeFi vaults, yield strategies, and how we're building the future of decentralized finance."
+      title="About Muscadine Labs"
+      description="Learn about Muscadine Labs and our mission to democratize DeFi access through automated yield strategies."
     >
-      {/* Quick Links Section */}
-      <section className="py-16">
+      {/* What is Muscadine Labs Section */}
+      <section className="py-8">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <Badge variant="outline" className="mb-4">Quick Start</Badge>
-            <h2 className="text-3xl font-bold mb-6">Get Started</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Explore our documentation and learn about DeFi with Muscadine Labs
-            </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge variant="outline" className="mb-4">About Us</Badge>
+              <h2 className="text-3xl font-bold mb-6">What is Muscadine Labs?</h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                At Muscadine Labs, we're building tools for financial self-sovereignty — empowering individuals to take back control of their financial future. We believe financial independence should belong to everyone, not just institutions. Through Bitcoin security, self-custody, and accessible DeFi solutions, we help people become their own bank and thrive in a system without middlemen.
+              </p>
+            </div>
           </div>
-          <div className="flex flex-wrap justify-center gap-4">
-            {quickLinks.map((link) => (
-              <Link key={link.href} href={link.href}>
-                <Card className="w-80 hover:shadow-lg transition-shadow cursor-pointer group">
-                  <CardHeader className="text-left">
-                    <div className="flex items-center space-x-3">
-                      <link.icon className="h-6 w-6 text-primary" />
-                      <CardTitle className="text-lg group-hover:text-primary transition-colors">{link.title}</CardTitle>
+        </div>
+      </section>
+
+      {/* Mission & Principles Section */}
+      <section className="py-8 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge variant="outline" className="mb-4">Our Mission</Badge>
+              <h2 className="text-3xl font-bold mb-6">Mission & Principles</h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl">Our Mission</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">
+                    To give financial freedom back to the people.
+                  </p>
+                  <p className="text-muted-foreground mb-4 italic">
+                    "Docēre est discere" - To teach is to learn.
+                  </p>
+                  <p className="text-muted-foreground">
+                    We want to teach everyday individuals that cryptocurrency and Bitcoin IS the future, and gives people the chance to truly own and receive their monetary work back in yield. This means retention of people's wealth to their hands, while decentralized systems do the work.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl">Core Principles</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                    <div>
+                      <p className="font-medium">Security First</p>
+                      <p className="text-sm text-muted-foreground">Every strategy is built with security as the primary consideration</p>
                     </div>
-                    <CardDescription>{link.description}</CardDescription>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                    <div>
+                      <p className="font-medium">Transparency</p>
+                      <p className="text-sm text-muted-foreground">All contracts are open-source and operations are auditable</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                    <div>
+                      <p className="font-medium">Accessibility</p>
+                      <p className="text-sm text-muted-foreground">Complex DeFi strategies made simple through automation</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                    <div>
+                      <p className="font-medium">Performance</p>
+                      <p className="text-sm text-muted-foreground">Continuous optimization to maximize yields</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Getting Started Section */}
+      <section className="py-8">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge variant="outline" className="mb-4">Getting Started</Badge>
+            <h2 className="text-3xl font-bold mb-6">Ready to Explore?</h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              Here are our products.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <Link href="/vault/about">
+                <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
+                  <CardHeader className="text-center">
+                    <div className="flex justify-center mb-2">
+                      <Zap className="h-6 w-6 text-primary" />
+                    </div>
+                    <CardTitle className="group-hover:text-primary transition-colors">
+                      Automated Vaults
+                    </CardTitle>
+                    <CardDescription>
+                      Self-executing strategies that optimize yields across multiple DeFi protocols
+                    </CardDescription>
                   </CardHeader>
                   <CardContent className="text-center">
                     <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
                   </CardContent>
                 </Card>
               </Link>
-            ))}
+
+              <Link href="/self-custody/about">
+                <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
+                  <CardHeader className="text-center">
+                    <div className="flex justify-center mb-2">
+                      <Users className="h-6 w-6 text-primary" />
+                    </div>
+                    <CardTitle className="group-hover:text-primary transition-colors">
+                      Self-Custody Management
+                    </CardTitle>
+                    <CardDescription>
+                      Experienced team with deep DeFi expertise to help create a secure self-custody solution
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
+                  </CardContent>
+                </Card>
+              </Link>
+            </div>
+
+            <div className="mt-12 p-6 bg-muted/30 rounded-2xl">
+              <h3 className="text-xl font-semibold mb-4">New to Crypto and DeFi?</h3>
+              <p className="text-muted-foreground mb-4">
+                If you're new to cryptocurrency and decentralized finance, we recommend reading our DeFi 101 section to get a better understanding of the fundamentals before exploring our products.
+              </p>
+              <Link href="/defi/what-is-defi">
+                <div className="inline-flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors font-medium">
+                  <span>Read DeFi 101</span>
+                  <ArrowRight className="h-4 w-4" />
+                </div>
+              </Link>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* Feature Cards Section */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <Badge variant="outline" className="mb-4">Key Concepts</Badge>
-            <h2 className="text-3xl font-bold mb-6">Understanding DeFi</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Learn the fundamental concepts that power decentralized finance
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {featureCards.map((card) => (
-              <Card key={card.title} className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-8 text-center">
-                  <div className="text-4xl mb-4">{card.icon}</div>
-                  <h3 className="text-xl font-semibold mb-3">{card.title}</h3>
-                  <p className="text-muted-foreground">{card.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </PageLayout>

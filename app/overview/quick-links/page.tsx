@@ -37,13 +37,13 @@ const internalLinks = [
   {
     title: "About",
     description: "Learn about Muscadine Labs",
-    href: "/overview/about",
+    href: "/",
     icon: ArrowRight,
   },
   {
     title: "DeFi 101 - What is DeFi",
     description: "Introduction to decentralized finance",
-    href: "/crypto/what-is-crypto",
+    href: "/defi/what-is-defi",
     icon: ArrowRight,
   },
   {

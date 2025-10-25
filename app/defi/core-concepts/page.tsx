@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { TrendingUp, Shield, Zap, Coins, Globe, BookOpen } from "lucide-react";
 
 export default function CoreConceptsPage() {
@@ -8,17 +8,17 @@ export default function CoreConceptsPage() {
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-5xl font-bold tracking-tight mb-6">
-            Crypto Core Concepts
+            DeFi Core Concepts
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Understanding the fundamental building blocks of cryptocurrency and blockchain technology and how they work together to create a new financial ecosystem.
+            Understanding the fundamental building blocks of decentralized finance and how they work together to create a new financial ecosystem.
           </p>
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="pt-4 pb-8">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Essential Crypto Concepts</h2>
+          <h2 className="text-3xl font-bold text-center mb-2">Essential DeFi Concepts</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
@@ -71,7 +71,44 @@ export default function CoreConceptsPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-muted/30">
+      <section className="py-8">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-6">What Muscadine Does</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3 mb-4">
+                    <TrendingUp className="h-6 w-6 text-primary" />
+                    <CardTitle>Automated Vaults</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base">
+                    Muscadine Labs creates automated yield strategies that optimize returns across multiple DeFi protocols while managing risk through smart contract automation.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3 mb-4">
+                    <Shield className="h-6 w-6 text-primary" />
+                    <CardTitle>Self-Custody Solutions</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base">
+                    We provide secure self-custody solutions that give you complete control over your Bitcoin and crypto assets while accessing DeFi opportunities.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">How DeFi Protocols Work</h2>
@@ -102,7 +139,7 @@ export default function CoreConceptsPage() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-8">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">Key DeFi Protocols</h2>
           <div className="grid md:grid-cols-3 gap-6">
@@ -141,43 +178,6 @@ export default function CoreConceptsPage() {
                 </CardDescription>
               </CardHeader>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">Learn More</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Continue your DeFi education with our comprehensive guides.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/defi/what-is-defi">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer p-6">
-                  <CardHeader className="text-center">
-                    <CardTitle>What is DeFi?</CardTitle>
-                    <CardDescription>Back to DeFi basics</CardDescription>
-                  </CardHeader>
-                </Card>
-              </Link>
-              <Link href="/defi/risks">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer p-6">
-                  <CardHeader className="text-center">
-                    <CardTitle>DeFi Risks</CardTitle>
-                    <CardDescription>Understand the risks involved</CardDescription>
-                  </CardHeader>
-                </Card>
-              </Link>
-              <Link href="/defi/wallet-setup">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer p-6">
-                  <CardHeader className="text-center">
-                    <CardTitle>Wallet Setup</CardTitle>
-                    <CardDescription>Get started with DeFi wallets</CardDescription>
-                  </CardHeader>
-                </Card>
-              </Link>
-            </div>
           </div>
         </div>
       </section>
