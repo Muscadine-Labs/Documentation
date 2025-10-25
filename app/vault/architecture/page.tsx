@@ -2,27 +2,30 @@ import { PageLayout } from "@/components/PageLayout";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Callout } from "@/components/Callout";
-import { Metric } from "@/components/Metric";
-import { RiskAlert } from "@/components/RiskAlert";
-import { ArrowRight, Shield, Zap, TrendingUp, Settings } from "lucide-react";
-import Link from "next/link";
+import { Shield, Zap, TrendingUp, Settings, Layers, Building2, Target, Coins } from "lucide-react";
 
 export default function VaultArchitecturePage() {
   return (
     <PageLayout 
       title="Vault Architecture"
-      description="A comprehensive technical overview of Muscadine Labs' vault architecture and operation."
+      description="Muscadine Vaults are built on Morpho's ERC-4626–compliant architecture, a modern DeFi standard that defines how tokenized yield vaults manage deposits, withdrawals, and earnings."
     >
-      {/* Architecture Overview */}
-      <section className="py-8">
+
+      {/* ERC-4626 Architecture Section */}
+      <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">Technical Overview</Badge>
-              <h2 className="text-3xl font-bold mb-6">How Vaults Work</h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Muscadine vaults are sophisticated smart contracts that automatically manage DeFi assets to optimize yields while handling risk management.
+              <Badge variant="outline" className="mb-4">ERC-4626 Standard</Badge>
+              <h2 className="text-3xl font-bold mb-6">Built on Modern DeFi Standards</h2>
+            </div>
+            
+            <div className="mb-12">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                Muscadine Vaults are built on Morpho's ERC-4626–compliant architecture, a modern DeFi standard that defines how tokenized yield vaults manage deposits, withdrawals, and earnings. Each vault is an isolated smart contract on Base that securely holds user assets, deploys them into approved lending markets, and continuously rebalances to capture the best available yield — all transparently and autonomously on-chain.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                The ERC-4626 framework ensures every depositor's share in the vault is represented by a standardized token. This structure makes returns fully auditable, portable, and interoperable across DeFi, while maintaining institutional-grade accounting for performance and liquidity. When you deposit into a Muscadine Vault, you receive a 4626 share token that grows in value as the vault earns yield.
               </p>
             </div>
 
@@ -30,13 +33,13 @@ export default function VaultArchitecturePage() {
               <Card className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex items-center space-x-3">
-                    <Zap className="h-6 w-6 text-primary" />
-                    <CardTitle>Automated Execution</CardTitle>
+                    <Layers className="h-6 w-6 text-primary" />
+                    <CardTitle>Standardized Tokens</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Vaults operate as autonomous investment managers, executing complex strategies without manual intervention 24/7.
+                    Every depositor's share is represented by a standardized ERC-4626 token that grows in value as the vault earns yield.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -45,12 +48,46 @@ export default function VaultArchitecturePage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Shield className="h-6 w-6 text-primary" />
-                    <CardTitle>Risk Management</CardTitle>
+                    <CardTitle>Fully Auditable</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Built-in risk controls and continuous monitoring protect user funds while maintaining optimal yield generation.
+                    Returns are fully auditable, portable, and interoperable across DeFi with institutional-grade accounting.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Modular Integration Section */}
+      <section className="py-8">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge variant="outline" className="mb-4">Modular Integration</Badge>
+              <h2 className="text-3xl font-bold mb-6">Secure Protocol Integration</h2>
+            </div>
+            
+            <div className="mb-12">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                Each vault connects through Morpho's modular adapter system, allowing secure integration with trusted protocols like Moonwell and other overcollateralized markets. Strategy parameters — such as collateral caps, market selection, and reallocation logic — are defined by the Curator, executed by the Allocator, and safeguarded by a Guardian role, all enforced by transparent on-chain governance and time-locked changes.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Target className="h-6 w-6 text-primary" />
+                    <CardTitle>Curator</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Defines strategy parameters including collateral caps, market selection, and reallocation logic.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -58,13 +95,134 @@ export default function VaultArchitecturePage() {
               <Card className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex items-center space-x-3">
-                    <TrendingUp className="h-6 w-6 text-primary" />
-                    <CardTitle>Multi-Protocol</CardTitle>
+                    <Zap className="h-6 w-6 text-primary" />
+                    <CardTitle>Allocator</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Strategies span across multiple DeFi protocols to capture the best opportunities and diversify risk.
+                    Executes the defined strategies and manages the deployment of assets across approved markets.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Shield className="h-6 w-6 text-primary" />
+                    <CardTitle>Guardian</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Safeguards the vault operations and ensures compliance with security parameters.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-8 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge variant="outline" className="mb-4">Best of Both Worlds</Badge>
+              <h2 className="text-3xl font-bold mb-6">Efficiency Meets Discipline</h2>
+            </div>
+            
+            <div className="text-center mb-12">
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                This design gives Muscadine Vaults the best of both worlds: the efficiency and transparency of decentralized finance, and the discipline of traditional portfolio management.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Deposits remain fully liquid, yield accrues automatically, and all activity is verifiable on-chain — a secure foundation for sustainable, self-custodied income.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <TrendingUp className="h-6 w-6 text-primary" />
+                    <CardTitle>DeFi Efficiency</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Leverages the efficiency and transparency of decentralized finance with automated yield generation and transparent operations.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Building2 className="h-6 w-6 text-primary" />
+                    <CardTitle>Traditional Discipline</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Maintains the discipline of traditional portfolio management with proper risk controls and institutional-grade accounting.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Features Section */}
+      <section className="py-8">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge variant="outline" className="mb-4">Key Features</Badge>
+              <h2 className="text-3xl font-bold mb-6">Secure Foundation for Income</h2>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Coins className="h-6 w-6 text-primary" />
+                    <CardTitle>Fully Liquid Deposits</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Your deposits remain fully liquid with the ability to withdraw at any time while earning yield.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Zap className="h-6 w-6 text-primary" />
+                    <CardTitle>Automatic Yield Accrual</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Yield accrues automatically through smart contract execution without manual intervention.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Shield className="h-6 w-6 text-primary" />
+                    <CardTitle>On-Chain Verification</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    All activity is verifiable on-chain, providing complete transparency and auditability.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -73,12 +231,12 @@ export default function VaultArchitecturePage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Settings className="h-6 w-6 text-primary" />
-                    <CardTitle>Modular Design</CardTitle>
+                    <CardTitle>Self-Custodied Income</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Individual strategies can be upgraded independently, allowing for continuous improvement and adaptation.
+                    Maintains self-custody while providing a secure foundation for sustainable income generation.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -86,86 +244,6 @@ export default function VaultArchitecturePage() {
           </div>
         </div>
       </section>
-
-      {/* Key Metrics */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">Performance Metrics</Badge>
-              <h2 className="text-3xl font-bold mb-6">Vault Capabilities</h2>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              <Metric label="Automation Level" value="100%" hint="Fully automated operation" />
-              <Metric label="Strategy Count" value="Multiple" hint="Diversified across protocols" />
-              <Metric label="Rebalancing" value="Dynamic" hint="Based on market conditions" />
-              <Metric label="Risk Monitoring" value="24/7" hint="Continuous monitoring" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Learn More Section */}
-      <section className="py-8">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="outline" className="mb-4">Explore More</Badge>
-            <h2 className="text-3xl font-bold mb-8">Dive Deeper</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Learn more about specific aspects of our vault architecture and operations.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/vault/fees">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
-                  <CardHeader className="text-center">
-                    <CardTitle className="group-hover:text-primary transition-colors">Fees & Economics</CardTitle>
-                    <CardDescription>Understand our transparent fee structure</CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
-                  </CardContent>
-                </Card>
-              </Link>
-
-              <Link href="/vault/roles-security">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
-                  <CardHeader className="text-center">
-                    <CardTitle className="group-hover:text-primary transition-colors">Roles & Security</CardTitle>
-                    <CardDescription>Learn about our security model</CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
-                  </CardContent>
-                </Card>
-              </Link>
-
-              <Link href="/vault/contracts">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
-                  <CardHeader className="text-center">
-                    <CardTitle className="group-hover:text-primary transition-colors">Smart Contracts</CardTitle>
-                    <CardDescription>Explore our deployed contracts</CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
-                  </CardContent>
-                </Card>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Callout type="info">
-        <strong>Want to dive deeper?</strong> Explore our vault architecture components and understand how automated strategies work in practice.
-      </Callout>
-
-      <RiskAlert type="warning" title="Important Disclaimer">
-        <p>
-          Muscadine Labs does not provide investment advice. Vaults are experimental DeFi smart contracts 
-          and may carry risk of loss. Users are responsible for their own decisions. DYOR.
-        </p>
-      </RiskAlert>
 
       <Footer />
     </PageLayout>

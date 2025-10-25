@@ -89,11 +89,6 @@ const navigation = {
             icon: Info,
           },
           {
-            name: "Fees",
-            href: "/vault/fees",
-            icon: DollarSign,
-          },
-          {
             name: "Architecture",
             href: "/vault/architecture",
             icon: BarChart3,
@@ -102,6 +97,11 @@ const navigation = {
             name: "Roles & Security",
             href: "/vault/roles-security",
             icon: Settings,
+          },
+          {
+            name: "Fees",
+            href: "/vault/fees",
+            icon: DollarSign,
           },
           {
             name: "Contracts",

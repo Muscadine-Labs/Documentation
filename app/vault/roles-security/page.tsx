@@ -2,26 +2,27 @@ import { PageLayout } from "@/components/PageLayout";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Callout } from "@/components/Callout";
-import { RoleCard } from "@/components/RoleCard";
-import { RiskAlert } from "@/components/RiskAlert";
-import { Shield, Users, Settings, Wallet } from "lucide-react";
+import { Shield, Target, Zap, Settings, Clock, Eye, Lock } from "lucide-react";
 
 export default function RolesSecurityPage() {
   return (
     <PageLayout 
       title="Roles & Security"
-      description="Understanding Muscadine Labs' sophisticated role-based access control system for vault management."
+      description="Muscadine Vaults are governed by a clear, on-chain role system designed for transparency and safety with multi-signature controls and time locks."
     >
+
       {/* Overview Section */}
-      <section className="py-8">
+      <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">Security Model</Badge>
-              <h2 className="text-3xl font-bold mb-6">Role-Based Control System</h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Muscadine Labs implements a sophisticated role-based access control (RBAC) system that distributes power across multiple entities, ensuring no single party has complete control.
+              <Badge variant="outline" className="mb-4">Governance Model</Badge>
+              <h2 className="text-3xl font-bold mb-6">Clear, On-Chain Role System</h2>
+            </div>
+            
+            <div className="mb-12">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                Muscadine Vaults are governed by a clear, on-chain role system designed for transparency and safety. Each role has a defined purpose and is protected by multi-signature controls and time locks, ensuring no single actor can act unilaterally.
               </p>
             </div>
 
@@ -30,12 +31,12 @@ export default function RolesSecurityPage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Shield className="h-6 w-6 text-primary" />
-                    <CardTitle>Separation of Powers</CardTitle>
+                    <CardTitle>Multi-Signature Protection</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Different roles have different responsibilities and permissions, requiring coordination between multiple parties for critical operations.
+                    All roles are protected by multi-signature controls, requiring multiple signatures for important operations to prevent unilateral actions.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -43,41 +44,13 @@ export default function RolesSecurityPage() {
               <Card className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex items-center space-x-3">
-                    <Users className="h-6 w-6 text-primary" />
-                    <CardTitle>Multisig Protection</CardTitle>
+                    <Clock className="h-6 w-6 text-primary" />
+                    <CardTitle>Time-Locked Changes</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    All management roles are protected by multisig wallets, requiring multiple signatures for important operations.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3">
-                    <Settings className="h-6 w-6 text-primary" />
-                    <CardTitle>Transparent Operations</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    All role-based operations are transparent and auditable on-chain, providing complete visibility.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3">
-                    <Wallet className="h-6 w-6 text-primary" />
-                    <CardTitle>Operational Resilience</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    If one role becomes unavailable, other roles can continue to operate the vaults, ensuring service continuity.
+                    Critical changes are protected by time locks, providing a delay period for review and ensuring no sudden modifications.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -86,135 +59,171 @@ export default function RolesSecurityPage() {
         </div>
       </section>
 
-      {/* Role Cards Section */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">Role Hierarchy</Badge>
-              <h2 className="text-3xl font-bold mb-6">Management Roles</h2>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              <RoleCard
-                title="Owner Role"
-                description="Ultimate control over vault parameters and upgrades"
-                address="0x4E5D3ef790C75682ac4f6d4C1dDCc08b36fC100A"
-                type="multisig"
-                explorerUrl="https://basescan.org/address/0x4E5D3ef790C75682ac4f6d4C1dDCc08b36fC100A"
-                safeUrl="https://app.safe.global/home?safe=base:0x4E5D3ef790C75682ac4f6d4C1dDCc08b36fC100A"
-              />
-              
-              <RoleCard
-                title="Guardian Role"
-                description="Emergency controls and security monitoring"
-                address="0x64e804eEF4F5a53272A8623b563ad2724E98A0a9"
-                type="multisig"
-                explorerUrl="https://basescan.org/address/0x64e804eEF4F5a53272A8623b563ad2724E98A0a9"
-                safeUrl="https://app.safe.global/home?safe=base:0x64e804eEF4F5a53272A8623b563ad2724E98A0a9"
-              />
-              
-              <RoleCard
-                title="Curator Role"
-                description="Strategy curation and protocol selection"
-                address="0xb6d1d784e9Bc3570546e231caCB52B4E0f1ED8b1"
-                type="multisig"
-                explorerUrl="https://basescan.org/address/0xb6d1d784e9Bc3570546e231caCB52B4E0f1ED8b1"
-                safeUrl="https://app.safe.global/home?safe=base:0xb6d1d784e9Bc3570546e231caCB52B4E0f1ED8b1"
-              />
-              
-              <RoleCard
-                title="Muscadine Hot Wallet"
-                description="Operational wallet for vault management"
-                address="0xf35B121bA32cBeaA27716abEfFb6B65a55f9B333"
-                type="wallet"
-                explorerUrl="https://basescan.org/address/0xf35B121bA32cBeaA27716abEfFb6B65a55f9B333"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Permission Matrix */}
+      {/* Role Definitions Section */}
       <section className="py-8">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">Permissions</Badge>
-              <h2 className="text-3xl font-bold mb-6">Permission Matrix</h2>
+              <Badge variant="outline" className="mb-4">Role Definitions</Badge>
+              <h2 className="text-3xl font-bold mb-6">Three Core Roles</h2>
             </div>
             
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse border border-border">
-                <thead>
-                  <tr className="bg-muted/50">
-                    <th className="border border-border p-3 text-left">Operation</th>
-                    <th className="border border-border p-3 text-center">Owner</th>
-                    <th className="border border-border p-3 text-center">Guardian</th>
-                    <th className="border border-border p-3 text-center">Curator</th>
-                    <th className="border border-border p-3 text-center">Allocators</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-border p-3 font-medium">Vault Parameter Changes</td>
-                    <td className="border border-border p-3 text-center text-green-600">✓</td>
-                    <td className="border border-border p-3 text-center text-red-600">✗</td>
-                    <td className="border border-border p-3 text-center text-red-600">✗</td>
-                    <td className="border border-border p-3 text-center text-red-600">✗</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-border p-3 font-medium">Emergency Pause</td>
-                    <td className="border border-border p-3 text-center text-green-600">✓</td>
-                    <td className="border border-border p-3 text-center text-green-600">✓</td>
-                    <td className="border border-border p-3 text-center text-red-600">✗</td>
-                    <td className="border border-border p-3 text-center text-red-600">✗</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-border p-3 font-medium">Strategy Updates</td>
-                    <td className="border border-border p-3 text-center text-green-600">✓</td>
-                    <td className="border border-border p-3 text-center text-red-600">✗</td>
-                    <td className="border border-border p-3 text-center text-green-600">✓</td>
-                    <td className="border border-border p-3 text-center text-red-600">✗</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-border p-3 font-medium">Protocol Selection</td>
-                    <td className="border border-border p-3 text-center text-green-600">✓</td>
-                    <td className="border border-border p-3 text-center text-red-600">✗</td>
-                    <td className="border border-border p-3 text-center text-green-600">✓</td>
-                    <td className="border border-border p-3 text-center text-red-600">✗</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-border p-3 font-medium">Asset Allocation</td>
-                    <td className="border border-border p-3 text-center text-red-600">✗</td>
-                    <td className="border border-border p-3 text-center text-red-600">✗</td>
-                    <td className="border border-border p-3 text-center text-red-600">✗</td>
-                    <td className="border border-border p-3 text-center text-green-600">✓</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-border p-3 font-medium">Fee Collection</td>
-                    <td className="border border-border p-3 text-center text-green-600">✓</td>
-                    <td className="border border-border p-3 text-center text-red-600">✗</td>
-                    <td className="border border-border p-3 text-center text-red-600">✗</td>
-                    <td className="border border-border p-3 text-center text-red-600">✗</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Target className="h-6 w-6 text-primary" />
+                    <CardTitle>Curator</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Defines the vault's strategy, sets risk parameters, and approves underlying markets. Responsible for strategic direction and market selection.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Zap className="h-6 w-6 text-primary" />
+                    <CardTitle>Allocator</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Executes rebalances and manages capital deployment within approved limits. Handles the operational execution of the curator's strategy.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Shield className="h-6 w-6 text-primary" />
+                    <CardTitle>Guardian</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Can pause or adjust vault operations in emergencies to protect depositors. Acts as the safety net for the entire system.
+                  </CardDescription>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
       </section>
 
-      <Callout type="info">
-        <strong>Want to learn more?</strong> Our role-based system ensures security through separation of powers and multisig protection, providing transparency and operational resilience.
-      </Callout>
+      {/* Morpho Framework Section */}
+      <section className="py-8 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge variant="outline" className="mb-4">Morpho Framework</Badge>
+              <h2 className="text-3xl font-bold mb-6">On-Chain Governance</h2>
+            </div>
+            
+            <div className="mb-12">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                All roles operate within the Morpho Vault governance framework, where every action — from market changes to parameter updates — is verifiable on-chain. Smart contracts are audited, immutable, and isolated, meaning each vault is independent and cannot impact others.
+              </p>
+            </div>
 
-      <RiskAlert type="warning" title="Important Disclaimer">
-        <p>
-          Muscadine Labs does not provide investment advice. Vaults are experimental DeFi smart contracts 
-          and may carry risk of loss. Users are responsible for their own decisions. DYOR.
-        </p>
-      </RiskAlert>
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Eye className="h-6 w-6 text-primary" />
+                    <CardTitle>Fully Verifiable</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Every action from market changes to parameter updates is verifiable on-chain, providing complete transparency and auditability.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Lock className="h-6 w-6 text-primary" />
+                    <CardTitle>Isolated & Secure</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Smart contracts are audited, immutable, and isolated, ensuring each vault is independent and cannot impact others.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Security Model Section */}
+      <section className="py-8">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge variant="outline" className="mb-4">Security Model</Badge>
+              <h2 className="text-3xl font-bold mb-6">Layered Security Approach</h2>
+            </div>
+            
+            <div className="text-center mb-12">
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                This layered security model combines automated risk management, transparent governance, and self-custody, ensuring that user assets remain secure, accessible, and fully under their control.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Settings className="h-6 w-6 text-primary" />
+                    <CardTitle>Automated Risk Management</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Smart contracts automatically manage risk parameters and execute safety protocols without manual intervention.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Eye className="h-6 w-6 text-primary" />
+                    <CardTitle>Transparent Governance</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    All governance decisions and role actions are transparent and verifiable on-chain, providing complete visibility.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Shield className="h-6 w-6 text-primary" />
+                    <CardTitle>Self-Custody</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Users maintain full control of their assets with the ability to withdraw at any time while earning yield.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </PageLayout>
