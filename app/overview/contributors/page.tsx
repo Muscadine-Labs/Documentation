@@ -7,15 +7,26 @@ import { Users, Github, Twitter, Mail, ArrowRight } from "lucide-react";
 
 const contributors = [
   {
-    name: "Muscadine Labs Team",
-    role: "Core Development",
-    description: "Core team responsible for vault development and strategy implementation",
+    name: "Nicholas Connelly",
+    role: "Founder & CEO",
+    description: "Leading Muscadine Labs vision and strategy for DeFi innovation",
+    github: "https://github.com/nicholasconnelly",
+    twitter: "#",
+    linkedin: "#",
+    avatar: "/avatars/nicholas.jpg",
+  },
+  {
+    name: "Core Development Team",
+    role: "Engineering",
+    description: "Building secure vault infrastructure and smart contract systems",
+    github: "https://github.com/Muscadine-Labs",
     contact: "contact@muscadine.io",
   },
   {
     name: "Community Contributors",
     role: "Open Source",
     description: "Community members contributing to documentation, testing, and feedback",
+    github: "https://github.com/Muscadine-Labs/Documentation",
     contact: "GitHub Issues",
   },
 ];
@@ -24,19 +35,19 @@ const communityLinks = [
   {
     name: "GitHub Repository",
     description: "Open source code and issue tracking",
-    href: "#",
+    href: "https://github.com/Muscadine-Labs",
     icon: Github,
   },
   {
-    name: "Community Forum",
-    description: "Discussions and support",
-    href: "#",
+    name: "Documentation",
+    description: "This documentation site",
+    href: "https://github.com/Muscadine-Labs/Documentation",
     icon: Users,
   },
   {
-    name: "Twitter/X",
-    description: "Latest updates and announcements",
-    href: "#",
+    name: "Main Website",
+    description: "Muscadine Labs official website",
+    href: "https://www.muscadine.io",
     icon: Twitter,
   },
 ];
@@ -54,7 +65,7 @@ export default function ContributorsPage() {
             <Badge variant="outline" className="mb-4">Our Team</Badge>
             <h2 className="text-3xl font-bold mb-6">Our Contributors</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {contributors.map((contributor) => (
               <Card key={contributor.name} className="hover:shadow-lg transition-shadow">
                 <CardHeader className="text-center">
@@ -68,10 +79,48 @@ export default function ContributorsPage() {
                 </CardHeader>
                 <CardContent className="text-center">
                   <p className="text-muted-foreground mb-4">{contributor.description}</p>
-                  <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
-                    <Mail className="h-4 w-4" />
-                    <span>{contributor.contact}</span>
+                  
+                  {/* Social Links */}
+                  <div className="flex justify-center space-x-4 mb-4">
+                    {contributor.github && (
+                      <a 
+                        href={contributor.github} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <Github className="h-5 w-5" />
+                      </a>
+                    )}
+                    {contributor.twitter && contributor.twitter !== "#" && (
+                      <a 
+                        href={contributor.twitter} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <Twitter className="h-5 w-5" />
+                      </a>
+                    )}
+                    {contributor.linkedin && contributor.linkedin !== "#" && (
+                      <a 
+                        href={contributor.linkedin} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <Mail className="h-5 w-5" />
+                      </a>
+                    )}
                   </div>
+
+                  {/* Contact Info */}
+                  {contributor.contact && (
+                    <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
+                      <Mail className="h-4 w-4" />
+                      <span>{contributor.contact}</span>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}
@@ -91,20 +140,28 @@ export default function ContributorsPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {communityLinks.map((link) => (
-              <Card key={link.name} className="hover:shadow-lg transition-shadow cursor-pointer group">
-                <CardHeader className="text-center">
-                  <div className="flex justify-center mb-4">
-                    <link.icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                    {link.name}
-                  </CardTitle>
-                  <CardDescription>{link.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
-                </CardContent>
-              </Card>
+              <a 
+                key={link.name} 
+                href={link.href} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <Card className="hover:shadow-lg transition-shadow cursor-pointer group h-full">
+                  <CardHeader className="text-center">
+                    <div className="flex justify-center mb-4">
+                      <link.icon className="h-8 w-8 text-primary" />
+                    </div>
+                    <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                      {link.name}
+                    </CardTitle>
+                    <CardDescription>{link.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
+                  </CardContent>
+                </Card>
+              </a>
             ))}
           </div>
         </div>
