@@ -1,24 +1,23 @@
 import Link from "next/link";
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Shield, Key, HardDrive } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { PageLayout } from "@/components/PageLayout";
+import { Footer } from "@/components/Footer";
+import { Shield, Key, HardDrive, CheckCircle, ArrowRight } from "lucide-react";
 
 export default function BitcoinPage() {
   return (
-    <div className="min-h-screen bg-background">
-      <section className="py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold tracking-tight mb-6">
-            Bitcoin Self-Custody
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Secure your Bitcoin with Muscadine's self-custody solutions. Take full control of your private keys and maintain complete ownership of your digital assets.
-          </p>
-        </div>
-      </section>
-
+    <PageLayout 
+      title="Bitcoin Self-Custody"
+      description="Secure your Bitcoin with Muscadine's self-custody solutions. Take full control of your private keys and maintain complete ownership of your digital assets."
+    >
+      {/* Features Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Bitcoin Self-Custody Features</h2>
+          <div className="text-center mb-12">
+            <Badge variant="outline" className="mb-4">Features</Badge>
+            <h2 className="text-3xl font-bold mb-6">Bitcoin Self-Custody Features</h2>
+          </div>
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader className="text-center">
@@ -59,65 +58,95 @@ export default function BitcoinPage() {
         </div>
       </section>
 
+      {/* Why Choose Section */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
+            <Badge variant="outline" className="mb-4">Why Choose</Badge>
             <h2 className="text-3xl font-bold mb-8">Why Choose Bitcoin Self-Custody?</h2>
             <p className="text-xl text-muted-foreground mb-8">
               Self-custody gives you complete ownership and control over your Bitcoin, eliminating counterparty risk and ensuring your assets are truly yours.
             </p>
             <div className="grid md:grid-cols-2 gap-8 text-left">
-              <div>
-                <h3 className="text-xl font-semibold mb-4">No Counterparty Risk</h3>
-                <p className="text-muted-foreground">
-                  Your Bitcoin is not held by any third party, eliminating the risk of exchange hacks or regulatory seizure.
-                </p>
+              <div className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-green-500 mt-1" />
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">No Counterparty Risk</h3>
+                  <p className="text-muted-foreground">
+                    Your Bitcoin is not held by any third party, eliminating the risk of exchange hacks or regulatory seizure.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-4">Complete Ownership</h3>
-                <p className="text-muted-foreground">
-                  You own your private keys, meaning you have complete control and ownership of your Bitcoin.
-                </p>
+              <div className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-green-500 mt-1" />
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Complete Ownership</h3>
+                  <p className="text-muted-foreground">
+                    You own your private keys, meaning you have complete control and ownership of your Bitcoin.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-4">Privacy Protection</h3>
-                <p className="text-muted-foreground">
-                  Self-custody solutions provide enhanced privacy by keeping your Bitcoin holdings private.
-                </p>
+              <div className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-green-500 mt-1" />
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Privacy Protection</h3>
+                  <p className="text-muted-foreground">
+                    Self-custody solutions provide enhanced privacy by keeping your Bitcoin holdings private.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-4">24/7 Access</h3>
-                <p className="text-muted-foreground">
-                  Access your Bitcoin anytime, anywhere, without relying on third-party services or business hours.
-                </p>
+              <div className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-green-500 mt-1" />
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">24/7 Access</h3>
+                  <p className="text-muted-foreground">
+                    Access your Bitcoin anytime, anywhere, without relying on third-party services or business hours.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Getting Started Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">Getting Started</h2>
+            <Badge variant="outline" className="mb-4">Getting Started</Badge>
+            <h2 className="text-3xl font-bold mb-8">Ready to Secure Your Bitcoin?</h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Ready to secure your Bitcoin with self-custody? Learn more about our DeFi wallet and recovery solutions.
+              Learn more about our DeFi wallet and recovery solutions to get started with Bitcoin self-custody.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="grid md:grid-cols-2 gap-6">
               <Link href="/self-custody/defi-wallet">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer p-6">
+                <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
                   <CardHeader className="text-center">
-                    <CardTitle>DeFi Wallet</CardTitle>
-                    <CardDescription>Learn about our DeFi wallet integration</CardDescription>
+                    <CardTitle className="group-hover:text-primary transition-colors">
+                      DeFi Wallet
+                    </CardTitle>
+                    <CardDescription>
+                      Learn about our DeFi wallet integration and features
+                    </CardDescription>
                   </CardHeader>
+                  <CardContent className="text-center">
+                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
+                  </CardContent>
                 </Card>
               </Link>
               <Link href="/self-custody/recovery">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer p-6">
+                <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
                   <CardHeader className="text-center">
-                    <CardTitle>Recovery</CardTitle>
-                    <CardDescription>Understand our recovery mechanisms</CardDescription>
+                    <CardTitle className="group-hover:text-primary transition-colors">
+                      Recovery Solutions
+                    </CardTitle>
+                    <CardDescription>
+                      Understand our recovery mechanisms and backup options
+                    </CardDescription>
                   </CardHeader>
+                  <CardContent className="text-center">
+                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
+                  </CardContent>
                 </Card>
               </Link>
             </div>
@@ -125,28 +154,7 @@ export default function BitcoinPage() {
         </div>
       </section>
 
-      <footer className="border-t py-12">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <p className="text-sm text-muted-foreground">
-                © 2025 Muscadine Labs. All rights reserved.
-              </p>
-            </div>
-            <div className="flex flex-wrap justify-center gap-6">
-              <a href="https://muscadine.io/bitcoin" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
-                Bitcoin Solutions
-              </a>
-              <a href="https://muscadine.io/defi" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
-                DeFi Platform
-              </a>
-              <a href="https://muscadine.io" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
-                Main Website
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <Footer />
+    </PageLayout>
   );
 }

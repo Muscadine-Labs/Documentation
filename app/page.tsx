@@ -1,24 +1,27 @@
 import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Shield, TrendingUp, Coins } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { PageLayout } from "@/components/PageLayout";
+import { Footer } from "@/components/Footer";
+import { Shield, TrendingUp, Coins, ArrowRight } from "lucide-react";
 
 const quickLinks = [
   {
-    title: "Products",
-    description: "Learn about our DeFi vaults and yield strategies",
-    href: "/products",
+    title: "About",
+    description: "Learn about Muscadine Labs and our mission",
+    href: "/overview/about",
     icon: TrendingUp,
   },
   {
     title: "DeFi 101",
     description: "Understanding decentralized finance basics",
-    href: "/defi",
+    href: "/defi/what-is-defi",
     icon: Coins,
   },
   {
-    title: "Fees & Economics",
-    description: "Transparent fee structure and economics",
-    href: "/fees",
+    title: "Vaults",
+    description: "Automated yield strategies and vault architecture",
+    href: "/vault/about",
     icon: Shield,
   },
 ];
@@ -43,27 +46,34 @@ const featureCards = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold tracking-tight mb-6">
-            Muscadine Labs Documentation
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Learn about our DeFi vaults, yield strategies, and how we&apos;re building the future of decentralized finance.
-          </p>
+    <PageLayout 
+      title="Muscadine Labs Documentation"
+      description="Learn about our DeFi vaults, yield strategies, and how we're building the future of decentralized finance."
+    >
+      {/* Quick Links Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <Badge variant="outline" className="mb-4">Quick Start</Badge>
+            <h2 className="text-3xl font-bold mb-6">Get Started</h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              Explore our documentation and learn about DeFi with Muscadine Labs
+            </p>
+          </div>
           <div className="flex flex-wrap justify-center gap-4">
             {quickLinks.map((link) => (
               <Link key={link.href} href={link.href}>
-                <Card className="w-80 hover:shadow-lg transition-shadow cursor-pointer">
+                <Card className="w-80 hover:shadow-lg transition-shadow cursor-pointer group">
                   <CardHeader className="text-left">
                     <div className="flex items-center space-x-3">
                       <link.icon className="h-6 w-6 text-primary" />
-                      <CardTitle className="text-lg">{link.title}</CardTitle>
+                      <CardTitle className="text-lg group-hover:text-primary transition-colors">{link.title}</CardTitle>
                     </div>
                     <CardDescription>{link.description}</CardDescription>
                   </CardHeader>
+                  <CardContent className="text-center">
+                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
+                  </CardContent>
                 </Card>
               </Link>
             ))}
@@ -71,13 +81,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Feature Cards */}
+      {/* Feature Cards Section */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Key Concepts</h2>
+          <div className="text-center mb-12">
+            <Badge variant="outline" className="mb-4">Key Concepts</Badge>
+            <h2 className="text-3xl font-bold mb-6">Understanding DeFi</h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              Learn the fundamental concepts that power decentralized finance
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
             {featureCards.map((card) => (
-              <Card key={card.title} className="rounded-2xl shadow-sm">
+              <Card key={card.title} className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-8 text-center">
                   <div className="text-4xl mb-4">{card.icon}</div>
                   <h3 className="text-xl font-semibold mb-3">{card.title}</h3>
@@ -89,35 +105,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t py-12">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <p className="text-sm text-muted-foreground">
-                © 2025 Muscadine Labs. All rights reserved.
-              </p>
-            </div>
-            <div className="flex flex-wrap justify-center gap-6">
-              <Link href="/contracts" className="text-sm text-muted-foreground hover:text-foreground">
-                Contracts
-              </Link>
-              <Link href="/risk" className="text-sm text-muted-foreground hover:text-foreground">
-                Risk Framework
-              </Link>
-              <a href="https://muscadine.io" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
-                Main Website
-              </a>
-              <a href="https://app.muscadine.io" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
-                App
-              </a>
-              <a href="mailto:contact@muscadine.io" className="text-sm text-muted-foreground hover:text-foreground">
-                Contact
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <Footer />
+    </PageLayout>
   );
 }
