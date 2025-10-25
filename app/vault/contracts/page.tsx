@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Callout } from "@/components/Callout";
-import { ExternalLink, FileText, Shield, Wallet } from "lucide-react";
+import { ExternalLink, FileText, Shield } from "lucide-react";
 
 export default function ContractsPage() {
   return (

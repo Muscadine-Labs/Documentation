@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { PageLayout } from "@/components/PageLayout";
 import { Footer } from "@/components/Footer";
-import { Users, Github, Twitter, Mail, ArrowRight, Globe } from "lucide-react";
+import { Users, Github, Twitter, ArrowRight, Globe, Linkedin } from "lucide-react";
 
 const contributors = [
   {
@@ -126,18 +126,11 @@ export default function ContributorsPage() {
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        <Mail className="h-5 w-5" />
+                        <Linkedin className="h-5 w-5" />
                       </a>
                     )}
                   </div>
 
-                  {/* Contact Info */}
-                  {contributor.contact && (
-                    <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
-                      <Mail className="h-4 w-4" />
-                      <span>{contributor.contact}</span>
-                    </div>
-                  )}
                 </CardContent>
               </Card>
             ))}
