@@ -2,23 +2,23 @@ import Link from "next/link";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AlertTriangle, Shield, Zap, TrendingDown, AlertCircle } from "lucide-react";
 
-export default function DefiRisksPage() {
+export default function CryptoRisksPage() {
   return (
     <div className="min-h-screen bg-background">
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-5xl font-bold tracking-tight mb-6">
-            DeFi Risks
+            Crypto Risks
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Understanding the risks involved in decentralized finance is crucial for making informed decisions and protecting your investments.
+            Understanding the risks involved in cryptocurrency and blockchain technology is crucial for making informed decisions and protecting your investments.
           </p>
         </div>
       </section>
 
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Major DeFi Risk Categories</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Major Crypto Risk Categories</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="hover:shadow-lg transition-shadow border-red-200">
               <CardHeader>

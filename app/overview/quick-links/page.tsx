@@ -43,7 +43,7 @@ const internalLinks = [
   {
     title: "DeFi 101 - What is DeFi",
     description: "Introduction to decentralized finance",
-    href: "/defi/what-is-defi",
+    href: "/crypto/what-is-crypto",
     icon: ArrowRight,
   },
   {

@@ -8,17 +8,17 @@ export default function CoreConceptsPage() {
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-5xl font-bold tracking-tight mb-6">
-            DeFi Core Concepts
+            Crypto Core Concepts
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Understanding the fundamental building blocks of decentralized finance and how they work together to create a new financial ecosystem.
+            Understanding the fundamental building blocks of cryptocurrency and blockchain technology and how they work together to create a new financial ecosystem.
           </p>
         </div>
       </section>
 
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Essential DeFi Concepts</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Essential Crypto Concepts</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>

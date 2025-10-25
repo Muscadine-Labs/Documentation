@@ -8,17 +8,17 @@ export default function WalletSetupPage() {
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-5xl font-bold tracking-tight mb-6">
-            DeFi Wallet Setup
+            Crypto Wallet Setup
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Learn how to set up and secure your DeFi wallet to safely interact with decentralized finance protocols.
+            Learn how to set up and secure your crypto wallet to safely interact with cryptocurrency protocols.
           </p>
         </div>
       </section>
 
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Types of DeFi Wallets</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Types of Crypto Wallets</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader className="text-center">

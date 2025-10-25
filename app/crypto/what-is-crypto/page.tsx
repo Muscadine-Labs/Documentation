@@ -5,18 +5,18 @@ import { PageLayout } from "@/components/PageLayout";
 import { Footer } from "@/components/Footer";
 import { TrendingUp, Shield, Zap, Coins, Globe, ArrowRight, CheckCircle } from "lucide-react";
 
-export default function WhatIsDefiPage() {
+export default function WhatIsCryptoPage() {
   return (
     <PageLayout 
-      title="What is DeFi?"
-      description="Decentralized Finance (DeFi) is a revolutionary financial system built on blockchain technology that operates without traditional intermediaries like banks, enabling anyone to access financial services globally."
+      title="What is Crypto?"
+      description="Cryptocurrency and blockchain technology represent a revolutionary financial system that operates without traditional intermediaries like banks, enabling anyone to access financial services globally."
     >
       {/* Core Principles Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <Badge variant="outline" className="mb-4">Core Principles</Badge>
-            <h2 className="text-3xl font-bold mb-6">Core DeFi Principles</h2>
+            <h2 className="text-3xl font-bold mb-6">Core Crypto Principles</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="hover:shadow-lg transition-shadow">
@@ -26,7 +26,7 @@ export default function WhatIsDefiPage() {
                 </div>
                 <CardTitle className="text-lg">Permissionless</CardTitle>
                 <CardDescription>
-                  Anyone can access DeFi protocols without approval from centralized authorities or geographic restrictions.
+                  Anyone can access crypto protocols without approval from centralized authorities or geographic restrictions.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -63,15 +63,15 @@ export default function WhatIsDefiPage() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="outline" className="mb-4">Applications</Badge>
-            <h2 className="text-3xl font-bold mb-8">Key DeFi Applications</h2>
+            <h2 className="text-3xl font-bold mb-8">Key Crypto Applications</h2>
             <p className="text-xl text-muted-foreground mb-8">
-              DeFi encompasses a wide range of financial services that were traditionally only available through banks and financial institutions.
+              Crypto encompasses a wide range of financial services that were traditionally only available through banks and financial institutions.
             </p>
             <div className="grid md:grid-cols-2 gap-8 text-left">
               <div className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-500 mt-1" />
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Decentralized Exchanges (DEXs)</h3>
+                  <h3 className="text-xl font-semibold mb-2">Cryptocurrency Trading</h3>
                   <p className="text-muted-foreground">
                     Trade cryptocurrencies directly with other users without intermediaries, maintaining control of your assets.
                   </p>
@@ -89,9 +89,9 @@ export default function WhatIsDefiPage() {
               <div className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-500 mt-1" />
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Yield Farming</h3>
+                  <h3 className="text-xl font-semibold mb-2">Yield Generation</h3>
                   <p className="text-muted-foreground">
-                    Provide liquidity to DeFi protocols and earn rewards in return for supporting the ecosystem.
+                    Provide liquidity to crypto protocols and earn rewards in return for supporting the ecosystem.
                   </p>
                 </div>
               </div>
@@ -114,12 +114,12 @@ export default function WhatIsDefiPage() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <Badge variant="outline" className="mb-4">Comparison</Badge>
-            <h2 className="text-3xl font-bold mb-6">DeFi vs Traditional Finance</h2>
+            <h2 className="text-3xl font-bold mb-6">Crypto vs Traditional Finance</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
-                <CardTitle className="text-center text-green-600">DeFi Advantages</CardTitle>
+                <CardTitle className="text-center text-green-600">Crypto Advantages</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-start space-x-3">
@@ -197,9 +197,9 @@ export default function WhatIsDefiPage() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="outline" className="mb-4">Muscadine Labs</Badge>
-            <h2 className="text-3xl font-bold mb-8">Muscadine Labs & DeFi</h2>
+            <h2 className="text-3xl font-bold mb-8">Muscadine Labs & Crypto</h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Muscadine Labs provides secure DeFi solutions that combine the benefits of decentralized finance with robust security measures and self-custody options.
+              Muscadine Labs provides secure crypto solutions that combine the benefits of cryptocurrency with robust security measures and self-custody options.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="hover:shadow-lg transition-shadow">
@@ -207,8 +207,8 @@ export default function WhatIsDefiPage() {
                   <div className="flex justify-center mb-4">
                     <Coins className="h-8 w-8 text-primary" />
                   </div>
-                  <CardTitle>Bitcoin DeFi</CardTitle>
-                  <CardDescription>Access DeFi opportunities with Bitcoin while maintaining self-custody</CardDescription>
+                  <CardTitle>Bitcoin Solutions</CardTitle>
+                  <CardDescription>Access crypto opportunities with Bitcoin while maintaining self-custody</CardDescription>
                 </CardHeader>
               </Card>
               <Card className="hover:shadow-lg transition-shadow">
@@ -226,7 +226,7 @@ export default function WhatIsDefiPage() {
                     <TrendingUp className="h-8 w-8 text-primary" />
                   </div>
                   <CardTitle>Risk Management</CardTitle>
-                  <CardDescription>Comprehensive risk frameworks for safe DeFi participation</CardDescription>
+                  <CardDescription>Comprehensive risk frameworks for safe crypto participation</CardDescription>
                 </CardHeader>
               </Card>
             </div>
@@ -241,24 +241,24 @@ export default function WhatIsDefiPage() {
             <Badge variant="outline" className="mb-4">Continue Learning</Badge>
             <h2 className="text-3xl font-bold mb-8">Learn More</h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Continue your DeFi education with our comprehensive guides and resources.
+              Continue your crypto education with our comprehensive guides and resources.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/defi/core-concepts">
+              <Link href="/crypto/core-concepts">
                 <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
                   <CardHeader className="text-center">
                     <CardTitle className="group-hover:text-primary transition-colors">Core Concepts</CardTitle>
-                    <CardDescription>Dive deeper into DeFi fundamentals</CardDescription>
+                    <CardDescription>Dive deeper into crypto fundamentals</CardDescription>
                   </CardHeader>
                   <CardContent className="text-center">
                     <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
                   </CardContent>
                 </Card>
               </Link>
-              <Link href="/defi/risks">
+              <Link href="/crypto/risks">
                 <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
                   <CardHeader className="text-center">
-                    <CardTitle className="group-hover:text-primary transition-colors">DeFi Risks</CardTitle>
+                    <CardTitle className="group-hover:text-primary transition-colors">Crypto Risks</CardTitle>
                     <CardDescription>Understand the risks involved</CardDescription>
                   </CardHeader>
                   <CardContent className="text-center">
@@ -266,11 +266,11 @@ export default function WhatIsDefiPage() {
                   </CardContent>
                 </Card>
               </Link>
-              <Link href="/defi/wallet-setup">
+              <Link href="/crypto/wallet-setup">
                 <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
                   <CardHeader className="text-center">
                     <CardTitle className="group-hover:text-primary transition-colors">Wallet Setup</CardTitle>
-                    <CardDescription>Get started with DeFi wallets</CardDescription>
+                    <CardDescription>Get started with crypto wallets</CardDescription>
                   </CardHeader>
                   <CardContent className="text-center">
                     <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />

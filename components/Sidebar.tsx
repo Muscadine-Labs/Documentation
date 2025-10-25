@@ -49,27 +49,27 @@ const navigation = {
     ],
   },
   defi101: {
-    name: "DeFi 101",
+    name: "Crypto 101",
     icon: BookOpen,
     items: [
       {
-        name: "What Is DeFi?",
-        href: "/defi/what-is-defi",
+        name: "What Is Crypto?",
+        href: "/crypto/what-is-crypto",
         icon: BookOpen,
       },
       {
         name: "Core Concepts",
-        href: "/defi/core-concepts",
+        href: "/crypto/core-concepts",
         icon: TrendingUp,
       },
       {
         name: "Risks",
-        href: "/defi/risks",
+        href: "/crypto/risks",
         icon: Shield,
       },
       {
         name: "Wallet Setup",
-        href: "/defi/wallet-setup",
+        href: "/crypto/wallet-setup",
         icon: Wallet,
       },
     ],
@@ -170,8 +170,14 @@ const navigation = {
         href: "/legal/privacy",
         icon: FileCheck,
       },
+    ],
+  },
+  contact: {
+    name: "Contact",
+    icon: Phone,
+    items: [
       {
-        name: "Contact",
+        name: "Contact & Support",
         href: "/contact",
         icon: Phone,
       },
@@ -189,6 +195,7 @@ export function Sidebar() {
     'products-self-custody-solutions': false,
     'products-roadmap': false,
     legalCompliance: false,
+    contact: false,
   });
 
   const toggleSection = (section: string) => {
@@ -360,6 +367,13 @@ export function Sidebar() {
         <div className="px-6 py-4">
           <nav className="space-y-2">
             <CollapsibleSection sectionKey="legalCompliance" section={navigation.legalCompliance} />
+          </nav>
+        </div>
+
+        {/* Contact Section */}
+        <div className="px-6 py-4">
+          <nav className="space-y-2">
+            <CollapsibleSection sectionKey="contact" section={navigation.contact} />
           </nav>
         </div>
       </div>
