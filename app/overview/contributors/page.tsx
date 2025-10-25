@@ -16,6 +16,15 @@ const contributors = [
     avatar: "/avatars/nicholas.jpg",
   },
   {
+    name: "Ignas Panavas",
+    role: "Co-Founder & CTO",
+    description: "Driving technical innovation and building secure infrastructure for Muscadine Labs",
+    github: "https://github.com/ignaspanavas",
+    twitter: "#",
+    linkedin: "#",
+    avatar: "/avatars/ignas.jpg",
+  },
+  {
     name: "Muscadine Labs Team",
     role: "Core Development",
     description: "Building secure vault infrastructure, smart contract systems, and self-custody solutions",
