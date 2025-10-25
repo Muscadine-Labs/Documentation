@@ -20,14 +20,14 @@ const quickLinks = [
   {
     title: "GitHub Repository",
     description: "Open source code and development resources",
-    href: "#",
+    href: "https://github.com/Muscadine-Labs",
     external: true,
     icon: Github,
   },
   {
     title: "Contact Support",
     description: "Get help and support from our team",
-    href: "mailto:contact@muscadine.io",
+    href: "https://www.muscadine.io/contact",
     external: true,
     icon: Mail,
   },
@@ -35,27 +35,27 @@ const quickLinks = [
 
 const internalLinks = [
   {
-    title: "Getting Started",
-    description: "New to Muscadine? Start here",
-    href: "/welcome",
+    title: "About",
+    description: "Learn about Muscadine Labs",
+    href: "/overview/about",
     icon: ArrowRight,
   },
   {
-    title: "Vault Overview",
+    title: "DeFi 101 - What is DeFi",
+    description: "Introduction to decentralized finance",
+    href: "/defi/what-is-defi",
+    icon: ArrowRight,
+  },
+  {
+    title: "Vault About",
     description: "Learn about our automated vault strategies",
-    href: "/products/overview",
+    href: "/vault/about",
     icon: ArrowRight,
   },
   {
-    title: "Risk Framework",
-    description: "Understand our risk management approach",
-    href: "/risk",
-    icon: ArrowRight,
-  },
-  {
-    title: "Contracts",
-    description: "Smart contract addresses and verification",
-    href: "/contracts",
+    title: "Self Custody About",
+    description: "Understanding self-custody and financial sovereignty",
+    href: "/self-custody/about",
     icon: ArrowRight,
   },
 ];
@@ -78,7 +78,7 @@ export default function QuickLinksPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20">
+      <section className="pt-20 pb-0">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-5xl font-bold tracking-tight mb-6">
             Quick Links

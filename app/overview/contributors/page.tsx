@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { PageLayout } from "@/components/PageLayout";
 import { Footer } from "@/components/Footer";
-import { Users, Github, Twitter, Mail, ArrowRight } from "lucide-react";
+import { Users, Github, Twitter, Mail, ArrowRight, Globe } from "lucide-react";
 
 const contributors = [
   {
@@ -11,6 +11,7 @@ const contributors = [
     role: "Founder & CEO",
     description: "Leading Muscadine Labs vision and strategy for DeFi innovation and financial self-sovereignty",
     github: "https://github.com/nicholasconnelly",
+    website: "https://nickconnelly.com",
     twitter: "#",
     linkedin: "#",
     avatar: "/avatars/nicholas.jpg",
@@ -20,44 +21,28 @@ const contributors = [
     role: "Co-Founder & CTO",
     description: "Driving technical innovation and building secure infrastructure for Muscadine Labs",
     github: "https://github.com/ignaspanavas",
+    website: "https://ignaspanavas.com",
     twitter: "#",
     linkedin: "#",
     avatar: "/avatars/ignas.jpg",
   },
-  {
-    name: "Muscadine Labs Team",
-    role: "Core Development",
-    description: "Building secure vault infrastructure, smart contract systems, and self-custody solutions",
-    github: "https://github.com/Muscadine-Labs",
-    contact: "contact@muscadine.io",
-  },
-  {
-    name: "Community Contributors",
-    role: "Open Source",
-    description: "Community members contributing to documentation, testing, and feedback across our ecosystem",
-    github: "https://github.com/Muscadine-Labs/Documentation",
-    contact: "GitHub Issues",
-  },
 ];
 
-const communityLinks = [
+const advisors = [
   {
-    name: "GitHub Repository",
-    description: "Open source code and issue tracking",
-    href: "https://github.com/Muscadine-Labs",
-    icon: Github,
+    name: "Nathan Asfaw",
+    role: "Computer Science Expert",
+    description: "Providing technical expertise and guidance on computer science principles",
   },
   {
-    name: "Documentation",
-    description: "This documentation site",
-    href: "https://github.com/Muscadine-Labs/Documentation",
-    icon: Users,
+    name: "Ayush Shrestha", 
+    role: "Marketing Advisor",
+    description: "Strategic marketing advice and brand development guidance",
   },
   {
-    name: "Main Website",
-    description: "Muscadine Labs official website",
-    href: "https://www.muscadine.io",
-    icon: Twitter,
+    name: "Marco Walther",
+    role: "Workflow Analyst", 
+    description: "Process optimization and workflow analysis expertise",
   },
 ];
 
@@ -70,13 +55,9 @@ export default function ContributorsPage() {
       {/* Contributors Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6">
             <Badge variant="outline" className="mb-4">Our Team</Badge>
-            <h2 className="text-3xl font-bold mb-6">Our Contributors</h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Meet the people building Muscadine Labs and learn how you can contribute to our mission of financial self-sovereignty.
-            </p>
-            <div className="bg-muted/30 rounded-lg p-6 mb-8">
+            <div className="bg-muted/30 rounded-lg p-6 mb-4">
               <p className="text-muted-foreground mb-4">
                 For detailed team information and company background, visit our main website:
               </p>
@@ -91,7 +72,7 @@ export default function ContributorsPage() {
               </a>
             </div>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {contributors.map((contributor) => (
               <Card key={contributor.name} className="hover:shadow-lg transition-shadow">
                 <CardHeader className="text-center">
@@ -116,6 +97,16 @@ export default function ContributorsPage() {
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
                         <Github className="h-5 w-5" />
+                      </a>
+                    )}
+                    {contributor.website && (
+                      <a 
+                        href={contributor.website} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <Globe className="h-5 w-5" />
                       </a>
                     )}
                     {contributor.twitter && contributor.twitter !== "#" && (
@@ -154,40 +145,32 @@ export default function ContributorsPage() {
         </div>
       </section>
 
-      {/* Community Links Section */}
+      {/* Advisors Section */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <Badge variant="outline" className="mb-4">Get Involved</Badge>
-            <h2 className="text-3xl font-bold mb-6">Join Our Community</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Connect with us and contribute to the future of DeFi
+            <Badge variant="outline" className="mb-4">Contributors to Muscadine</Badge>
+            <h2 className="text-3xl font-bold mb-6">We are very grateful</h2>
+            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              These people helped Muscadine on its journey with their advice and ideas.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            {communityLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block"
-              >
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer group h-full">
-                  <CardHeader className="text-center">
-                    <div className="flex justify-center mb-4">
-                      <link.icon className="h-8 w-8 text-primary" />
-                    </div>
-                    <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                      {link.name}
-                    </CardTitle>
-                    <CardDescription>{link.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
-                  </CardContent>
-                </Card>
-              </a>
+            {advisors.map((advisor) => (
+              <Card key={advisor.name} className="hover:shadow-lg transition-shadow">
+                <CardHeader className="text-center">
+                  <div className="flex justify-center mb-4">
+                    <Users className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">{advisor.name}</CardTitle>
+                  <CardDescription className="text-primary font-medium">
+                    {advisor.role}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-muted-foreground">{advisor.description}</p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

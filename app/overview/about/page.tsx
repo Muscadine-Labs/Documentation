@@ -114,55 +114,7 @@ export default function WelcomePage() {
               Here are some recommended starting points for your journey with Muscadine Labs:
             </p>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-              <Link href="/defi/what-is-defi">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
-                  <CardHeader className="text-center">
-                    <CardTitle className="group-hover:text-primary transition-colors">
-                      DeFi 101
-                    </CardTitle>
-                    <CardDescription>
-                      Get familiar with decentralized finance basics
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
-                  </CardContent>
-                </Card>
-              </Link>
-
-              <Link href="/fees/performance-fee">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
-                  <CardHeader className="text-center">
-                    <CardTitle className="group-hover:text-primary transition-colors">
-                      Fees & Economics
-                    </CardTitle>
-                    <CardDescription>
-                      Understand our transparent fee structure
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
-                  </CardContent>
-                </Card>
-              </Link>
-
-              <Link href="/vault-architecture/how-vaults-work">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
-                  <CardHeader className="text-center">
-                    <CardTitle className="group-hover:text-primary transition-colors">
-                      How Vaults Work
-                    </CardTitle>
-                    <CardDescription>
-                      Understand our automated strategies in detail
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
-                  </CardContent>
-                </Card>
-              </Link>
-
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
               <Link href="/vault/about">
                 <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
                   <CardHeader className="text-center">
@@ -202,67 +154,10 @@ export default function WelcomePage() {
               </Link>
             </div>
 
-            <Callout type="info">
-              <strong>New to DeFi?</strong> We recommend starting with our <Link href="/defi/what-is-defi" className="underline hover:no-underline">DeFi 101</Link> section to understand the fundamentals before diving into our specific products.
-            </Callout>
           </div>
         </div>
       </section>
 
-      {/* Contact & Support Section */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">Contact & Support</Badge>
-              <h2 className="text-3xl font-bold mb-6">We're Here to Help</h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Have questions or need help? We're here to assist you on your DeFi journey.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              <a href="https://www.muscadine.io/contact" target="_blank" rel="noopener noreferrer">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
-                  <CardHeader className="text-center">
-                    <div className="flex justify-center mb-4">
-                      <Mail className="h-8 w-8 text-primary" />
-                    </div>
-                    <CardTitle className="group-hover:text-primary transition-colors">Contact Us</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <p className="text-muted-foreground">
-                      Get in touch with our team
-                    </p>
-                  </CardContent>
-                </Card>
-              </a>
-
-              <a href="https://github.com/Muscadine-Labs" target="_blank" rel="noopener noreferrer">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
-                  <CardHeader className="text-center">
-                    <div className="flex justify-center mb-4">
-                      <Code className="h-8 w-8 text-primary" />
-                    </div>
-                    <CardTitle className="group-hover:text-primary transition-colors">Open Source</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <p className="text-muted-foreground">
-                      View our open-source code and smart contracts
-                    </p>
-                  </CardContent>
-                </Card>
-              </a>
-            </div>
-
-            <div className="text-center mt-12">
-              <p className="text-sm text-muted-foreground italic">
-                This documentation is regularly updated to reflect the latest developments in our platform and the broader DeFi ecosystem.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </PageLayout>
