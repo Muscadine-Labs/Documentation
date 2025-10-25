@@ -150,7 +150,7 @@ export default function CoreConceptsPage() {
                 </div>
                 <CardTitle>Lending Protocols</CardTitle>
                 <CardDescription>
-                  Enable users to lend assets and earn interest, or borrow against collateral. Examples include Aave, Compound, and Venus.
+                  Enable users to lend assets and earn interest, or borrow against collateral. Examples include Aave, Morpho, and Moonwell.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -162,7 +162,7 @@ export default function CoreConceptsPage() {
                 </div>
                 <CardTitle>DEXs (Decentralized Exchanges)</CardTitle>
                 <CardDescription>
-                  Allow peer-to-peer trading without intermediaries. Examples include Uniswap, SushiSwap, and PancakeSwap.
+                  Allow peer-to-peer trading without intermediaries. Examples include Uniswap and Aerodrome.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -174,7 +174,7 @@ export default function CoreConceptsPage() {
                 </div>
                 <CardTitle>Yield Aggregators</CardTitle>
                 <CardDescription>
-                  Automatically move funds between protocols to maximize yields. Examples include Yearn Finance, Beefy Finance, and Muscadine Labs.
+                  Automatically move funds between protocols to maximize yields. Examples include Beefy Finance and Muscadine Labs.
                 </CardDescription>
               </CardHeader>
             </Card>
