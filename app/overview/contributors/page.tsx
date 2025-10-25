@@ -9,23 +9,23 @@ const contributors = [
   {
     name: "Nicholas Connelly",
     role: "Founder & CEO",
-    description: "Leading Muscadine Labs vision and strategy for DeFi innovation",
+    description: "Leading Muscadine Labs vision and strategy for DeFi innovation and financial self-sovereignty",
     github: "https://github.com/nicholasconnelly",
     twitter: "#",
     linkedin: "#",
     avatar: "/avatars/nicholas.jpg",
   },
   {
-    name: "Core Development Team",
-    role: "Engineering",
-    description: "Building secure vault infrastructure and smart contract systems",
+    name: "Muscadine Labs Team",
+    role: "Core Development",
+    description: "Building secure vault infrastructure, smart contract systems, and self-custody solutions",
     github: "https://github.com/Muscadine-Labs",
     contact: "contact@muscadine.io",
   },
   {
     name: "Community Contributors",
     role: "Open Source",
-    description: "Community members contributing to documentation, testing, and feedback",
+    description: "Community members contributing to documentation, testing, and feedback across our ecosystem",
     github: "https://github.com/Muscadine-Labs/Documentation",
     contact: "GitHub Issues",
   },
@@ -64,6 +64,23 @@ export default function ContributorsPage() {
           <div className="text-center mb-12">
             <Badge variant="outline" className="mb-4">Our Team</Badge>
             <h2 className="text-3xl font-bold mb-6">Our Contributors</h2>
+            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              Meet the people building Muscadine Labs and learn how you can contribute to our mission of financial self-sovereignty.
+            </p>
+            <div className="bg-muted/30 rounded-lg p-6 mb-8">
+              <p className="text-muted-foreground mb-4">
+                For detailed team information and company background, visit our main website:
+              </p>
+              <a 
+                href="https://www.muscadine.io/about" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors font-medium"
+              >
+                <span>Learn more about Muscadine Labs</span>
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {contributors.map((contributor) => (
