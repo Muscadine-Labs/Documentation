@@ -37,7 +37,7 @@ export default function UpcomingFeaturesPage() {
               </div>
 
               <p className="text-lg mb-8">
-                This flow chart is the vision for Muscadine, our V1 vaults are just the start, we are only able to supply to Morpho V1 markets, once V2 is created we would shift towards being able to supply to the most liquid and efficient markets, of any DeFi protocol (possibly on any blockchain).
+                We are open to any innovation that comes forth to us, we create solutions to fit our clients. This flow chart is the vision for Muscadine, our V1 vaults are just the start, we are only able to supply to Morpho V1 markets, once V2 is created we would shift towards being able to supply to the most liquid and efficient markets, of any DeFi protocol (possibly on any blockchain).
               </p>
 
               <p className="mb-6">
