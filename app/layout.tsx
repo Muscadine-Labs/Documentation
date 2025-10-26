@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   description: "Documentation for Muscadine Labs - DeFi vaults and yield strategies",
   keywords: ["DeFi", "vaults", "yield", "lending", "borrowing", "Muscadine"],
   authors: [{ name: "Muscadine Labs" }],
+  icons: {
+    icon: "/muscadinelogo.jpg",
+  },
   openGraph: {
     title: "Muscadine Labs Documentation",
     description: "Documentation for Muscadine Labs - DeFi vaults and yield strategies",

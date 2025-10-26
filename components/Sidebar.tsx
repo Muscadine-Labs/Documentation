@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { 
@@ -328,9 +329,16 @@ export function Sidebar() {
           href="https://muscadine.io" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-xl font-bold hover:text-sidebar-primary transition-colors"
+          className="flex items-center space-x-2 text-xl font-bold hover:text-sidebar-primary transition-colors"
         >
-          Muscadine Labs
+          <Image 
+            src="/muscadinelogo.jpg" 
+            alt="Muscadine Labs Logo" 
+            width={24} 
+            height={24}
+            className="rounded-sm"
+          />
+          <span>Muscadine Labs</span>
         </a>
         <p className="text-sm text-sidebar-foreground/70 mt-1">Documentation</p>
       </div>
