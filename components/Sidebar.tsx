@@ -181,7 +181,11 @@ const navigation = {
   },
 };
 
-export function Sidebar() {
+interface SidebarProps {
+  onNavigate?: () => void;
+}
+
+export function Sidebar({ onNavigate }: SidebarProps) {
   const pathname = usePathname();
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
     overview: true,
@@ -285,6 +289,7 @@ export function Sidebar() {
                               <Link
                                 key={subItem.name}
                                 href={subItem.href}
+                                onClick={onNavigate}
                                 className={`flex items-center space-x-3 px-3 py-2 rounded-md text-sm transition-colors ${
                                   isSubActive
                                     ? "bg-sidebar-accent text-sidebar-accent-foreground"
@@ -302,6 +307,7 @@ export function Sidebar() {
                   ) : (
                     <Link
                       href={item.href}
+                      onClick={onNavigate}
                       className={`flex items-center space-x-3 px-3 py-2 rounded-md text-sm transition-colors ${
                         isActive
                           ? "bg-sidebar-accent text-sidebar-accent-foreground"
@@ -329,6 +335,7 @@ export function Sidebar() {
           href="https://muscadine.io" 
           target="_blank" 
           rel="noopener noreferrer"
+          onClick={onNavigate}
           className="flex items-center space-x-2 text-xl font-bold hover:text-sidebar-primary transition-colors"
         >
           <Image 
