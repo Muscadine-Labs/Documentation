@@ -2,7 +2,7 @@ import { PageLayout } from "@/components/PageLayout";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Shield, TrendingUp, DollarSign, Building2, Target, Zap, Layers, ArrowRight, CheckCircle, Coins, Bitcoin, Zap as ZapIcon } from "lucide-react";
+import { Shield, TrendingUp, DollarSign, Building2, Target, Zap, Layers, Coins, Bitcoin, Zap as ZapIcon } from "lucide-react";
 
 export default function VaultsAboutPage() {
   return (

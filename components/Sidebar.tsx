@@ -9,6 +9,7 @@ import {
   Link as LinkIcon, 
   TrendingUp, 
   Shield, 
+  DollarSign,
   Info,
   Building2,
   BarChart3,

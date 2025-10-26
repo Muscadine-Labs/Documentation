@@ -7,9 +7,7 @@ import Link from "next/link";
 import { 
   Zap, 
   Users, 
-  ArrowRight, 
-  Mail, 
-  Code,
+  ArrowRight,
   CheckCircle
 } from "lucide-react";
 
