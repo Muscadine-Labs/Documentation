@@ -130,11 +130,6 @@ const navigation = {
             href: "/self-custody/defi-wallet",
             icon: Wallet,
           },
-          {
-            name: "Recovery",
-            href: "/self-custody/recovery",
-            icon: HardDrive,
-          },
         ],
       },
       {

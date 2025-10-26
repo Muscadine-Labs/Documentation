@@ -1,9 +1,8 @@
-import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { PageLayout } from "@/components/PageLayout";
 import { Footer } from "@/components/Footer";
-import { Shield, Key, HardDrive, CheckCircle, ArrowRight } from "lucide-react";
+import { Shield, Key, HardDrive, CheckCircle, Server, FileText } from "lucide-react";
 
 export default function BitcoinPage() {
   return (
@@ -11,145 +10,172 @@ export default function BitcoinPage() {
       title="Bitcoin Self-Custody"
       description="Secure your Bitcoin with Muscadine's self-custody solutions. Take full control of your private keys and maintain complete ownership of your digital assets."
     >
-      {/* Features Section */}
+      {/* Bitcoin Core Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <Badge variant="outline" className="mb-4">Features</Badge>
-            <h2 className="text-3xl font-bold mb-6">Bitcoin Self-Custody Features</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader className="text-center">
-                <div className="flex justify-center mb-4">
-                  <Key className="h-8 w-8 text-primary" />
-                </div>
-                <CardTitle className="text-lg">Private Key Control</CardTitle>
-                <CardDescription>
-                  You maintain complete control over your Bitcoin private keys. No third-party custody risks.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader className="text-center">
-                <div className="flex justify-center mb-4">
-                  <Shield className="h-8 w-8 text-primary" />
-                </div>
-                <CardTitle className="text-lg">Enhanced Security</CardTitle>
-                <CardDescription>
-                  Advanced security measures protect your Bitcoin holdings with industry-leading encryption.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader className="text-center">
-                <div className="flex justify-center mb-4">
-                  <HardDrive className="h-8 w-8 text-primary" />
-                </div>
-                <CardTitle className="text-lg">Recovery Options</CardTitle>
-                <CardDescription>
-                  Multiple recovery mechanisms ensure you can always access your Bitcoin when needed.
-                </CardDescription>
-              </CardHeader>
-            </Card>
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge variant="outline" className="mb-4">Bitcoin</Badge>
+            <h2 className="text-3xl font-bold mb-6">Bitcoin is at the Core</h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              Bitcoin is at the core of everything we do. It represents financial sovereignty, censorship resistance, and enduring value. At Muscadine, our Bitcoin Self-Custody solutions are designed for individuals who want to truly own their Bitcoin—not just hold an IOU on an exchange.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Section */}
+      {/* Wallet Support Section */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="outline" className="mb-4">Why Choose</Badge>
-            <h2 className="text-3xl font-bold mb-8">Why Choose Bitcoin Self-Custody?</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Self-custody gives you complete ownership and control over your Bitcoin, eliminating counterparty risk and ensuring your assets are truly yours.
-            </p>
-            <div className="grid md:grid-cols-2 gap-8 text-left">
-              <div className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-green-500 mt-1" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">No Counterparty Risk</h3>
-                  <p className="text-muted-foreground">
-                    Your Bitcoin is not held by any third party, eliminating the risk of exchange hacks or regulatory seizure.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-green-500 mt-1" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Complete Ownership</h3>
-                  <p className="text-muted-foreground">
-                    You own your private keys, meaning you have complete control and ownership of your Bitcoin.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-green-500 mt-1" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Privacy Protection</h3>
-                  <p className="text-muted-foreground">
-                    Self-custody solutions provide enhanced privacy by keeping your Bitcoin holdings private.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-green-500 mt-1" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">24/7 Access</h3>
-                  <p className="text-muted-foreground">
-                    Access your Bitcoin anytime, anywhere, without relying on third-party services or business hours.
-                  </p>
-                </div>
-              </div>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12">Secure Wallet Support</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader className="text-center">
+                  <div className="flex justify-center mb-4">
+                    <Server className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">Node Support</CardTitle>
+                  <CardDescription>
+                    Connect to our Bitcoin node for trustless verification and enhanced privacy.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader className="text-center">
+                  <div className="flex justify-center mb-4">
+                    <Shield className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">Hardware Wallets</CardTitle>
+                  <CardDescription>
+                    Secure your Bitcoin with industry-leading hardware wallet integration and support.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader className="text-center">
+                  <div className="flex justify-center mb-4">
+                    <FileText className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">Paper Backups</CardTitle>
+                  <CardDescription>
+                    Offline backup solutions for maximum security and long-term storage.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Getting Started Section */}
+      {/* Node Verification Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge variant="outline" className="mb-4">Trustless Verification</Badge>
+              <h2 className="text-3xl font-bold mb-6">Run Your Own Node</h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Users can verify every transaction themselves by connecting directly to our node—available at <a href="https://muscadine.io/node" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">muscadine.io/node</a>—ensuring that they operate trustlessly and independently of third parties.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Server className="h-6 w-6 text-primary" />
+                    <CardTitle>Enhanced Privacy</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Running your own node enhances privacy by eliminating reliance on external servers and third-party data providers.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-6 w-6 text-primary" />
+                    <CardTitle>Independent Verification</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Verify your own copy of Bitcoin's ledger, reinforcing your autonomy and ensuring complete trustlessness.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Advanced Features Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge variant="outline" className="mb-4">Advanced Features</Badge>
+              <h2 className="text-3xl font-bold mb-6">BIP-85 Key Generation</h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Our approach to Bitcoin self-custody integrates single, multi-sig, and paper-wallet options with BIP-85-based key generation for managing master and child wallets. This enables long-term wealth division and inheritance planning without ever compromising the root keys.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader className="text-center">
+                  <div className="flex justify-center mb-4">
+                    <Key className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">Single Wallet</CardTitle>
+                  <CardDescription>
+                    Secure single-signature wallet setup for individual Bitcoin management.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader className="text-center">
+                  <div className="flex justify-center mb-4">
+                    <Shield className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">Multi-Sig</CardTitle>
+                  <CardDescription>
+                    Enhanced security through multi-signature wallet configurations.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader className="text-center">
+                  <div className="flex justify-center mb-4">
+                    <HardDrive className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">Paper Wallets</CardTitle>
+                  <CardDescription>
+                    Offline paper wallet solutions for maximum security and inheritance planning.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Support Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="outline" className="mb-4">Getting Started</Badge>
-            <h2 className="text-3xl font-bold mb-8">Ready to Secure Your Bitcoin?</h2>
+            <Badge variant="outline" className="mb-4">Expert Support</Badge>
+            <h2 className="text-3xl font-bold mb-8">Comprehensive Bitcoin Security</h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Learn more about our DeFi wallet and recovery solutions to get started with Bitcoin self-custody.
+              For guidance on node setup, Sparrow configuration, and comprehensive Bitcoin security design, reach out to us directly. We'll help you implement the safest, most resilient Bitcoin framework possible.
             </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              <Link href="/self-custody/defi-wallet">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
-                  <CardHeader className="text-center">
-                    <CardTitle className="group-hover:text-primary transition-colors">
-                      DeFi Wallet
-                    </CardTitle>
-                    <CardDescription>
-                      Learn about our DeFi wallet integration and features
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
-                  </CardContent>
-                </Card>
-              </Link>
-              <Link href="/self-custody/recovery">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
-                  <CardHeader className="text-center">
-                    <CardTitle className="group-hover:text-primary transition-colors">
-                      Recovery Solutions
-                    </CardTitle>
-                    <CardDescription>
-                      Understand our recovery mechanisms and backup options
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
-                  </CardContent>
-                </Card>
-              </Link>
-            </div>
           </div>
         </div>
       </section>

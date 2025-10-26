@@ -2,7 +2,7 @@ import { PageLayout } from "@/components/PageLayout";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { DollarSign, TrendingUp, Shield, Calculator, Target, Eye, Zap } from "lucide-react";
+import { DollarSign, TrendingUp, Shield, Calculator, Target, Zap } from "lucide-react";
 
 export default function FeesPage() {
   return (
