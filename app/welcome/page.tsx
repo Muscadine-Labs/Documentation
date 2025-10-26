@@ -5,13 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { 
-  Shield, 
-  Eye, 
   Zap, 
   Users, 
   ArrowRight, 
   Mail, 
-  FileText, 
   Code,
   CheckCircle
 } from "lucide-react";

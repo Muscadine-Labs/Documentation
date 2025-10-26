@@ -2,7 +2,7 @@ import { PageLayout } from "@/components/PageLayout";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, FileText, Shield, Users, DollarSign, Eye, Lock } from "lucide-react";
+import { ExternalLink, Shield, Eye, Lock } from "lucide-react";
 
 export default function ContractsPage() {
   return (
