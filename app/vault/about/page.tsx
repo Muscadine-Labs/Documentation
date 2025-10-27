@@ -21,10 +21,10 @@ export default function VaultsAboutPage() {
             </div>
             
             <div className="mb-12">
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-left">
                 By leveraging Morpho's transparent and efficient vault architecture, we make it simple for individuals and institutions to earn real yield on their digital assets, without intermediaries or hidden risk.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed text-left">
                 When you deposit assets into a Muscadine Vault, your funds are automatically deployed across trustless, overcollateralized lending markets to generate optimized returns. Each vault is managed by smart contracts that allocate capital, harvest rewards, and rebalance positions in real time — so your assets are always working efficiently on-chain.
               </p>
             </div>
@@ -66,10 +66,12 @@ export default function VaultsAboutPage() {
       <section className="py-8">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">Our Vaults</Badge>
-              <h2 className="text-3xl font-bold mb-6">Three Distinct Investment Strategies</h2>
-              <p className="text-xl text-muted-foreground mb-8">
+            <div className="mb-12">
+              <div className="text-center">
+                <Badge variant="outline" className="mb-4">Our Vaults</Badge>
+                <h2 className="text-3xl font-bold mb-6">Three Distinct Investment Strategies</h2>
+              </div>
+              <p className="text-xl text-muted-foreground mb-8 text-left">
                 We currently offer three Muscadine Vaults — USDC, cbBTC, and ETH — each designed to fit a distinct investor profile.
               </p>
             </div>
@@ -125,19 +127,19 @@ export default function VaultsAboutPage() {
       <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6">
               <Badge variant="outline" className="mb-4">Our Mission</Badge>
               <h2 className="text-3xl font-bold mb-6">Restoring What Finance Should Be</h2>
             </div>
             
-            <div className="text-center mb-12">
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+            <div className="mb-12">
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8 text-left">
                 At Muscadine Labs, we created these vaults to restore what finance should be: transparent, aligned, and empowering.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-left">
                 Our mission is to make financial self-sovereignty practical — combining the rigor of institutional risk management with the freedom of decentralized ownership.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed text-left">
                 Built on the security of Morpho Vaults and deployed on Base, Muscadine Vaults give investors a trusted gateway to DeFi income — clear, efficient, and always under your control.
               </p>
             </div>

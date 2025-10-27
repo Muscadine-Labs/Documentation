@@ -13,10 +13,12 @@ export default function DefiWalletPage() {
       {/* DeFi Evolution Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="outline" className="mb-4">DeFi</Badge>
-            <h2 className="text-3xl font-bold mb-6">The Evolution of Finance</h2>
-            <p className="text-xl text-muted-foreground mb-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center">
+              <Badge variant="outline" className="mb-4">DeFi</Badge>
+              <h2 className="text-3xl font-bold mb-6">The Evolution of Finance</h2>
+            </div>
+            <p className="text-xl text-muted-foreground mb-8 text-left">
               Decentralized finance represents the evolution of traditional finance—transparent, programmable, and user-controlled. But with this freedom comes the responsibility of managing your own keys safely. Muscadine's DeFi Self-Custody solutions are built for those who want access to on-chain lending, borrowing, and yield strategies without sacrificing ownership.
             </p>
           </div>
@@ -119,10 +121,12 @@ export default function DefiWalletPage() {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">Key Management</Badge>
-              <h2 className="text-3xl font-bold mb-6">Safe Exposure Segmentation</h2>
-              <p className="text-xl text-muted-foreground mb-8">
+            <div className="mb-12">
+              <div className="text-center">
+                <Badge variant="outline" className="mb-4">Key Management</Badge>
+                <h2 className="text-3xl font-bold mb-6">Safe Exposure Segmentation</h2>
+              </div>
+              <p className="text-xl text-muted-foreground mb-8 text-left">
                 Our key-management model lets you safely segment exposure using multi-wallet setups, paper vaults, or BIP-85 child keys. This structure allows you to participate in DeFi while minimizing systemic risk and maintaining control of your funds at all times.
               </p>
             </div>

@@ -10,7 +10,7 @@ interface FooterProps {
 
 export function Footer({ links = [] }: FooterProps) {
   const defaultLinks = [
-    { label: "Contact", href: "mailto:contact@muscadine.io", external: true },
+    { label: "Contact", href: "https://muscadine.io/contact", external: true },
     { label: "Website", href: "https://muscadine.io", external: true },
   ];
 

@@ -1,7 +1,7 @@
 import { PageLayout } from "@/components/PageLayout";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Linkedin, Github, ExternalLink } from "lucide-react";
+import { Mail, Linkedin, Github, ExternalLink, Twitter } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -18,6 +18,30 @@ export default function ContactPage() {
             </p>
           </div>
 
+          {/* Website - Full Width */}
+          <Card className="hover:shadow-lg transition-shadow mb-8">
+            <CardHeader>
+              <div className="flex items-center space-x-3">
+                <ExternalLink className="h-6 w-6 text-primary" />
+                <CardTitle>Website</CardTitle>
+              </div>
+              <CardDescription>
+                Visit our main website
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <a 
+                href="https://muscadine.io/contact" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:underline font-medium"
+              >
+                muscadine.io/contact
+              </a>
+            </CardContent>
+          </Card>
+
+          {/* Other 4 cards in 2x2 grid */}
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
@@ -42,21 +66,21 @@ export default function ContactPage() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="flex items-center space-x-3">
-                  <ExternalLink className="h-6 w-6 text-primary" />
-                  <CardTitle>Website</CardTitle>
+                  <Twitter className="h-6 w-6 text-primary" />
+                  <CardTitle>X (Twitter)</CardTitle>
                 </div>
                 <CardDescription>
-                  Visit our main website
+                  Follow us on X for updates
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <a 
-                  href="https://muscadine.io/contact" 
+                  href="https://x.com/muscadinelabs" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-primary hover:underline font-medium"
                 >
-                  muscadine.io/contact
+                  @muscadinelabs
                 </a>
               </CardContent>
             </Card>

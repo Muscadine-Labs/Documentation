@@ -55,9 +55,11 @@ export default function ContributorsPage() {
       {/* Contributors Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-6">
-            <Badge variant="outline" className="mb-4">Our Team</Badge>
-            <div className="bg-muted/30 rounded-lg p-6 mb-4">
+          <div className="mb-6">
+            <div className="text-center">
+              <Badge variant="outline" className="mb-4">Our Team</Badge>
+            </div>
+            <div className="bg-muted/30 rounded-lg p-6 mb-4 text-center">
               <p className="text-muted-foreground mb-4">
                 For detailed team information and company background, visit our main website:
               </p>
@@ -141,12 +143,14 @@ export default function ContributorsPage() {
       {/* Advisors Section */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <Badge variant="outline" className="mb-4">Contributors to Muscadine</Badge>
-            <h2 className="text-3xl font-bold mb-6">We are very grateful</h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              These people helped Muscadine on its journey with their advice and ideas.
-            </p>
+          <div className="mb-12">
+            <div className="text-center">
+              <Badge variant="outline" className="mb-4">Contributors to Muscadine</Badge>
+              <h2 className="text-3xl font-bold mb-6">We are very grateful</h2>
+              <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+                These people helped Muscadine on its journey with their advice and ideas.
+              </p>
+            </div>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {advisors.map((advisor) => (

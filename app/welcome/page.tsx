@@ -23,10 +23,12 @@ export default function WelcomePage() {
       <section className="py-8">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">About Us</Badge>
-              <h2 className="text-3xl font-bold mb-6">What is Muscadine Labs?</h2>
-              <p className="text-xl text-muted-foreground mb-8">
+            <div className="mb-12">
+              <div className="text-center">
+                <Badge variant="outline" className="mb-4">About Us</Badge>
+                <h2 className="text-3xl font-bold mb-6">What is Muscadine Labs?</h2>
+              </div>
+              <p className="text-xl text-muted-foreground mb-8 text-left">
                 At Muscadine Labs, we're building tools for financial self-sovereignty — empowering individuals to take back control of their financial future. We believe financial independence should belong to everyone, not just institutions. Through Bitcoin security, self-custody, and accessible DeFi solutions, we help people become their own bank and thrive in a system without middlemen.
               </p>
             </div>

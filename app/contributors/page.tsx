@@ -82,10 +82,12 @@ export default function ContributorsPage() {
       {/* Community Links Section */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6">
             <Badge variant="outline" className="mb-4">Get Involved</Badge>
             <h2 className="text-3xl font-bold mb-6">Join Our Community</h2>
-            <p className="text-xl text-muted-foreground mb-8">
+          </div>
+          <div className="mb-8">
+            <p className="text-xl text-muted-foreground text-left">
               Connect with us and contribute to the future of DeFi
             </p>
           </div>

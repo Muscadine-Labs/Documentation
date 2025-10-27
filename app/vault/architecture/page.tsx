@@ -128,16 +128,16 @@ export default function VaultArchitecturePage() {
       <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6">
               <Badge variant="outline" className="mb-4">Best of Both Worlds</Badge>
               <h2 className="text-3xl font-bold mb-6">Efficiency Meets Discipline</h2>
             </div>
             
-            <div className="text-center mb-12">
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+            <div className="mb-12">
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8 text-left">
                 This design gives Muscadine Vaults the best of both worlds: the efficiency and transparency of decentralized finance, and the discipline of traditional portfolio management.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed text-left">
                 Deposits remain fully liquid, yield accrues automatically, and all activity is verifiable on-chain — a secure foundation for sustainable, self-custodied income.
               </p>
             </div>

@@ -14,10 +14,12 @@ export default function SelfCustodyAboutPage() {
       <section className="py-8">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6">
               <Badge variant="outline" className="mb-4">Self-Custody</Badge>
               <h2 className="text-3xl font-bold mb-6">Financial Self-Sovereignty</h2>
-              <p className="text-xl text-muted-foreground mb-8">
+            </div>
+            <div className="mb-12">
+              <p className="text-xl text-muted-foreground mb-8 text-left">
                 At Muscadine we believe financial self-sovereignty is fundamental. Our Self-Custody Solutions platform empowers users to take full control of their private keys and digital wealth—whether you're managing Bitcoin, participating in DeFi, or simply planning generational wealth transfer.
               </p>
             </div>
@@ -96,12 +98,16 @@ export default function SelfCustodyAboutPage() {
       {/* Benefits Section */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="outline" className="mb-4">Benefits</Badge>
-            <h2 className="text-3xl font-bold mb-8">Why Choose Self-Custody?</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Self-custody gives you complete ownership and control over your digital assets, eliminating counterparty risk and ensuring your assets are truly yours.
-            </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-6">
+              <Badge variant="outline" className="mb-4">Benefits</Badge>
+              <h2 className="text-3xl font-bold mb-6">Why Choose Self-Custody?</h2>
+            </div>
+            <div className="mb-8">
+              <p className="text-xl text-muted-foreground text-left">
+                Self-custody gives you complete ownership and control over your digital assets, eliminating counterparty risk and ensuring your assets are truly yours.
+              </p>
+            </div>
             <div className="grid md:grid-cols-2 gap-8 text-left">
               <div className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-500 mt-1" />
