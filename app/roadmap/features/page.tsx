@@ -56,6 +56,82 @@ export default function UpcomingFeaturesPage() {
         </div>
       </section>
 
+      {/* Principles Section */}
+      <section className="py-16 bg-neutral-50 dark:bg-neutral-900">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="prose prose-neutral dark:prose-invert max-w-none">
+              <div className="text-center mb-12">
+                <Badge variant="outline" className="mb-4">Architecture & Risk Management</Badge>
+                <h2 className="text-3xl font-bold mb-6">Core Principles</h2>
+              </div>
+
+              <div className="space-y-8">
+                {/* Trustless Architecture */}
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">Trustless Architecture</h3>
+                  <p className="mb-4">
+                    Systems should be fully trustless, minimizing reliance on foundations, governance committees, or centralized decision-makers. These dependencies often introduce bottlenecks, misaligned incentives, and security risks.
+                  </p>
+                  <p className="mb-0">
+                    <strong>Solution:</strong> Implement AI agents to autonomously manage vaults, curate assets, and execute risk-management decisions without human intermediaries.
+                  </p>
+                </div>
+
+                {/* Risk and Leverage Management */}
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">Risk and Leverage Management</h3>
+                  <p className="mb-4">
+                    Over-leveraging is one of the most common causes of collapse in decentralized systems. Leverage can be a powerful tool, but when unchecked, it amplifies systemic fragility.
+                  </p>
+                  <p className="mb-0">
+                    <strong>Guideline:</strong> Ensure each vault or product maintains independent risk parameters, internal safety limits, and conservative collateralization ratios. Diversification across assets and strategies further reduces correlated risks.
+                  </p>
+                </div>
+
+                {/* Security Above All */}
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">Security Above All</h3>
+                  <p className="mb-4">
+                    The most catastrophic event in any protocol is a hack—whether due to smart-contract vulnerabilities, front-end exploits, or compromised infrastructure.
+                  </p>
+                  <p className="mb-0">
+                    <strong>Prevention:</strong> Employ rigorous audit cycles, formal verification where possible, continuous on-chain monitoring, and front-end threat modeling. A zero-error security culture must be non-negotiable.
+                  </p>
+                </div>
+
+                {/* Borrowing and Liquidity Controls */}
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">Borrowing and Liquidity Controls</h3>
+                  <p className="mb-4">
+                    If borrowing mechanisms are introduced from vaults, they must be responsibly designed. KYC-based borrowing can mitigate fraud and ensure accountability. For non-KYC designs, the protocol must address the oracle problem (accurate asset pricing) and liquidity constraints to prevent underwater loans. Set borrow caps and dynamic interest models to limit systemic exposure and maintain solvency during volatility.
+                  </p>
+                </div>
+
+                {/* Additional Guidelines */}
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">Additional Guidelines</h3>
+                  <ul className="space-y-3 mb-0">
+                    <li>
+                      <strong>Governance Minimization:</strong> Favor parameter auto-adjustment via on-chain metrics and AI agents over manual DAO votes.
+                    </li>
+                    <li>
+                      <strong>Transparency:</strong> Publish real-time health metrics for each vault (LTV, utilization, collateral composition) so users can monitor risk.
+                    </li>
+                    <li>
+                      <strong>Composability Considerations:</strong> Ensure integrations (e.g., with oracles, lending protocols, or DEXs) are modular and permissionless but include circuit-breakers to isolate failures.
+                    </li>
+                    <li>
+                      <strong>Documentation:</strong> Document and analyze every incident or parameter breach to build a long-term library of what not to repeat.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </PageLayout>
   );

@@ -2,7 +2,7 @@ import { PageLayout } from "@/components/PageLayout";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Shield, Eye, Lock } from "lucide-react";
+import { ExternalLink, Eye, Lock } from "lucide-react";
 
 export default function ContractsPage() {
   return (
@@ -281,57 +281,6 @@ export default function ContractsPage() {
                       View on BaseScan <ExternalLink className="h-4 w-4 ml-1" />
                     </a>
                   </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Transparency Section */}
-      <section className="py-8">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">Transparency and Verification</Badge>
-              <h2 className="text-3xl font-bold mb-6">Commitment to Security</h2>
-            </div>
-            
-            <div className="text-center mb-12">
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                All Muscadine contracts are audited, immutable, and publicly viewable on BaseScan. Every role and wallet is multi-signature controlled, ensuring no single entity has unilateral control over protocol operations.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                This transparent contract structure reflects Muscadine Labs' commitment to security, verifiability, and investor alignment — where governance is open, actions are traceable, and custody always remains on-chain.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3">
-                    <Eye className="h-6 w-6 text-primary" />
-                    <CardTitle>Open Governance</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Governance is open, actions are traceable, and all operations are transparently verifiable on-chain.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3">
-                    <Shield className="h-6 w-6 text-primary" />
-                    <CardTitle>On-Chain Custody</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Custody always remains on-chain with multi-signature protection ensuring security and verifiability.
-                  </CardDescription>
                 </CardContent>
               </Card>
             </div>
