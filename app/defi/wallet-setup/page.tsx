@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Wallet, Shield, Key, Smartphone, Monitor } from "lucide-react";
+import { Shield, Key, Smartphone, Monitor } from "lucide-react";
 
 export default function WalletSetupPage() {
   return (

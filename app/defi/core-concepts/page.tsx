@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { TrendingUp, Shield, Zap, Coins, Globe, BookOpen, AlertTriangle } from "lucide-react";
+import { TrendingUp, Shield, Zap, Coins, Globe, BookOpen } from "lucide-react";
 
 export default function CoreConceptsPage() {
   return (

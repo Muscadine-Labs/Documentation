@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { AlertTriangle, Shield, Zap, TrendingDown, AlertCircle } from "lucide-react";
+import { AlertTriangle, Shield, Zap, TrendingDown } from "lucide-react";
 
 export default function DefiRisksPage() {
   return (

@@ -1,4 +1,3 @@
-import { Callout } from "@/components/Callout";
 import { PageLayout } from "@/components/PageLayout";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
