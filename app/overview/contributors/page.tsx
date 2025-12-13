@@ -10,7 +10,7 @@ const contributors = [
     role: "Founder & CEO",
     description: "Leading Muscadine Labs vision and strategy for DeFi innovation and financial self-sovereignty",
     github: null,
-    website: "https://nickconnelly.com",
+    website: null,
     twitter: "#",
     linkedin: "#",
     avatar: "/avatars/nicholas.jpg",
