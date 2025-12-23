@@ -1,4 +1,4 @@
-import { CalendarClock, Sparkles, Wrench, Zap, Bitcoin, TrendingUp } from "lucide-react";
+import { CalendarClock, Sparkles, Wrench, Zap, Bitcoin, TrendingUp, Shield } from "lucide-react";
 
 import { Footer } from "@/components/Footer";
 import { PageLayout } from "@/components/PageLayout";
@@ -12,16 +12,16 @@ const shortTermRoadmap = [
     icon: Zap,
   },
   {
-    title: "Muscadine Vineyard Vaults",
-    description: "Creating new vineyard vault products to expand our yield strategy offerings.",
-    icon: TrendingUp,
+    title: "Improving risk management and market ratings",
+    description: "Enhanced risk assessment and market evaluation capabilities for better decision-making.",
+    icon: Shield,
   },
 ];
 
 const longTermRoadmap = [
   {
-    title: "Multi-protocol risk curation",
-    description: "Expand risk management capabilities beyond Morpho protocol to support many protocols.",
+    title: "Muscadine Vineyard Vaults & Multi-protocol risk curation",
+    description: "Creating new vineyard vault products to expand yield strategy offerings while expanding risk management capabilities beyond Morpho protocol to support many protocols.",
     icon: TrendingUp,
   },
   {

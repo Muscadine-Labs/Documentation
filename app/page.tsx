@@ -53,6 +53,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Mission & Purpose */}
+      <section className="py-12">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <Badge variant="outline" className="mb-4">Our Mission</Badge>
+              <h2 className="text-3xl font-semibold tracking-tight mb-4">Muscadine Labs Goal & Purpose</h2>
+            </div>
+            
+            <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6">
+              <p className="text-lg leading-relaxed">
+                Muscadine Labs' goal is to promote financial ownership through decentralized, transparent, and efficient solutions. We do this through DeFi, Bitcoin, and blockchain technology.
+              </p>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">DeFi Bank</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  At the core, we are both a DeFi Bank — we curate risk management through lending, where clients can self-custody their funds while we are only able to lend them out to markets. Clients earn more efficient capital than traditional banks, while we remain mindful of risk mitigation.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">Blockchain Infrastructure</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  We use blockchain rails (Morpho infrastructure to build vaults, then we allocate assets to different protocols/vaults to optimize yield and risk) and the Base chain because of the ease of distribution to on/offramp fiat through Coinbase, and our own website where users can easily access funds to connect to our vaults (savings accounts). Using blockchain, all of our strategies are transparent and easily accessible to see.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">Self-Custody Solutions</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  We also provide self-custody solutions, building generational systems for families/clients to be able to truly custody their own assets with no third party — unlike a bank, broker, or exchange where they hold your assets. This removes the friction for most people on the knowledge required to make these systems.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">Technology Innovation</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  As a technology company, we aspire to be at the wild west of innovation (smart contracts, AI agents, etc.), creating new methods and ways to generate wealth and income for our clients.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Quick start */}
       <section className="py-10 bg-muted/40">
         <div className="container mx-auto px-6">
