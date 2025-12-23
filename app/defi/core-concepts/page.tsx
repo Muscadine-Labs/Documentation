@@ -144,53 +144,6 @@ export default function CoreConceptsPage() {
         </div>
       </section>
 
-      <section className="py-12">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center space-y-2 mb-8">
-            <Badge variant="outline" className="mx-auto w-fit">Go deeper</Badge>
-            <h2 className="text-3xl font-semibold tracking-tight">Keep building the mental model</h2>
-            <p className="text-muted-foreground">
-              Move from concepts to practice with the next sections.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/defi/risks">
-              <Card className="h-full hover:-translate-y-1 hover:shadow-md transition-all">
-                <CardHeader className="space-y-2 text-center">
-                  <CardTitle className="text-lg">Risk categories</CardTitle>
-                  <CardDescription>Understand smart contract, market, and operational risk.</CardDescription>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground" />
-                </CardContent>
-              </Card>
-            </Link>
-            <Link href="/defi/wallet-setup">
-              <Card className="h-full hover:-translate-y-1 hover:shadow-md transition-all">
-                <CardHeader className="space-y-2 text-center">
-                  <CardTitle className="text-lg">Get a wallet ready</CardTitle>
-                  <CardDescription>Pick hardware or smart wallets and secure the keys.</CardDescription>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground" />
-                </CardContent>
-              </Card>
-            </Link>
-            <Link href="/vault/about">
-              <Card className="h-full hover:-translate-y-1 hover:shadow-md transition-all">
-                <CardHeader className="space-y-2 text-center">
-                  <CardTitle className="text-lg">See our vaults</CardTitle>
-                  <CardDescription>How Muscadine automates the concepts above.</CardDescription>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground" />
-                </CardContent>
-              </Card>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </PageLayout>
   );

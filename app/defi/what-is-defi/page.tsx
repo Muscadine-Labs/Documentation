@@ -37,23 +37,6 @@ const fundamentals = [
   },
 ];
 
-const learnNext = [
-  {
-    title: "Core concepts",
-    description: "Understand smart contracts, collateral, and liquidity.",
-    href: "/defi/core-concepts",
-  },
-  {
-    title: "DeFi risks",
-    description: "Market, contract, and operational risks to watch.",
-    href: "/defi/risks",
-  },
-  {
-    title: "Wallet setup",
-    description: "Create and secure a wallet before you deposit.",
-    href: "/defi/wallet-setup",
-  },
-];
 
 export default function WhatIsDefiPage() {
   return (
@@ -135,33 +118,6 @@ export default function WhatIsDefiPage() {
                 </CardDescription>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-10 bg-muted/40">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center space-y-2 mb-8">
-            <Badge variant="outline" className="mx-auto w-fit">Next steps</Badge>
-            <h2 className="text-3xl font-semibold tracking-tight">Keep learning</h2>
-            <p className="text-muted-foreground">
-              Go deeper into the mechanics, the risks, and how to get your wallet ready.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {learnNext.map((item) => (
-              <Link key={item.title} href={item.href}>
-                <Card className="h-full hover:-translate-y-1 hover:shadow-md transition-all">
-                  <CardHeader className="space-y-2 text-center">
-                    <CardTitle className="text-lg">{item.title}</CardTitle>
-                    <CardDescription>{item.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground" />
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
           </div>
         </div>
       </section>

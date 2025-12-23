@@ -133,7 +133,7 @@ export default function Home() {
                 <ul className="text-sm text-muted-foreground space-y-2">
                   <li className="flex items-center gap-2">
                     <ArrowRight className="h-4 w-4 text-primary" />
-                    How vault architecture, contracts, and roles fit together.
+                    How vault contracts and roles fit together.
                   </li>
                   <li className="flex items-center gap-2">
                     <ArrowRight className="h-4 w-4 text-primary" />
@@ -149,11 +149,6 @@ export default function Home() {
                     <Button size="sm">
                       View docs
                       <ArrowRight className="h-4 w-4" />
-                    </Button>
-                  </Link>
-                  <Link href="/vault/architecture">
-                    <Button size="sm" variant="outline">
-                      Architecture
                     </Button>
                   </Link>
                 </div>
@@ -244,70 +239,10 @@ export default function Home() {
                   <CardTitle>Efficiency built-in</CardTitle>
                 </div>
                 <CardDescription>
-                  Lean 2% performance fee, automation to reduce overhead, and simple entry points.
+                  Lean 5% performance fee, automation to reduce overhead, and simple entry points.
                 </CardDescription>
               </CardHeader>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Updates & resources */}
-      <section className="py-12">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto mb-8 text-center space-y-2">
-            <Badge variant="outline" className="mx-auto w-fit">Resources</Badge>
-            <h2 className="text-3xl font-semibold tracking-tight">Stay current</h2>
-            <p className="text-muted-foreground">
-              Track roadmap milestones, view contributor notes, and find shortcuts.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/roadmap/features">
-              <Card className="h-full hover:shadow-md transition-all">
-                <CardHeader className="flex items-start justify-between space-y-0">
-                  <div>
-                    <CardTitle className="text-lg">Roadmap</CardTitle>
-                    <CardDescription>What is shipping next and why.</CardDescription>
-                  </div>
-                  <Sparkles className="h-5 w-5 text-primary" />
-                </CardHeader>
-                <CardContent className="text-sm text-muted-foreground">
-                  View feature pipeline, governance updates, and upcoming releases.
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link href="/overview/contributors">
-              <Card className="h-full hover:shadow-md transition-all">
-                <CardHeader className="flex items-start justify-between space-y-0">
-                  <div>
-                    <CardTitle className="text-lg">Contributors</CardTitle>
-                    <CardDescription>Who maintains what.</CardDescription>
-                  </div>
-                  <Users className="h-5 w-5 text-primary" />
-                </CardHeader>
-                <CardContent className="text-sm text-muted-foreground">
-                  Contact the right owners for vaults, custody, and risk documentation.
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link href="/overview/quick-links">
-              <Card className="h-full hover:shadow-md transition-all">
-                <CardHeader className="flex items-start justify-between space-y-0">
-                  <div>
-                    <CardTitle className="text-lg">Quick links</CardTitle>
-                    <CardDescription>Fast jump-offs across docs.</CardDescription>
-                  </div>
-                  <ArrowRight className="h-5 w-5 text-primary" />
-                </CardHeader>
-                <CardContent className="text-sm text-muted-foreground">
-                  Bookmarks for common tasks: funding, withdrawals, disclosures, and FAQs.
-                </CardContent>
-              </Card>
-            </Link>
           </div>
         </div>
       </section>

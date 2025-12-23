@@ -1,53 +1,98 @@
-import { ExternalLink, Eye, Lock } from "lucide-react";
+import { Shield, Target, Zap, Clock, Eye, Lock, ExternalLink, Wallet } from "lucide-react";
 
 import { Footer } from "@/components/Footer";
 import { PageLayout } from "@/components/PageLayout";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-export default function ContractsPage() {
+export default function RolesContractsPage() {
   return (
     <PageLayout 
-      title="Smart Contracts"
-      description="Verified, multi-sig secured vault contracts on Base with clear role references."
+      title="Roles & Contracts"
+      description="Clear on-chain roles, verified contracts, multi-sig protections, and time locks to prevent unilateral changes."
     >
 
       <section className="py-10 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">On-Chain Transparency</Badge>
-              <h2 className="text-3xl font-semibold tracking-tight mb-6">Fully verifiable contracts</h2>
-            </div>
-            
-            <div className="mb-12">
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Vaults and roles are deployed on Base, secured by multi-sig safes, and verifiable on BaseScan. Addresses and explorers are listed below.
+            <div className="text-center mb-8">
+              <Badge variant="outline" className="mb-4">Governance Model</Badge>
+              <h2 className="text-3xl font-semibold tracking-tight mb-4">Clear, on-chain role system</h2>
+              <p className="text-lg text-muted-foreground">
+                Roles are enforced on-chain with multi-sig and time locks. No single actor can act alone.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
               <Card className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex items-center space-x-3">
-                    <Eye className="h-6 w-6 text-primary" />
-                    <CardTitle>Fully transparent</CardTitle>
+                    <Target className="h-6 w-6 text-primary" />
+                    <CardTitle>Curator</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
-                    <CardDescription>Audited, immutable, and viewable on BaseScan.</CardDescription>
+                  <CardDescription>
+                    Defines strategy, sets risk parameters, and approves markets.
+                  </CardDescription>
                 </CardContent>
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex items-center space-x-3">
-                    <Lock className="h-6 w-6 text-primary" />
-                    <CardTitle>Multi-signature secured</CardTitle>
+                    <Zap className="h-6 w-6 text-primary" />
+                    <CardTitle>Allocator</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
-                    <CardDescription>Roles and safes require multiple signers; no unilateral control.</CardDescription>
+                  <CardDescription>
+                    Executes rebalances and manages capital deployment.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Shield className="h-6 w-6 text-primary" />
+                    <CardTitle>Guardian</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Can pause operations in emergencies to protect depositors.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Shield className="h-6 w-6 text-primary" />
+                    <CardTitle>Multi-signature protection</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    All roles require multiple signatures for important operations.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Clock className="h-6 w-6 text-primary" />
+                    <CardTitle>Time-locked changes</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Critical changes are protected by time locks for review.
+                  </CardDescription>
                 </CardContent>
               </Card>
             </div>
@@ -55,23 +100,26 @@ export default function ContractsPage() {
         </div>
       </section>
 
-      {/* Vault Addresses Section */}
+      {/* Vault Contracts Section */}
       <section className="py-8">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">Vault Addresses</Badge>
-              <h2 className="text-3xl font-bold mb-6">Muscadine Vault Contracts</h2>
+            <div className="text-center mb-8">
+              <Badge variant="outline" className="mb-4">Vault Contracts</Badge>
+              <h2 className="text-3xl font-semibold tracking-tight mb-4">Verified vault addresses</h2>
+              <p className="text-muted-foreground">
+                All contracts are deployed on Base, secured by multi-sig safes, and verifiable on BaseScan.
+              </p>
             </div>
-            
-            <div className="space-y-6 mb-12">
+
+            <div className="space-y-4 mb-8">
               <Card>
                 <CardHeader>
                   <CardTitle>Muscadine USDC Vault</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="font-medium">Contract Address:</span>
+                    <span className="font-medium">Address:</span>
                     <code className="bg-muted px-2 py-1 rounded text-sm">0xf7e26Fa48A568b8b0038e104DfD8ABdf0f99074F</code>
                   </div>
                   <div className="flex items-center justify-between">
@@ -89,7 +137,7 @@ export default function ContractsPage() {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="font-medium">Contract Address:</span>
+                    <span className="font-medium">Address:</span>
                     <code className="bg-muted px-2 py-1 rounded text-sm">0xAeCc8113a7bD0CFAF7000EA7A31afFD4691ff3E9</code>
                   </div>
                   <div className="flex items-center justify-between">
@@ -107,7 +155,7 @@ export default function ContractsPage() {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="font-medium">Contract Address:</span>
+                    <span className="font-medium">Address:</span>
                     <code className="bg-muted px-2 py-1 rounded text-sm">0x21e0d366272798da3A977FEBA699FCB91959d120</code>
                   </div>
                   <div className="flex items-center justify-between">
@@ -123,23 +171,23 @@ export default function ContractsPage() {
         </div>
       </section>
 
-      {/* Vault Roles Section */}
+      {/* Role Contracts Section */}
       <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">Vault Roles</Badge>
-              <h2 className="text-3xl font-bold mb-6">Multi-Signature Governance</h2>
+            <div className="text-center mb-8">
+              <Badge variant="outline" className="mb-4">Role Contracts</Badge>
+              <h2 className="text-3xl font-semibold tracking-tight mb-4">Multi-signature governance</h2>
             </div>
             
-            <div className="space-y-6 mb-12">
+            <div className="space-y-4 mb-8">
               <Card>
                 <CardHeader>
                   <CardTitle>Owner (Safe Multisig)</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="font-medium">Contract Address:</span>
+                    <span className="font-medium">Address:</span>
                     <code className="bg-muted px-2 py-1 rounded text-sm">0x4E5D3ef790C75682ac4f6d4C1dDCc08b36fC100A</code>
                   </div>
                   <div className="flex items-center justify-between">
@@ -157,7 +205,7 @@ export default function ContractsPage() {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="font-medium">Contract Address:</span>
+                    <span className="font-medium">Address:</span>
                     <code className="bg-muted px-2 py-1 rounded text-sm">0x64e804eEF4F5a53272A8623b563ad2724E98A0a9</code>
                   </div>
                   <div className="flex items-center justify-between">
@@ -175,7 +223,7 @@ export default function ContractsPage() {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="font-medium">Contract Address:</span>
+                    <span className="font-medium">Address:</span>
                     <code className="bg-muted px-2 py-1 rounded text-sm">0xb6d1d784e9Bc3570546e231caCB52B4E0f1ED8b1</code>
                   </div>
                   <div className="flex items-center justify-between">
@@ -195,19 +243,19 @@ export default function ContractsPage() {
       <section className="py-8">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">Allocator</Badge>
-              <h2 className="text-3xl font-bold mb-6">Capital Deployment</h2>
+            <div className="text-center mb-8">
+              <Badge variant="outline" className="mb-4">Allocator Addresses</Badge>
+              <h2 className="text-3xl font-semibold tracking-tight mb-4">Capital deployment</h2>
             </div>
             
-            <div className="space-y-6 mb-12">
+            <div className="space-y-4 mb-8">
               <Card>
                 <CardHeader>
                   <CardTitle>Public Allocator (Morpho smart contract)</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Integrated directly with Morpho Vault infrastructure for automated capital deployment and rebalancing.
+                    Integrated with Morpho Vault infrastructure for automated capital deployment and rebalancing.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -218,7 +266,7 @@ export default function ContractsPage() {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="font-medium">Contract Address:</span>
+                    <span className="font-medium">Address:</span>
                     <code className="bg-muted px-2 py-1 rounded text-sm">0xf35B121bA32cBeaA27716abEfFb6B65a55f9B333</code>
                   </div>
                   <div className="flex items-center justify-between">
@@ -236,7 +284,7 @@ export default function ContractsPage() {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="font-medium">Contract Address:</span>
+                    <span className="font-medium">Address:</span>
                     <code className="bg-muted px-2 py-1 rounded text-sm">0x0D5A708B651FeE1DAA0470431c4262ab3e1D0261</code>
                   </div>
                   <div className="flex items-center justify-between">
@@ -252,34 +300,38 @@ export default function ContractsPage() {
         </div>
       </section>
 
-      {/* Fee Splitting Section */}
+      {/* Treasury Wallet Section */}
       <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">Fee Splitting</Badge>
-              <h2 className="text-3xl font-bold mb-6">Revenue Distribution</h2>
+            <div className="text-center mb-8">
+              <Badge variant="outline" className="mb-4">Treasury</Badge>
+              <h2 className="text-3xl font-semibold tracking-tight mb-4">Fee collection address</h2>
+              <p className="text-muted-foreground">
+                Performance fees are collected and sent to the treasury wallet.
+              </p>
             </div>
             
-            <div className="space-y-6 mb-12">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Fee Contract</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="font-medium">Contract Address:</span>
-                    <code className="bg-muted px-2 py-1 rounded text-sm">0x194DeC45D34040488f355823e1F94C0434304188</code>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-medium">Explorer:</span>
-                    <a href="https://basescan.org/address/0x194DeC45D34040488f355823e1F94C0434304188" target="_blank" rel="noopener noreferrer" className="flex items-center text-primary hover:underline">
-                      View on BaseScan <ExternalLink className="h-4 w-4 ml-1" />
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+            <Card>
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <Wallet className="h-6 w-6 text-primary" />
+                  <CardTitle>Treasury Wallet</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="font-medium">Address:</span>
+                  <code className="bg-muted px-2 py-1 rounded text-sm">0x057fd8b961eb664baa647a5c7a6e9728faba266a</code>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="font-medium">Explorer:</span>
+                  <a href="https://basescan.org/address/0x057fd8b961eb664baa647a5c7a6e9728faba266a" target="_blank" rel="noopener noreferrer" className="flex items-center text-primary hover:underline">
+                    View on BaseScan <ExternalLink className="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

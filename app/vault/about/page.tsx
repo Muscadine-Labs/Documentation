@@ -276,6 +276,56 @@ export default function VaultsAboutPage() {
         </div>
       </section>
 
+      <section className="py-8 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <Badge variant="outline" className="mb-4">ERC-4626 Standard</Badge>
+              <h2 className="text-3xl font-semibold tracking-tight mb-6">Built on Morpho-developed and audited vaults</h2>
+            </div>
+            
+            <div className="mb-8">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                Muscadine vaults are built on the ERC-4626 tokenized vault standard, implemented through Morpho-developed and audited vault infrastructure. This ensures interoperability, standardization, and security across the DeFi ecosystem.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                ERC-4626 provides a standardized interface for yield-bearing vaults, making our vaults compatible with a wide range of DeFi protocols and tools. Each deposit mints shares that appreciate as yield accrues, providing transparent and portable value representation.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Layers className="h-6 w-6 text-primary" />
+                    <CardTitle>Morpho-developed infrastructure</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Our vaults leverage Morpho's battle-tested vault architecture, developed by one of the most trusted teams in DeFi. This infrastructure has been thoroughly audited and proven in production.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <Shield className="h-6 w-6 text-primary" />
+                    <CardTitle>Audited and secure</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    All vault contracts have undergone comprehensive security audits. The ERC-4626 standard ensures consistent behavior and reduces integration risks across the DeFi ecosystem.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </PageLayout>
   );

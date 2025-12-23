@@ -35,7 +35,7 @@ const docLinks = [
   },
   {
     title: "Vaults",
-    description: "About, architecture, fees, and roles",
+    description: "About, fees, and roles",
     href: "/vault/about",
   },
   {

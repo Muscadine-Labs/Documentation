@@ -89,24 +89,14 @@ const navigation = {
             icon: Info,
           },
           {
-            name: "Architecture",
-            href: "/vault/architecture",
-            icon: BarChart3,
-          },
-          {
-            name: "Roles & Security",
-            href: "/vault/roles-security",
+            name: "Roles & Contracts",
+            href: "/vault/roles-contracts",
             icon: Settings,
           },
           {
             name: "Fees",
             href: "/vault/fees",
             icon: DollarSign,
-          },
-          {
-            name: "Contracts",
-            href: "/vault/contracts",
-            icon: FileText,
           },
         ],
       },

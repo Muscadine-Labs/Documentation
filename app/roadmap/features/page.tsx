@@ -1,30 +1,38 @@
-import { CalendarClock, Sparkles, Wrench } from "lucide-react";
+import { CalendarClock, Sparkles, Wrench, Zap, Bitcoin, TrendingUp } from "lucide-react";
 
 import { Footer } from "@/components/Footer";
 import { PageLayout } from "@/components/PageLayout";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-const roadmap = [
+const shortTermRoadmap = [
   {
-    title: "Vault reporting refresh",
-    description: "Clearer performance views, fee transparency, and role references.",
-    status: "In progress",
+    title: "Improve vault front end",
+    description: "Enhanced user interface and experience for vault interactions.",
+    icon: Zap,
   },
   {
-    title: "Contract references",
-    description: "Publish verified addresses and ABI references inline in docs.",
-    status: "Planned",
+    title: "Muscadine Vineyard Vaults",
+    description: "Creating new vineyard vault products to expand our yield strategy offerings.",
+    icon: TrendingUp,
+  },
+];
+
+const longTermRoadmap = [
+  {
+    title: "Multi-protocol risk curation",
+    description: "Expand risk management capabilities beyond Morpho protocol to support many protocols.",
+    icon: TrendingUp,
   },
   {
-    title: "Self-custody playbooks",
-    description: "Step-by-step ops guides for keys, recovery, and multi-sig.",
-    status: "Planned",
+    title: "Alternative yield strategies",
+    description: "Explore new yield opportunities including arbitrage, liquidation bots, and other innovative strategies.",
+    icon: Zap,
   },
   {
-    title: "Risk & disclosure sync",
-    description: "Align legal/risk pages with vault fee and roles pages.",
-    status: "Planned",
+    title: "Bitcoin infrastructure development",
+    description: "Focus on Bitcoin development including Lightning Network, node infrastructure, and mining infrastructure.",
+    icon: Bitcoin,
   },
 ];
 
@@ -32,30 +40,25 @@ export default function UpcomingFeaturesPage() {
   return (
     <PageLayout
       title="Roadmap"
-      description="What we are shipping next for the docs and product surfaces."
+      description="Our short-term and long-term development plans for Muscadine Labs."
     >
       <section className="py-10 bg-muted/40">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center space-y-2 mb-8">
-            <Badge variant="outline" className="mx-auto w-fit">Status</Badge>
-            <h2 className="text-3xl font-semibold tracking-tight">Docs & product updates</h2>
+            <Badge variant="outline" className="mx-auto w-fit">Short Term</Badge>
+            <h2 className="text-3xl font-semibold tracking-tight">Current priorities</h2>
             <p className="text-muted-foreground">
-              Lightweight view; we keep this page short and link to details when live.
+              Focus areas we're actively working on.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {roadmap.map((item) => (
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            {shortTermRoadmap.map((item) => (
               <Card key={item.title} className="h-full hover:-translate-y-1 hover:shadow-md transition-all">
                 <CardHeader className="space-y-2">
                   <div className="flex items-center gap-2">
-                    {item.status === "In progress" ? (
-                      <Wrench className="h-5 w-5 text-primary" />
-                    ) : (
-                      <Sparkles className="h-5 w-5 text-primary" />
-                    )}
+                    <item.icon className="h-5 w-5 text-primary" />
                     <CardTitle className="text-lg">{item.title}</CardTitle>
                   </div>
-                  <Badge variant="outline" className="w-fit">{item.status}</Badge>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>{item.description}</CardDescription>
@@ -68,12 +71,27 @@ export default function UpcomingFeaturesPage() {
 
       <section className="py-10">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center space-y-3">
-            <CalendarClock className="h-6 w-6 text-primary mx-auto" />
-            <h3 className="text-2xl font-semibold">Want something prioritized?</h3>
+          <div className="max-w-4xl mx-auto text-center space-y-2 mb-8">
+            <Badge variant="outline" className="mx-auto w-fit">Long Term</Badge>
+            <h2 className="text-3xl font-semibold tracking-tight">Future vision</h2>
             <p className="text-muted-foreground">
-              Open an issue on GitHub or email contact@muscadine.io with the use case. We triage weekly and publish changes here.
+              Strategic directions we're exploring for the future.
             </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {longTermRoadmap.map((item) => (
+              <Card key={item.title} className="h-full hover:-translate-y-1 hover:shadow-md transition-all">
+                <CardHeader className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <item.icon className="h-5 w-5 text-primary" />
+                    <CardTitle className="text-lg">{item.title}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>{item.description}</CardDescription>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

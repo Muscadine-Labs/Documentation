@@ -9,7 +9,7 @@ export default function FeesPage() {
   return (
     <PageLayout 
       title="Fees & Economics"
-      description="Simple: 2% performance fee on profits earned. No management fees, no withdrawal penalties."
+      description="Simple: 5% performance fee on profits earned. No management fees, no withdrawal penalties."
     >
 
       <section className="py-10 bg-muted/30">
@@ -22,7 +22,7 @@ export default function FeesPage() {
             
             <div className="mb-12">
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                We only charge when you earn. The 2% performance fee applies to profits realized by the vault. No management, withdrawal, or hidden fees.
+                We only charge when you earn. The 5% performance fee applies to profits realized by the vault. No management, withdrawal, or hidden fees.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Every dollar you deposit stays in your custody and is verifiable on-chain.
@@ -34,7 +34,7 @@ export default function FeesPage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <TrendingUp className="h-6 w-6 text-primary" />
-                    <CardTitle>2% Performance Fee</CardTitle>
+                    <CardTitle>5% Performance Fee</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -121,7 +121,7 @@ export default function FeesPage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Just 2% performance fee, reflecting the ethos of decentralized finance: transparent, efficient, and fair.
+                    Just 5% performance fee, reflecting the ethos of decentralized finance: transparent, efficient, and fair.
                   </CardDescription>
                 </CardContent>
               </Card>
