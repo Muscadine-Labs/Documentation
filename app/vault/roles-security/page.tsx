@@ -1,28 +1,28 @@
-import { PageLayout } from "@/components/PageLayout";
-import { Footer } from "@/components/Footer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Shield, Target, Zap, Settings, Clock, Eye, Lock } from "lucide-react";
+
+import { Footer } from "@/components/Footer";
+import { PageLayout } from "@/components/PageLayout";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function RolesSecurityPage() {
   return (
     <PageLayout 
       title="Roles & Security"
-      description="Muscadine Vaults are governed by a clear, on-chain role system designed for transparency and safety with multi-signature controls and time locks."
+      description="Clear on-chain roles, multi-sig protections, and time locks to prevent unilateral changes."
     >
 
-      {/* Overview Section */}
-      <section className="py-8 bg-muted/30">
+      <section className="py-10 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <Badge variant="outline" className="mb-4">Governance Model</Badge>
-              <h2 className="text-3xl font-bold mb-6">Clear, On-Chain Role System</h2>
+              <h2 className="text-3xl font-semibold tracking-tight mb-6">Clear, on-chain role system</h2>
             </div>
             
             <div className="mb-12">
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Muscadine Vaults are governed by a clear, on-chain role system designed for transparency and safety. Each role has a defined purpose and is protected by multi-signature controls and time locks, ensuring no single actor can act unilaterally.
+                Roles are enforced on-chain with multi-sig and time locks. No single actor can act alone.
               </p>
             </div>
 
@@ -31,7 +31,7 @@ export default function RolesSecurityPage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Shield className="h-6 w-6 text-primary" />
-                    <CardTitle>Multi-Signature Protection</CardTitle>
+                    <CardTitle>Multi-signature protection</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -45,7 +45,7 @@ export default function RolesSecurityPage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Clock className="h-6 w-6 text-primary" />
-                    <CardTitle>Time-Locked Changes</CardTitle>
+                    <CardTitle>Time-locked changes</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -59,13 +59,12 @@ export default function RolesSecurityPage() {
         </div>
       </section>
 
-      {/* Role Definitions Section */}
       <section className="py-8">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <Badge variant="outline" className="mb-4">Role Definitions</Badge>
-              <h2 className="text-3xl font-bold mb-6">Three Core Roles</h2>
+              <h2 className="text-3xl font-semibold tracking-tight mb-6">Three core roles</h2>
             </div>
             
             <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -115,13 +114,12 @@ export default function RolesSecurityPage() {
         </div>
       </section>
 
-      {/* Morpho Framework Section */}
       <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <Badge variant="outline" className="mb-4">Morpho Framework</Badge>
-              <h2 className="text-3xl font-bold mb-6">On-Chain Governance</h2>
+              <h2 className="text-3xl font-semibold tracking-tight mb-6">On-chain governance</h2>
             </div>
             
             <div className="mb-12">
@@ -135,7 +133,7 @@ export default function RolesSecurityPage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Eye className="h-6 w-6 text-primary" />
-                    <CardTitle>Fully Verifiable</CardTitle>
+                    <CardTitle>Fully verifiable</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -149,7 +147,7 @@ export default function RolesSecurityPage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Lock className="h-6 w-6 text-primary" />
-                    <CardTitle>Isolated & Secure</CardTitle>
+                    <CardTitle>Isolated & secure</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -163,13 +161,12 @@ export default function RolesSecurityPage() {
         </div>
       </section>
 
-      {/* Security Model Section */}
       <section className="py-8">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <Badge variant="outline" className="mb-4">Security Model</Badge>
-              <h2 className="text-3xl font-bold mb-6">Layered Security Approach</h2>
+              <h2 className="text-3xl font-semibold tracking-tight mb-6">Layered security approach</h2>
             </div>
             
             <div className="text-center mb-12">
@@ -183,7 +180,7 @@ export default function RolesSecurityPage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Settings className="h-6 w-6 text-primary" />
-                    <CardTitle>Automated Risk Management</CardTitle>
+                    <CardTitle>Automated risk management</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -197,7 +194,7 @@ export default function RolesSecurityPage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Eye className="h-6 w-6 text-primary" />
-                    <CardTitle>Transparent Governance</CardTitle>
+                    <CardTitle>Transparent governance</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -211,7 +208,7 @@ export default function RolesSecurityPage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Shield className="h-6 w-6 text-primary" />
-                    <CardTitle>Self-Custody</CardTitle>
+                    <CardTitle>Self-custody</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>

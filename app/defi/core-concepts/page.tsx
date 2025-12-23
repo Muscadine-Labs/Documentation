@@ -1,215 +1,197 @@
 import Link from "next/link";
+import { ArrowRight, BookOpen, Coins, Globe, Layers, ShieldCheck, Zap } from "lucide-react";
+
+import { Footer } from "@/components/Footer";
+import { PageLayout } from "@/components/PageLayout";
+import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { TrendingUp, Shield, Zap, Coins, Globe, BookOpen } from "lucide-react";
+
+const essentials = [
+  {
+    title: "Smart contracts",
+    description: "Code that runs the rules. No help desks, no paperwork — just deterministic execution on-chain.",
+    icon: BookOpen,
+  },
+  {
+    title: "Liquidity & AMMs",
+    description: "Pooled assets that enable 24/7 swaps without order books. More liquidity means better pricing.",
+    icon: Coins,
+  },
+  {
+    title: "Collateralization",
+    description: "Borrowers post more value than they borrow. If prices drop, collateral is liquidated to protect lenders.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Composability",
+    description: "Protocols plug together like Lego blocks. Vaults, DEXs, and lenders can be stacked into new products.",
+    icon: Layers,
+  },
+];
+
+const protocolTypes = [
+  {
+    title: "Lending markets",
+    description: "Supply assets to earn interest, or borrow against your collateral.",
+    icon: Zap,
+  },
+  {
+    title: "DEXs",
+    description: "Swap tokens without intermediaries. Examples: Uniswap, Aerodrome.",
+    icon: Globe,
+  },
+  {
+    title: "Yield automation",
+    description: "Aggregators move capital for you to optimize returns. Muscadine vaults live here.",
+    icon: ArrowRight,
+  },
+];
 
 export default function CoreConceptsPage() {
   return (
-    <div className="min-h-screen bg-background">
-      <section className="py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold tracking-tight mb-6">
-            DeFi Core Concepts
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Understanding the fundamental building blocks of decentralized finance and how they work together to create a new financial ecosystem.
-          </p>
-        </div>
-      </section>
-
-      <section className="pt-4 pb-8">
+    <PageLayout
+      title="DeFi Core Concepts"
+      description="The must-know building blocks for navigating decentralized finance with confidence."
+    >
+      <section className="py-8 bg-muted/40">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-2">Essential DeFi Concepts</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-center space-x-3 mb-4">
-                  <BookOpen className="h-6 w-6 text-primary" />
-                  <CardTitle>Smart Contracts</CardTitle>
-                </div>
-                <CardDescription className="text-base">
-                  Self-executing contracts with terms directly written into code. They automatically execute when predetermined conditions are met, eliminating the need for intermediaries. Smart contracts are immutable once deployed and run on blockchain networks, ensuring transparency and reducing counterparty risk. They enable complex financial operations like automated lending, yield farming, and decentralized exchanges without human intervention.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-center space-x-3 mb-4">
-                  <Coins className="h-6 w-6 text-primary" />
-                  <CardTitle>Liquidity Pools & AMMs</CardTitle>
-                </div>
-                <CardDescription className="text-base">
-                  Collections of tokens locked in smart contracts that enable decentralized trading through Automated Market Makers. Users provide liquidity and earn fees from trading activity. AMMs use mathematical formulas (like x*y=k) to automatically adjust prices as trades occur - when someone buys a token, the price increases; when they sell, it decreases. This creates a continuous market that's always available, unlike traditional exchanges that rely on order books. Popular AMM formulas include Constant Product (Uniswap), Stable Swap (Curve), and Weighted Pools (Balancer). Higher liquidity means better prices and lower slippage for traders.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-center space-x-3 mb-4">
-                  <Zap className="h-6 w-6 text-primary" />
-                  <CardTitle>Other DeFi Applications</CardTitle>
-                </div>
-                <CardDescription className="text-base">
-                  DeFi extends beyond basic lending and trading to include advanced financial instruments. Perpetual futures (perps) allow leveraged trading without expiration dates. Derivatives enable exposure to asset prices without owning the underlying assets. Prediction markets let users bet on future events and outcomes. Insurance protocols provide coverage against smart contract risks and hacks. Yield aggregators automatically optimize returns across multiple protocols. Real World Assets (RWAs) tokenize physical assets like real estate, commodities, and bonds, bringing traditional assets onto the blockchain. These innovations (many more unmentioned) expand DeFi's utility beyond traditional finance capabilities.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-center space-x-3 mb-4">
-                  <Shield className="h-6 w-6 text-primary" />
-                  <CardTitle>Collateralization</CardTitle>
-                </div>
-                <CardDescription className="text-base">
-                  The practice of locking up assets as security for loans or other financial activities. Over-collateralization is common in DeFi to manage risk. Unlike traditional financial systems that use undercollateralization (which is inherently riskier than DeFi lending and borrowing), you can only borrow as much as you have collateralized. This creates a safety buffer that protects lenders and reduces systemic risk. For example, to borrow $100, you need to deposit $150+ worth of collateral. If your collateral drops in value, you can be liquidated to protect the protocol - this goes to pay back the lenders.
-                </CardDescription>
-              </CardHeader>
-            </Card>
+          <div className="max-w-5xl mx-auto text-center space-y-2 mb-8">
+            <Badge variant="outline" className="mx-auto w-fit">Essentials</Badge>
+            <h2 className="text-3xl font-semibold tracking-tight">Four things to internalize</h2>
+            <p className="text-muted-foreground">
+              If you know these, you can reason about almost any DeFi protocol.
+            </p>
           </div>
-        </div>
-      </section>
-
-      <section className="py-8">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-6">What Muscadine Does</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3 mb-4">
-                    <TrendingUp className="h-6 w-6 text-primary" />
-                    <CardTitle>Automated Vaults</CardTitle>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {essentials.map((item) => (
+              <Card key={item.title} className="h-full hover:-translate-y-1 hover:shadow-md transition-all">
+                <CardHeader className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <item.icon className="h-5 w-5 text-primary" />
+                    <CardTitle className="text-lg">{item.title}</CardTitle>
                   </div>
+                  <CardDescription>{item.description}</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    We curate and manage risk on Morpho vault infrastructure on the blockchain, lending tokens to overcollateralized markets in return for variable interest.
-                  </CardDescription>
-                </CardContent>
               </Card>
-
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3 mb-4">
-                    <Shield className="h-6 w-6 text-primary" />
-                    <CardTitle>Self-Custody Solutions</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    We create self-custody solutions for clients, enabling them to securely own their wealth through running their own nodes, paper keys, and key systems for optimal safety, security, and ownership.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="py-8 bg-muted/30">
+      <section className="py-12">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">How DeFi Protocols Work</h2>
-            <div className="space-y-8">
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">1</div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">User Deposits Assets</h3>
-                  <p className="text-muted-foreground">Users deposit their tokens into smart contracts, maintaining ownership while enabling protocol functionality.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">2</div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Smart Contracts Execute Logic</h3>
-                  <p className="text-muted-foreground">Automated code handles lending, borrowing, trading, or other financial operations based on predefined rules.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">3</div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Users Earn Rewards</h3>
-                  <p className="text-muted-foreground">Participants receive fees, interest, or governance tokens as compensation for providing liquidity or using the protocol.</p>
-                </div>
-              </div>
-            </div>
+          <div className="max-w-4xl mx-auto text-center space-y-2 mb-8">
+            <Badge variant="outline" className="mx-auto w-fit">Protocol types</Badge>
+            <h2 className="text-3xl font-semibold tracking-tight">Where you will interact</h2>
+            <p className="text-muted-foreground">
+              The common building blocks you will see in Muscadine vaults and across DeFi.
+            </p>
           </div>
-        </div>
-      </section>
-
-      <section className="py-8">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Key DeFi Protocols</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader className="text-center">
-                <div className="flex justify-center mb-4">
-                  <TrendingUp className="h-8 w-8 text-primary" />
-                </div>
-                <CardTitle>Lending Protocols</CardTitle>
-                <CardDescription>
-                  Enable users to lend assets and earn interest, or borrow against collateral. Examples include Aave, Morpho, and Moonwell.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader className="text-center">
-                <div className="flex justify-center mb-4">
-                  <Globe className="h-8 w-8 text-primary" />
-                </div>
-                <CardTitle>DEXs (Decentralized Exchanges)</CardTitle>
-                <CardDescription>
-                  Allow peer-to-peer trading without intermediaries. Examples include Uniswap and Aerodrome.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader className="text-center">
-                <div className="flex justify-center mb-4">
-                  <Zap className="h-8 w-8 text-primary" />
-                </div>
-                <CardTitle>Yield Aggregators</CardTitle>
-                <CardDescription>
-                  Automatically move funds between protocols to maximize yields. Examples include Beefy Finance and Muscadine Labs.
-                </CardDescription>
-              </CardHeader>
-            </Card>
+            {protocolTypes.map((item) => (
+              <Card key={item.title} className="h-full hover:-translate-y-1 hover:shadow-md transition-all">
+                <CardHeader className="space-y-2 text-center">
+                  <div className="flex justify-center">
+                    <item.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">{item.title}</CardTitle>
+                  <CardDescription>{item.description}</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      <footer className="border-t py-12">
+      <section className="py-10 bg-muted/40">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <p className="text-sm text-muted-foreground">
-                © 2025 Muscadine Labs. All rights reserved.
-              </p>
-            </div>
-            <div className="flex flex-wrap justify-center gap-6">
-              <Link href="/contracts" className="text-sm text-muted-foreground hover:text-foreground">
-                Contracts
-              </Link>
-              <Link href="/risk" className="text-sm text-muted-foreground hover:text-foreground">
-                Risk Framework
-              </Link>
-              <a href="https://muscadine.io" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
-                Main Website
-              </a>
-              <a href="https://app.muscadine.io" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
-                App
-              </a>
-              <a href="mailto:contact@muscadine.io" className="text-sm text-muted-foreground hover:text-foreground">
-                Contact
-              </a>
-            </div>
+          <div className="max-w-4xl mx-auto text-center space-y-2 mb-8">
+            <Badge variant="outline" className="mx-auto w-fit">How it flows</Badge>
+            <h2 className="text-3xl font-semibold tracking-tight">Lifecycle of a DeFi action</h2>
+            <p className="text-muted-foreground">
+              A simple mental model for any on-chain interaction.
+            </p>
           </div>
-      </div>
-      </footer>
-    </div>
+          <div className="space-y-6 max-w-3xl mx-auto">
+            {[
+              {
+                step: "1",
+                title: "You deposit",
+                description: "Approve and supply assets from your wallet. You keep custody via your private keys.",
+              },
+              {
+                step: "2",
+                title: "Contract executes",
+                description: "The protocol applies predefined rules: lend, swap, or stake, all on-chain.",
+              },
+              {
+                step: "3",
+                title: "You earn/settle",
+                description: "Positions update in real time. Yields accrue or trades complete transparently.",
+              },
+            ].map((item) => (
+              <div key={item.step} className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold">
+                  {item.step}
+                </div>
+                <div>
+                  <p className="font-semibold">{item.title}</p>
+                  <p className="text-muted-foreground">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center space-y-2 mb-8">
+            <Badge variant="outline" className="mx-auto w-fit">Go deeper</Badge>
+            <h2 className="text-3xl font-semibold tracking-tight">Keep building the mental model</h2>
+            <p className="text-muted-foreground">
+              Move from concepts to practice with the next sections.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link href="/defi/risks">
+              <Card className="h-full hover:-translate-y-1 hover:shadow-md transition-all">
+                <CardHeader className="space-y-2 text-center">
+                  <CardTitle className="text-lg">Risk categories</CardTitle>
+                  <CardDescription>Understand smart contract, market, and operational risk.</CardDescription>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground" />
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/defi/wallet-setup">
+              <Card className="h-full hover:-translate-y-1 hover:shadow-md transition-all">
+                <CardHeader className="space-y-2 text-center">
+                  <CardTitle className="text-lg">Get a wallet ready</CardTitle>
+                  <CardDescription>Pick hardware or smart wallets and secure the keys.</CardDescription>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground" />
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/vault/about">
+              <Card className="h-full hover:-translate-y-1 hover:shadow-md transition-all">
+                <CardHeader className="space-y-2 text-center">
+                  <CardTitle className="text-lg">See our vaults</CardTitle>
+                  <CardDescription>How Muscadine automates the concepts above.</CardDescription>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground" />
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </PageLayout>
   );
 }

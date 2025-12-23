@@ -1,31 +1,31 @@
-import { PageLayout } from "@/components/PageLayout";
-import { Footer } from "@/components/Footer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Shield, Zap, TrendingUp, Settings, Layers, Building2, Target, Coins } from "lucide-react";
+
+import { Footer } from "@/components/Footer";
+import { PageLayout } from "@/components/PageLayout";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function VaultArchitecturePage() {
   return (
     <PageLayout 
       title="Vault Architecture"
-      description="Muscadine Vaults are built on Morpho's ERC-4626–compliant architecture, a modern DeFi standard that defines how tokenized yield vaults manage deposits, withdrawals, and earnings."
+      description="Morpho-based ERC-4626 vaults with clear roles, modular adapters, and on-chain verification."
     >
 
-      {/* ERC-4626 Architecture Section */}
-      <section className="py-8 bg-muted/30">
+      <section className="py-10 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <Badge variant="outline" className="mb-4">ERC-4626 Standard</Badge>
-              <h2 className="text-3xl font-bold mb-6">Built on Modern DeFi Standards</h2>
+              <h2 className="text-3xl font-semibold tracking-tight mb-6">Built on modern standards</h2>
             </div>
             
             <div className="mb-12">
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Muscadine Vaults are built on Morpho's ERC-4626–compliant architecture, a modern DeFi standard that defines how tokenized yield vaults manage deposits, withdrawals, and earnings. Each vault is an isolated smart contract on Base that securely holds user assets, deploys them into approved lending markets, and continuously rebalances to capture the best available yield — all transparently and autonomously on-chain.
+                ERC-4626 vaults on Base, isolated per product, allocating into approved overcollateralized markets via Morpho adapters.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                The ERC-4626 framework ensures every depositor's share in the vault is represented by a standardized token. This structure makes returns fully auditable, portable, and interoperable across DeFi, while maintaining institutional-grade accounting for performance and liquidity. When you deposit into a Muscadine Vault, you receive a 4626 share token that grows in value as the vault earns yield.
+                Deposits mint 4626 shares that appreciate as yield accrues — portable, auditable, and interoperable across DeFi.
               </p>
             </div>
 
@@ -34,7 +34,7 @@ export default function VaultArchitecturePage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Layers className="h-6 w-6 text-primary" />
-                    <CardTitle>Standardized Tokens</CardTitle>
+                    <CardTitle>Standardized tokens</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -48,7 +48,7 @@ export default function VaultArchitecturePage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Shield className="h-6 w-6 text-primary" />
-                    <CardTitle>Fully Auditable</CardTitle>
+                    <CardTitle>Fully auditable</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -62,18 +62,17 @@ export default function VaultArchitecturePage() {
         </div>
       </section>
 
-      {/* Modular Integration Section */}
       <section className="py-8">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <Badge variant="outline" className="mb-4">Modular Integration</Badge>
-              <h2 className="text-3xl font-bold mb-6">Secure Protocol Integration</h2>
+              <h2 className="text-3xl font-semibold tracking-tight mb-6">Secure protocol integration</h2>
             </div>
             
             <div className="mb-12">
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Each vault connects through Morpho's modular adapter system, allowing secure integration with trusted protocols like Moonwell and other overcollateralized markets. Strategy parameters — such as collateral caps, market selection, and reallocation logic — are defined by the Curator, executed by the Allocator, and safeguarded by a Guardian role, all enforced by transparent on-chain governance and time-locked changes.
+                Morpho adapters integrate only approved overcollateralized markets (e.g., Moonwell). Curator sets params, Allocator executes, Guardian safeguards — all time-locked and on-chain.
               </p>
             </div>
 

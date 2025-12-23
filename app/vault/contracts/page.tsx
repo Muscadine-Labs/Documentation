@@ -1,28 +1,28 @@
-import { PageLayout } from "@/components/PageLayout";
-import { Footer } from "@/components/Footer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Eye, Lock } from "lucide-react";
+
+import { Footer } from "@/components/Footer";
+import { PageLayout } from "@/components/PageLayout";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function ContractsPage() {
   return (
     <PageLayout 
       title="Smart Contracts"
-      description="All Muscadine Vaults and their associated roles are fully on-chain, transparent, and verifiable. Each contract has been deployed on Base, secured by multi-signature safes, and integrated directly with the Morpho Vault infrastructure."
+      description="Verified, multi-sig secured vault contracts on Base with clear role references."
     >
 
-      {/* Overview Section */}
-      <section className="py-8 bg-muted/30">
+      <section className="py-10 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <Badge variant="outline" className="mb-4">On-Chain Transparency</Badge>
-              <h2 className="text-3xl font-bold mb-6">Fully Verifiable Contracts</h2>
+              <h2 className="text-3xl font-semibold tracking-tight mb-6">Fully verifiable contracts</h2>
             </div>
             
             <div className="mb-12">
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                All Muscadine Vaults and their associated roles are fully on-chain, transparent, and verifiable. Each contract has been deployed on Base, secured by multi-signature safes, and integrated directly with the Morpho Vault infrastructure.
+                Vaults and roles are deployed on Base, secured by multi-sig safes, and verifiable on BaseScan. Addresses and explorers are listed below.
               </p>
             </div>
 
@@ -31,13 +31,11 @@ export default function ContractsPage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Eye className="h-6 w-6 text-primary" />
-                    <CardTitle>Fully Transparent</CardTitle>
+                    <CardTitle>Fully transparent</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription>
-                    All contracts are audited, immutable, and publicly viewable on BaseScan with complete transparency.
-                  </CardDescription>
+                    <CardDescription>Audited, immutable, and viewable on BaseScan.</CardDescription>
                 </CardContent>
               </Card>
 
@@ -45,13 +43,11 @@ export default function ContractsPage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Lock className="h-6 w-6 text-primary" />
-                    <CardTitle>Multi-Signature Secured</CardTitle>
+                    <CardTitle>Multi-signature secured</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription>
-                    Every role and wallet is multi-signature controlled, ensuring no single entity has unilateral control.
-                  </CardDescription>
+                    <CardDescription>Roles and safes require multiple signers; no unilateral control.</CardDescription>
                 </CardContent>
               </Card>
             </div>

@@ -1,31 +1,31 @@
-import { PageLayout } from "@/components/PageLayout";
-import { Footer } from "@/components/Footer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { DollarSign, TrendingUp, Shield, Calculator, Target, Zap } from "lucide-react";
+
+import { Footer } from "@/components/Footer";
+import { PageLayout } from "@/components/PageLayout";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function FeesPage() {
   return (
     <PageLayout 
       title="Fees & Economics"
-      description="At Muscadine Labs, our philosophy is simple — your capital should work for you, not for us. We charge a 2% performance fee, taken only on profits actually earned by the vault."
+      description="Simple: 2% performance fee on profits earned. No management fees, no withdrawal penalties."
     >
 
-      {/* Philosophy Section */}
-      <section className="py-8 bg-muted/30">
+      <section className="py-10 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <Badge variant="outline" className="mb-4">Our Philosophy</Badge>
-              <h2 className="text-3xl font-bold mb-6">Your Capital Should Work for You</h2>
+              <h2 className="text-3xl font-semibold tracking-tight mb-6">Your capital should work for you</h2>
             </div>
             
             <div className="mb-12">
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                At Muscadine Labs, our philosophy is simple — your capital should work for you, not for us.
+                We only charge when you earn. The 2% performance fee applies to profits realized by the vault. No management, withdrawal, or hidden fees.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We charge a 2% performance fee, taken only on profits actually earned by the vault. There are no management fees, no withdrawal penalties, and no hidden costs. Every dollar you deposit remains fully in your control and verifiably on-chain.
+                Every dollar you deposit stays in your custody and is verifiable on-chain.
               </p>
             </div>
 

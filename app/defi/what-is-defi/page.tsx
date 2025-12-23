@@ -1,230 +1,167 @@
 import Link from "next/link";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { PageLayout } from "@/components/PageLayout";
+import {
+  ArrowRight,
+  Bitcoin,
+  BookOpen,
+  Coins,
+  ShieldCheck,
+  Sparkles,
+  Zap,
+} from "lucide-react";
+
 import { Footer } from "@/components/Footer";
-import { Coins, Shield, Zap, ArrowRight } from "lucide-react";
+import { PageLayout } from "@/components/PageLayout";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
+const fundamentals = [
+  {
+    title: "Cryptocurrencies",
+    description: "Digital money secured by cryptography and run on public blockchains, not banks.",
+    icon: Coins,
+  },
+  {
+    title: "Self-custody",
+    description: "You hold the keys, you hold the coins. No intermediaries to freeze or gate access.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Bitcoin",
+    description: "Fixed supply, energy-secured, and censorship resistant. The base layer for self-sovereign money.",
+    icon: Bitcoin,
+  },
+  {
+    title: "DeFi",
+    description: "Financial services delivered by smart contracts: lending, trading, and yield without permission.",
+    icon: Zap,
+  },
+];
+
+const learnNext = [
+  {
+    title: "Core concepts",
+    description: "Understand smart contracts, collateral, and liquidity.",
+    href: "/defi/core-concepts",
+  },
+  {
+    title: "DeFi risks",
+    description: "Market, contract, and operational risks to watch.",
+    href: "/defi/risks",
+  },
+  {
+    title: "Wallet setup",
+    description: "Create and secure a wallet before you deposit.",
+    href: "/defi/wallet-setup",
+  },
+];
 
 export default function WhatIsDefiPage() {
   return (
-    <PageLayout 
+    <PageLayout
       title="What is DeFi?"
-      description="Learn the fundamentals of cryptocurrency, Bitcoin, and decentralized finance (DeFi) to understand the future of money."
+      description="A quick, opinionated primer on crypto, Bitcoin, and decentralized finance so you know what you are using and why it matters."
     >
-      {/* What is Cryptocurrencies Section */}
-      <section className="py-8">
+      <section className="py-6 bg-muted/40">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">Fundamentals</Badge>
-              <h2 className="text-3xl font-bold mb-6">What is Cryptocurrencies?</h2>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3 mb-4">
-                    <Coins className="h-6 w-6 text-primary" />
-                    <CardTitle>Digital Money</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    Cryptocurrencies are digital or virtual currencies that use cryptography for security. Unlike traditional money controlled by banks and governments, cryptocurrencies operate on decentralized networks called blockchains.
-                  </p>
-                  <p className="text-muted-foreground">
-                    They enable peer-to-peer transactions without intermediaries, giving you complete control over your money.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3 mb-4">
-                    <Shield className="h-6 w-6 text-primary" />
-                    <CardTitle>Key Features</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div>
-                    <h4 className="font-semibold">Decentralized</h4>
-                    <p className="text-sm text-muted-foreground">No single authority controls the network</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Transparent</h4>
-                    <p className="text-sm text-muted-foreground">All transactions are publicly recorded</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Secure</h4>
-                    <p className="text-sm text-muted-foreground">Protected by advanced cryptography</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What is Bitcoin Section */}
-      <section className="py-8 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">Digital Gold</Badge>
-              <h2 className="text-3xl font-bold mb-6">What is Bitcoin?</h2>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3 mb-4">
-                    <Coins className="h-6 w-6 text-primary" />
-                    <CardTitle>The First Cryptocurrency</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    Bitcoin is an energy-based currency that represents a revolutionary shift from traditional financial systems. Unlike centralized currencies controlled by banks and governments, Bitcoin is truly decentralized and owned by its holders.
-                  </p>
-                  <p className="text-muted-foreground">
-                    Anyone can mine Bitcoin using computational energy, and once you own it, you have complete control over your assets with no intermediary that can freeze your account or devalue your holdings.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3 mb-4">
-                    <Shield className="h-6 w-6 text-primary" />
-                    <CardTitle>Why Bitcoin Matters</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div>
-                    <h4 className="font-semibold">Limited Supply</h4>
-                    <p className="text-sm text-muted-foreground">Only 21 million Bitcoin will ever exist</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Inflation Resistant</h4>
-                    <p className="text-sm text-muted-foreground">Cannot be printed or devalued by governments</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Global Access</h4>
-                    <p className="text-sm text-muted-foreground">Available to anyone with internet access</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Self-Custody</h4>
-                    <p className="text-sm text-muted-foreground">You control your own private keys and assets</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What is DeFi Section */}
-      <section className="py-8">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">Financial Revolution</Badge>
-              <h2 className="text-3xl font-bold mb-6">What is DeFi?</h2>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3 mb-4">
-                    <Zap className="h-6 w-6 text-primary" />
-                    <CardTitle>Decentralized Finance</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    DeFi (Decentralized Finance) refers to financial services built on blockchain networks that operate without traditional intermediaries like banks. Smart contracts automate financial processes.
-                  </p>
-                  <p className="text-muted-foreground">
-                    DeFi enables lending, borrowing, trading, and earning yield in a permissionless way. No entity can stop you from accessing these services or give you unfair rates based on your identity or location.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3 mb-4">
-                    <Coins className="h-6 w-6 text-primary" />
-                    <CardTitle>DeFi Applications</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div>
-                    <h4 className="font-semibold">Lending & Borrowing</h4>
-                    <p className="text-sm text-muted-foreground">Earn interest or borrow against your crypto</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Decentralized Exchanges</h4>
-                    <p className="text-sm text-muted-foreground">Trade cryptocurrencies without intermediaries</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Market Making</h4>
-                    <p className="text-sm text-muted-foreground">Earn rewards by providing liquidity</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">RWA</h4>
-                    <p className="text-sm text-muted-foreground">Tokenized real world assets like real estate and commodities</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Learn More Section */}
-      <section className="py-8 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="outline" className="mb-4">Continue Learning</Badge>
-            <h2 className="text-3xl font-bold mb-8">Ready to Learn More?</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Dive deeper into crypto concepts, understand the risks, and learn how to get started.
+          <div className="max-w-5xl mx-auto text-center space-y-2 mb-8">
+            <Badge variant="outline" className="mx-auto w-fit">Basics</Badge>
+            <h2 className="text-3xl font-semibold tracking-tight">The essentials in four cards</h2>
+            <p className="text-muted-foreground">
+              Keep it simple: what it is, why it is safe, and what you can do with it.
             </p>
-            <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/defi/core-concepts">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
-                  <CardHeader className="text-center">
-                    <CardTitle className="group-hover:text-primary transition-colors">Core Concepts</CardTitle>
-                    <CardDescription>Dive deeper into DeFi fundamentals</CardDescription>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {fundamentals.map((item) => (
+              <Card key={item.title} className="h-full hover:-translate-y-1 hover:shadow-md transition-all">
+                <CardHeader className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <item.icon className="h-5 w-5 text-primary" />
+                    <CardTitle className="text-lg">{item.title}</CardTitle>
+                  </div>
+                  <CardDescription>{item.description}</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center space-y-2 mb-10">
+            <Badge variant="outline" className="mx-auto w-fit">How DeFi works</Badge>
+            <h2 className="text-3xl font-semibold tracking-tight">Smart contracts instead of intermediaries</h2>
+            <p className="text-muted-foreground">
+              Code replaces paperwork: deposit assets, the contract executes rules, you get transparent returns.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="h-full">
+              <CardHeader>
+                <div className="flex items-center gap-2">
+                  <BookOpen className="h-5 w-5 text-primary" />
+                  <CardTitle>Transparent rules</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  The terms are on-chain. Anyone can verify the code, positions, and state of the protocol.
+                </CardDescription>
+              </CardContent>
+            </Card>
+            <Card className="h-full">
+              <CardHeader>
+                <div className="flex items-center gap-2">
+                  <ShieldCheck className="h-5 w-5 text-primary" />
+                  <CardTitle>Overcollateralized</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Borrowers must lock more value than they borrow. If markets move, collateral is liquidated to keep lenders whole.
+                </CardDescription>
+              </CardContent>
+            </Card>
+            <Card className="h-full">
+              <CardHeader>
+                <div className="flex items-center gap-2">
+                  <Zap className="h-5 w-5 text-primary" />
+                  <CardTitle>Permissionless access</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  No account reviews. Connect a wallet and interact directly; your address is your identity.
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-10 bg-muted/40">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center space-y-2 mb-8">
+            <Badge variant="outline" className="mx-auto w-fit">Next steps</Badge>
+            <h2 className="text-3xl font-semibold tracking-tight">Keep learning</h2>
+            <p className="text-muted-foreground">
+              Go deeper into the mechanics, the risks, and how to get your wallet ready.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {learnNext.map((item) => (
+              <Link key={item.title} href={item.href}>
+                <Card className="h-full hover:-translate-y-1 hover:shadow-md transition-all">
+                  <CardHeader className="space-y-2 text-center">
+                    <CardTitle className="text-lg">{item.title}</CardTitle>
+                    <CardDescription>{item.description}</CardDescription>
                   </CardHeader>
                   <CardContent className="text-center">
-                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
+                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground" />
                   </CardContent>
                 </Card>
               </Link>
-              <Link href="/defi/risks">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
-                  <CardHeader className="text-center">
-                    <CardTitle className="group-hover:text-primary transition-colors">DeFi Risks</CardTitle>
-                    <CardDescription>Understand the risks involved</CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
-                  </CardContent>
-                </Card>
-              </Link>
-              <Link href="/defi/wallet-setup">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
-                  <CardHeader className="text-center">
-                    <CardTitle className="group-hover:text-primary transition-colors">Wallet Setup</CardTitle>
-                    <CardDescription>Get started with DeFi wallets</CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
-                  </CardContent>
-                </Card>
-              </Link>
-            </div>
+            ))}
           </div>
         </div>
       </section>

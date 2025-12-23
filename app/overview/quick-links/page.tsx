@@ -1,111 +1,111 @@
 import Link from "next/link";
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink, Github, Globe, Mail, ArrowRight } from "lucide-react";
+import { ArrowRight, Globe, Mail, ShieldCheck, Sparkles, SquareGanttChart } from "lucide-react";
 
-const quickLinks = [
+import { Footer } from "@/components/Footer";
+import { PageLayout } from "@/components/PageLayout";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
+const externalLinks = [
   {
-    title: "Main Website",
-    description: "Official Muscadine Labs website with company information",
+    title: "Main site",
+    description: "Company narrative and product marketing",
     href: "https://muscadine.io",
-    external: true,
     icon: Globe,
   },
   {
-    title: "App",
-    description: "Main application for interacting with DeFi products",
-    href: "https://app.muscadine.io",
-    external: true,
-    icon: ExternalLink,
-  },
-  {
-    title: "GitHub Repository",
-    description: "Open source code and development resources",
-    href: "https://github.com/Muscadine-Labs",
-    external: true,
-    icon: Github,
-  },
-  {
-    title: "Contact Support",
-    description: "Get help and support from our team",
+    title: "Contact",
+    description: "Support, partnerships, and press",
     href: "https://www.muscadine.io/contact",
-    external: true,
     icon: Mail,
   },
 ];
 
-const internalLinks = [
+const docLinks = [
   {
-    title: "About",
-    description: "Learn about Muscadine Labs",
+    title: "Docs home",
+    description: "Start from the main documentation landing",
     href: "/",
-    icon: ArrowRight,
   },
   {
-    title: "DeFi 101 - What is DeFi",
-    description: "Introduction to decentralized finance",
+    title: "DeFi 101",
+    description: "Basics before diving into vaults",
     href: "/defi/what-is-defi",
-    icon: ArrowRight,
   },
   {
-    title: "Vault About",
-    description: "Learn about our automated vault strategies",
+    title: "Vaults",
+    description: "About, architecture, fees, and roles",
     href: "/vault/about",
-    icon: ArrowRight,
   },
   {
-    title: "Self Custody About",
-    description: "Understanding self-custody and financial sovereignty",
+    title: "Self-custody",
+    description: "Operational playbook for keys and recovery",
     href: "/self-custody/about",
-    icon: ArrowRight,
+  },
+  {
+    title: "Roadmap",
+    description: "What is shipping next",
+    href: "/roadmap/features",
+  },
+  {
+    title: "Risk & legal",
+    description: "Disclosures, privacy, and terms",
+    href: "/legal/risk-disclosures",
   },
 ];
 
 export default function QuickLinksPage() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <a href="https://muscadine.io" target="_blank" rel="noopener noreferrer" className="text-2xl font-bold hover:text-primary transition-colors">
-                Muscadine Labs
-              </a>
-              <span className="text-sm text-muted-foreground">Documentation</span>
-            </div>
+    <PageLayout
+      title="Documentation Quick Links"
+      description="The fastest path to the right Muscadine docs and resources."
+    >
+      <section className="pb-4">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link href="/">
+              <Button size="lg">
+                Docs home
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
+            <Link href="/roadmap/features">
+              <Button variant="outline" size="lg">
+                Roadmap
+                <Sparkles className="h-4 w-4" />
+              </Button>
+            </Link>
+            <Link href="/overview/contributors">
+              <Button variant="ghost" size="lg">
+                Contributors
+                <SquareGanttChart className="h-4 w-4" />
+              </Button>
+            </Link>
           </div>
-        </div>
-      </header>
-
-      {/* Hero Section */}
-      <section className="pt-20 pb-0">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold tracking-tight mb-6">
-            Quick Links
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Fast access to all Muscadine Labs resources and important pages.
-          </p>
         </div>
       </section>
 
-      {/* External Links */}
-      <section className="py-16">
+      <section className="py-10 bg-muted/40">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">External Resources</h2>
+          <div className="max-w-4xl mx-auto text-center space-y-2 mb-8">
+            <Badge variant="outline" className="mx-auto w-fit">External</Badge>
+            <h2 className="text-3xl font-semibold tracking-tight">Primary destinations</h2>
+            <p className="text-muted-foreground">Company endpoints outside this docs site.</p>
+          </div>
           <div className="grid md:grid-cols-2 gap-6">
-            {quickLinks.map((link) => (
+            {externalLinks.map((link) => (
               <a
                 key={link.title}
                 href={link.href}
-                target={link.external ? "_blank" : undefined}
-                rel={link.external ? "noopener noreferrer" : undefined}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block"
               >
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer">
-                  <CardHeader className="text-left">
-                    <div className="flex items-center space-x-3">
-                      <link.icon className="h-6 w-6 text-primary" />
+                <Card className="h-full hover:-translate-y-1 hover:shadow-md transition-all">
+                  <CardHeader className="space-y-2">
+                    <div className="flex items-center gap-3">
+                      <link.icon className="h-5 w-5 text-primary" />
                       <CardTitle className="text-lg">{link.title}</CardTitle>
                     </div>
                     <CardDescription>{link.description}</CardDescription>
@@ -117,17 +117,22 @@ export default function QuickLinksPage() {
         </div>
       </section>
 
-      {/* Internal Links */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-12">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Documentation Quick Access</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {internalLinks.map((link) => (
+          <div className="max-w-4xl mx-auto text-center space-y-2 mb-8">
+            <Badge variant="outline" className="mx-auto w-fit">Docs</Badge>
+            <h2 className="text-3xl font-semibold tracking-tight">Doc shortcuts</h2>
+            <p className="text-muted-foreground">
+              Jump into the section you need without hunting through nav.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {docLinks.map((link) => (
               <Link key={link.title} href={link.href}>
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer">
-                  <CardHeader className="text-left">
-                    <div className="flex items-center space-x-3">
-                      <link.icon className="h-6 w-6 text-primary" />
+                <Card className="h-full hover:-translate-y-1 hover:shadow-md transition-all">
+                  <CardHeader className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <ShieldCheck className="h-4 w-4 text-primary" />
                       <CardTitle className="text-lg">{link.title}</CardTitle>
                     </div>
                     <CardDescription>{link.description}</CardDescription>
@@ -139,35 +144,7 @@ export default function QuickLinksPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t py-12">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <p className="text-sm text-muted-foreground">
-                © 2025 Muscadine Labs. All rights reserved.
-              </p>
-            </div>
-            <div className="flex flex-wrap justify-center gap-6">
-              <Link href="/contracts" className="text-sm text-muted-foreground hover:text-foreground">
-                Contracts
-              </Link>
-              <Link href="/risk" className="text-sm text-muted-foreground hover:text-foreground">
-                Risk Framework
-              </Link>
-              <a href="https://muscadine.io" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
-                Main Website
-              </a>
-              <a href="https://app.muscadine.io" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
-                App
-              </a>
-              <a href="mailto:contact@muscadine.io" className="text-sm text-muted-foreground hover:text-foreground">
-                Contact
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <Footer />
+    </PageLayout>
   );
 }

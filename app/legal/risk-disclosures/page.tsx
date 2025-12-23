@@ -1,96 +1,81 @@
-import { PageLayout } from "@/components/PageLayout";
 import { Footer } from "@/components/Footer";
+import { PageLayout } from "@/components/PageLayout";
 
 export default function RiskDisclosuresPage() {
   return (
     <PageLayout 
       title="Risk Disclosures"
-      description="Important risk disclosures for Muscadine Labs LLC services and DeFi protocols."
+      description="Key risks for Muscadine vaults, self-custody, and on-chain activity."
     >
-      <section className="py-16">
+      <section className="py-12">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-neutral dark:prose-invert max-w-none">
-              <h2>Risk Disclosures</h2>
-              <p>Last updated: October 2025</p>
+              <p><strong>Last updated:</strong> October 2025</p>
               
               <h3>Company Information</h3>
-              <p>Muscadine Labs LLC is a Wyoming limited liability company providing blockchain software development and digital asset services. This risk disclosure applies to all our services including DeFi vaults, self-custody solutions, and blockchain infrastructure.</p>
+              <p>Muscadine Labs LLC (Wyoming) provides blockchain software, DeFi vaults, and self-custody solutions. These disclosures apply to all services.</p>
               
               <h3>General Blockchain and DeFi Risks</h3>
-              <p>All blockchain and DeFi activities involve significant risks:</p>
               <ul>
-                <li><strong>Smart Contract Risks:</strong> Vulnerabilities, bugs, or exploits in smart contracts can result in total loss of funds</li>
-                <li><strong>Market Volatility:</strong> Digital asset prices can fluctuate dramatically and unpredictably</li>
-                <li><strong>Liquidity Risks:</strong> Markets may become illiquid, making it difficult to exit positions</li>
-                <li><strong>Regulatory Risks:</strong> Changes in laws or regulations may affect the legality or viability of services</li>
-                <li><strong>Technology Risks:</strong> Network congestion, forks, or technical failures can impact operations</li>
-                <li><strong>Counterparty Risks:</strong> Risks associated with third-party protocols and services</li>
+                <li><strong>Smart contract:</strong> Bugs or exploits can cause total loss.</li>
+                <li><strong>Market volatility:</strong> Prices can move sharply and unpredictably.</li>
+                <li><strong>Liquidity:</strong> Markets can become illiquid, blocking exits.</li>
+                <li><strong>Regulatory:</strong> Rule changes may impact access or legality.</li>
+                <li><strong>Technology:</strong> Congestion, forks, or failures can disrupt operations.</li>
+                <li><strong>Counterparty:</strong> Dependencies on third-party protocols/services.</li>
               </ul>
               
               <h3>Muscadine Vault-Specific Risks</h3>
-              <p>Our DeFi vaults involve additional risks:</p>
               <ul>
-                <li><strong>Underlying Protocol Risks:</strong> Risks from AAVE, Moonwell, Morpho, and other integrated protocols</li>
-                <li><strong>Liquidation Risks:</strong> Overcollateralized loans may be liquidated if collateral values fall below thresholds</li>
-                <li><strong>Interest Rate Risks:</strong> Fluctuations in lending rates can affect vault performance</li>
-                <li><strong>Cross-Chain Bridge Risks:</strong> Risks associated with moving assets between different blockchain networks</li>
-                <li><strong>Strategy Risks:</strong> Automated strategies may not perform as expected due to market conditions</li>
-                <li><strong>Gas Fee Risks:</strong> High network fees can impact profitability and execution</li>
+                <li><strong>Underlying protocol:</strong> Risks from AAVE, Moonwell, Morpho, etc.</li>
+                <li><strong>Liquidation:</strong> Overcollateralized loans can be liquidated.</li>
+                <li><strong>Interest rate:</strong> Lending rates fluctuate.</li>
+                <li><strong>Bridge:</strong> Moving assets across chains adds bridge risk.</li>
+                <li><strong>Strategy:</strong> Automated strategies may underperform in certain markets.</li>
+                <li><strong>Gas fees:</strong> High fees can affect execution and profitability.</li>
               </ul>
               
               <h3>Self-Custody and Bitcoin Risks</h3>
-              <p>Self-custody solutions carry unique risks:</p>
               <ul>
-                <li><strong>Key Loss Risks:</strong> Loss of private keys or seed phrases results in permanent loss of funds with no recovery options</li>
-                <li><strong>Hardware Failures:</strong> Hardware wallet malfunctions can prevent access to funds</li>
-                <li><strong>User Error:</strong> Mistakes in transactions, addresses, or amounts can result in loss of funds</li>
-                <li><strong>Security Risks:</strong> Phishing, malware, or physical theft can compromise wallet security</li>
-                <li><strong>Node Risks:</strong> Running Bitcoin nodes involves technical risks and ongoing maintenance requirements</li>
-                <li><strong>BIP-85 Risks:</strong> Hierarchical key generation requires careful implementation and backup procedures</li>
+                <li><strong>Key loss:</strong> Lost keys/phrases mean irreversible loss of funds.</li>
+                <li><strong>Hardware failure:</strong> Device issues can block access.</li>
+                <li><strong>User error:</strong> Mistyped addresses/amounts are irreversible.</li>
+                <li><strong>Security:</strong> Phishing, malware, or theft can compromise wallets.</li>
+                <li><strong>Node:</strong> Running nodes carries technical/maintenance risk.</li>
+                <li><strong>BIP-85:</strong> Requires careful implementation and backups.</li>
               </ul>
               
               <h3>Operational and Business Risks</h3>
-              <p>Additional risks related to our operations:</p>
               <ul>
-                <li><strong>Service Availability:</strong> Our services may experience downtime or interruptions</li>
-                <li><strong>Regulatory Compliance:</strong> We operate under Wyoming state law and applicable federal regulations</li>
-                <li><strong>Third-Party Dependencies:</strong> Our services depend on external blockchain networks and protocols</li>
-                <li><strong>Software Risks:</strong> Our software is provided "as is" and may contain bugs or vulnerabilities</li>
-                <li><strong>Market Risks:</strong> Changes in DeFi markets can impact the viability of our strategies</li>
+                <li><strong>Availability:</strong> Services may experience downtime.</li>
+                <li><strong>Compliance:</strong> We operate under applicable laws; users must too.</li>
+                <li><strong>Third-party dependencies:</strong> Reliance on external networks/protocols.</li>
+                <li><strong>Software:</strong> Provided “as is”; bugs or vulnerabilities may exist.</li>
+                <li><strong>Market shifts:</strong> DeFi market changes can affect strategies.</li>
               </ul>
               
               <h3>No Guarantees or Warranties</h3>
-              <p>Muscadine Labs LLC provides all services "as is" without any warranties, express or implied. We make no guarantees regarding:</p>
-              <ul>
-                <li>Performance or returns on investments</li>
-                <li>Security of smart contracts or protocols</li>
-                <li>Availability or reliability of services</li>
-                <li>Protection against losses</li>
-              </ul>
-              <p>Past performance does not guarantee future results. Users assume all risks associated with their activities.</p>
+              <p>Services are provided “as is.” No guarantees on performance, security, availability, or protection from loss. Past results do not guarantee future outcomes.</p>
               
               <h3>Financial and Legal Disclaimer</h3>
-              <p>This information is not financial, legal, or tax advice. Users should:</p>
               <ul>
-                <li>Consult with qualified professionals before making investment decisions</li>
-                <li>Understand applicable tax implications of their activities</li>
-                <li>Ensure compliance with all applicable laws and regulations</li>
-                <li>Only invest what they can afford to lose</li>
+                <li>Not financial, legal, or tax advice.</li>
+                <li>Consult qualified professionals and understand tax implications.</li>
+                <li>Only invest what you can afford to lose.</li>
               </ul>
               
               <h3>User Responsibilities</h3>
-              <p>Users are solely responsible for:</p>
               <ul>
-                <li>Understanding the risks associated with blockchain and DeFi activities</li>
-                <li>Maintaining security of their private keys and wallets</li>
-                <li>Verifying all transactions before execution</li>
-                <li>Compliance with applicable laws and regulations</li>
-                <li>Due diligence on any investments or strategies</li>
+                <li>Understand blockchain/DeFi risks.</li>
+                <li>Maintain private key security.</li>
+                <li>Verify all transactions before execution.</li>
+                <li>Ensure legal compliance.</li>
+                <li>Perform due diligence on any investment or strategy.</li>
               </ul>
               
               <h3>Contact</h3>
-              <p>For questions about these risk disclosures, contact Muscadine Labs LLC at <a href="mailto:muscadinelabs@gmail.com">muscadinelabs@gmail.com</a></p>
+              <p>Questions: <a href="mailto:muscadinelabs@gmail.com">muscadinelabs@gmail.com</a></p>
             </div>
           </div>
         </div>

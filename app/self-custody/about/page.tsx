@@ -1,150 +1,107 @@
-import { PageLayout } from "@/components/PageLayout";
+import { Shield, Key, HardDrive, CheckCircle, Compass } from "lucide-react";
+
 import { Footer } from "@/components/Footer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { PageLayout } from "@/components/PageLayout";
 import { Badge } from "@/components/ui/badge";
-import { Shield, Key, HardDrive, CheckCircle } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
+const pillars = [
+  {
+    title: "Own your keys",
+    description: "No custodians. You hold the signing material, always.",
+    icon: Key,
+  },
+  {
+    title: "Segment risk",
+    description: "Use separate wallets for vaults, trading, and cold storage.",
+    icon: Shield,
+  },
+  {
+    title: "Recover safely",
+    description: "Backups and procedures that you test, not just write down.",
+    icon: HardDrive,
+  },
+  {
+    title: "Operate clearly",
+    description: "Document who does what and when for stress scenarios.",
+    icon: Compass,
+  },
+];
+
+const benefits = [
+  {
+    title: "No counterparty risk",
+    description: "Assets aren’t parked with an exchange or custodian.",
+  },
+  {
+    title: "Full ownership",
+    description: "Private keys stay with you; no rehypothecation or freezes.",
+  },
+  {
+    title: "Security by design",
+    description: "Redundancy, separation of duties, and rehearsed recovery.",
+  },
+  {
+    title: "Flexible control",
+    description: "Choose hardware, smart, or paper flows to fit your risk.",
+  },
+];
 
 export default function SelfCustodyAboutPage() {
   return (
     <PageLayout 
-      title="About Self-Custody Solutions"
-      description="Learn about Muscadine Labs' self-custody solutions that give you complete control over your digital assets and private keys."
+      title="About Self-Custody"
+      description="How we structure key ownership, backups, and operational safety so you stay sovereign across Bitcoin and DeFi."
     >
-      {/* Self-Custody Overview Section */}
-      <section className="py-8">
+      <section className="py-10 bg-muted/40">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-6">
-              <Badge variant="outline" className="mb-4">Self-Custody</Badge>
-              <h2 className="text-3xl font-bold mb-6">Financial Self-Sovereignty</h2>
-            </div>
-            <div className="mb-12">
-              <p className="text-xl text-muted-foreground mb-8 text-left">
-                At Muscadine we believe financial self-sovereignty is fundamental. Our Self-Custody Solutions platform empowers users to take full control of their private keys and digital wealth—whether you're managing Bitcoin, participating in DeFi, or simply planning generational wealth transfer.
+            <div className="text-center space-y-2 mb-8">
+              <Badge variant="outline" className="mx-auto w-fit">Principles</Badge>
+              <h2 className="text-3xl font-semibold tracking-tight">A simple self-custody playbook</h2>
+              <p className="text-muted-foreground">
+                Four pillars cover the lifecycle: holding keys, segmenting risk, backing up, and operating under pressure.
               </p>
             </div>
-
-            {/* Unified Framework Section */}
-            <div className="mb-12">
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3">
-                    <Key className="h-6 w-6 text-primary" />
-                    <CardTitle>Unified Key Management Framework</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    We offer a unified framework for key-management across single-, multi- and paper-wallet formats, so you're never tethered to third-party custody.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Advanced Features Section */}
-            <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-6 text-center">Advanced Features</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <Card className="hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <div className="flex items-center space-x-3">
-                      <HardDrive className="h-6 w-6 text-primary" />
-                      <CardTitle>BIP-85 Hierarchical Key Generation</CardTitle>
+            <div className="grid md:grid-cols-2 gap-6">
+              {pillars.map((item) => (
+                <Card key={item.title} className="h-full hover:-translate-y-1 hover:shadow-md transition-all">
+                  <CardHeader className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <item.icon className="h-5 w-5 text-primary" />
+                      <CardTitle className="text-lg">{item.title}</CardTitle>
                     </div>
+                    <CardDescription>{item.description}</CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <CardDescription>
-                      Advanced BIP-85 hierarchical master- and child-key generation enables you to create vaults for multiple wallets (for children, heirs, siblings, business partners) without ever compromising your root key.
-                    </CardDescription>
-                  </CardContent>
                 </Card>
-
-                <Card className="hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <div className="flex items-center space-x-3">
-                      <Shield className="h-6 w-6 text-primary" />
-                      <CardTitle>Multi-Purpose Wallet Architecture</CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription>
-                      Securely divide wallets for different purposes or generations while keeping risk low. Perfect for generational wealth planning and business partnerships.
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-
-            {/* Support Section */}
-            <div className="mb-12">
-              <Card className="hover:shadow-lg transition-shadow bg-primary/5">
-                <CardHeader>
-                  <div className="flex items-center space-x-3">
-                    <Shield className="h-6 w-6 text-primary" />
-                    <CardTitle>Comprehensive Support & Guidance</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    Whether you're starting your first wallet or architecting a generational wealth infrastructure, contact us for comprehensive guides and one-on-one setup support—our team will walk you through selecting the right wallet type, implementing recovery planning, and executing a self-custody strategy tailored to your goals.
-                  </CardDescription>
-                </CardContent>
-              </Card>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-6">
-              <Badge variant="outline" className="mb-4">Benefits</Badge>
-              <h2 className="text-3xl font-bold mb-6">Why Choose Self-Custody?</h2>
-            </div>
-            <div className="mb-8">
-              <p className="text-xl text-muted-foreground text-left">
-                Self-custody gives you complete ownership and control over your digital assets, eliminating counterparty risk and ensuring your assets are truly yours.
+            <div className="text-center space-y-2 mb-8">
+              <Badge variant="outline" className="mx-auto w-fit">Why it matters</Badge>
+              <h2 className="text-3xl font-semibold tracking-tight">Benefits of doing it right</h2>
+              <p className="text-muted-foreground">
+                Self-custody is powerful only when it is disciplined. These are the outcomes we anchor on.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-8 text-left">
-              <div className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-green-500 mt-1" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">No Counterparty Risk</h3>
-                  <p className="text-muted-foreground">
-                    Your assets are not held by any third party, eliminating the risk of exchange hacks or regulatory seizure.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-green-500 mt-1" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Complete Ownership</h3>
-                  <p className="text-muted-foreground">
-                    You own your private keys, meaning you have complete control and ownership of your digital assets.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-green-500 mt-1" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Privacy Protection</h3>
-                  <p className="text-muted-foreground">
-                    Self-custody solutions provide enhanced privacy by keeping your asset holdings private.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-green-500 mt-1" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Financial Sovereignty</h3>
-                  <p className="text-muted-foreground">
-                    Take back control of your financial future with true self-sovereignty over your assets.
-                  </p>
-                </div>
-              </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {benefits.map((item) => (
+                <Card key={item.title} className="h-full">
+                  <CardHeader className="space-y-1">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-5 w-5 text-green-500" />
+                      <CardTitle className="text-lg">{item.title}</CardTitle>
+                    </div>
+                    <CardDescription>{item.description}</CardDescription>
+                  </CardHeader>
+                </Card>
+              ))}
             </div>
           </div>
         </div>

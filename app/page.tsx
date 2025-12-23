@@ -1,180 +1,316 @@
-import { PageLayout } from "@/components/PageLayout";
-import { Footer } from "@/components/Footer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import { 
-  Zap, 
-  Users, 
+import {
   ArrowRight,
-  CheckCircle
+  BarChart3,
+  BookOpen,
+  FileText,
+  ShieldCheck,
+  Sparkles,
+  Users,
+  Wallet,
+  Zap,
 } from "lucide-react";
+
+import { Footer } from "@/components/Footer";
+import { PageLayout } from "@/components/PageLayout";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Home() {
   return (
-    <PageLayout 
-      title="About Muscadine Labs"
-      description="Learn about Muscadine Labs and our mission to democratize DeFi access through automated yield strategies."
+    <PageLayout
+      title="Muscadine Labs Documentation"
+      description="Learn how to use Muscadine vaults, practice secure self-custody, and understand the risk, fee, and governance model in one place."
     >
-      {/* What is Muscadine Labs Section */}
-      <section className="py-8">
+      {/* Hero CTAs */}
+      <section className="pb-4">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-6">
-              <Badge variant="outline" className="mb-4">About Us</Badge>
-              <h2 className="text-3xl font-bold mb-6">What is Muscadine Labs?</h2>
-            </div>
-            <div className="mb-12">
-              <p className="text-xl text-muted-foreground mb-8 text-left">
-                At Muscadine Labs, we build tools for financial self-sovereignty, empowering individuals to take full control of their financial future. We believe financial independence should belong to everyone, not just institutions. Through Bitcoin security, self-custody, and accessible decentralized finance (DeFi) solutions, we help people become their own bank and participate directly in the emerging financial system—without intermediaries.
-              </p>
-              <p className="text-xl text-muted-foreground mb-8 text-left">
-                We curate and manage risk through Morpho vault infrastructure, deploying capital into overcollateralized lending markets that provide variable returns. Unlike traditional financial systems that rely on undercollateralized credit, our approach ensures borrowers maintain collateral equal to or greater than their debt, minimizing systemic risk. In parallel, we design self-custody frameworks that enable clients to securely own and manage their wealth through node operation, paper key systems, and advanced key management solutions emphasizing security and sovereignty.
-              </p>
-              <p className="text-xl text-muted-foreground mb-8 text-left">
-                Muscadine Labs differentiates itself through transparency, efficiency, and accessibility. We operate with one of the lowest fees in the industry—a 2% performance fee—eliminating the layers of cost that have re-emerged as DeFi increasingly mimics traditional finance. Our objective is to restore the original ethos of crypto: open access, fair participation, and genuine ownership. Anyone can access our vaults to earn competitive yields across the most liquid on-chain markets. Beyond yield generation, our mission is to advance financial literacy and technological empowerment, helping individuals understand, control, and grow their wealth through decentralized systems.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission & Principles Section */}
-      <section className="py-8 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">Our Mission</Badge>
-              <h2 className="text-3xl font-bold mb-6">Mission & Principles</h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl">Our Mission</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    To give financial freedom back to the people.
-                  </p>
-                  <p className="text-muted-foreground mb-4 italic">
-                    "Docēre est discere" - To teach is to learn.
-                  </p>
-                  <p className="text-muted-foreground">
-                    We want to teach everyday individuals that cryptocurrency and Bitcoin IS the future, and gives people the chance to truly own and receive their monetary work back in yield. This means retention of people's wealth to their hands, while decentralized systems do the work.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl">Core Principles</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <div>
-                      <p className="font-medium">Security First</p>
-                      <p className="text-sm text-muted-foreground">Every strategy is built with security as the primary consideration</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <div>
-                      <p className="font-medium">Transparency</p>
-                      <p className="text-sm text-muted-foreground">All contracts are open-source and operations are auditable</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <div>
-                      <p className="font-medium">Accessibility</p>
-                      <p className="text-sm text-muted-foreground">Complex DeFi strategies made simple through automation</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <div>
-                      <p className="font-medium">Performance</p>
-                      <p className="text-sm text-muted-foreground">Continuous optimization to maximize yields</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Getting Started Section */}
-      <section className="py-8">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center">
-              <Badge variant="outline" className="mb-4">Getting Started</Badge>
-              <h2 className="text-3xl font-bold mb-6">Ready to Explore?</h2>
-            </div>
-            <p className="text-xl text-muted-foreground mb-8 text-left">
-              Here are our products.
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <Link href="/vault/about">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
-                  <CardHeader className="text-center">
-                    <div className="flex justify-center mb-2">
-                      <Zap className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle className="group-hover:text-primary transition-colors">
-                      Automated Vaults
-                    </CardTitle>
-                    <CardDescription>
-                      Self-executing strategies that optimize yields across multiple DeFi protocols
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
-                  </CardContent>
-                </Card>
-              </Link>
-
-              <Link href="/self-custody/about">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
-                  <CardHeader className="text-center">
-                    <div className="flex justify-center mb-2">
-                      <Users className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle className="group-hover:text-primary transition-colors">
-                      Self-Custody Management
-                    </CardTitle>
-                    <CardDescription>
-                      Experienced team with deep DeFi expertise to help create a secure self-custody solution
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <ArrowRight className="h-4 w-4 mx-auto text-muted-foreground group-hover:text-primary transition-colors" />
-                  </CardContent>
-                </Card>
-              </Link>
-            </div>
-
-            <div className="mt-12 p-6 bg-muted/30 rounded-2xl">
-              <h3 className="text-xl font-semibold mb-4">New to Crypto and DeFi?</h3>
-              <p className="text-muted-foreground mb-4">
-                If you're new to cryptocurrency and decentralized finance, we recommend reading our DeFi 101 section to get a better understanding of the fundamentals before exploring our products.
-              </p>
-              <Link href="/defi/what-is-defi">
-                <div className="inline-flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors font-medium">
-                  <span>Read DeFi 101</span>
+          <div className="flex flex-col items-center gap-4">
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link href="/quick-links">
+                <Button size="lg" className="shadow-sm">
+                  View docs overview
                   <ArrowRight className="h-4 w-4" />
-                </div>
+                </Button>
+              </Link>
+              <Link href="/defi/what-is-defi">
+                <Button variant="outline" size="lg">
+                  DeFi 101
+                </Button>
+              </Link>
+              <Link href="/roadmap/features">
+                <Button variant="ghost" size="lg">
+                  Roadmap
+                  <Sparkles className="h-4 w-4" />
+                </Button>
               </Link>
             </div>
-
+            <p className="text-muted-foreground text-center max-w-3xl">
+              Start with the quick links if you want the fastest path, or jump straight into DeFi 101 if you are new. Everything else is organized by product and capability below.
+            </p>
           </div>
         </div>
       </section>
 
+      {/* Quick start */}
+      <section className="py-10 bg-muted/40">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto space-y-2 mb-8 text-center">
+            <Badge variant="outline" className="mx-auto w-fit">Start here</Badge>
+            <h2 className="text-3xl font-semibold tracking-tight">Quickstart guides</h2>
+            <p className="text-muted-foreground">
+              Short, opinionated paths to get productive in minutes.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "DeFi 101",
+                href: "/defi/what-is-defi",
+                description: "Understand on-chain basics and core terminology.",
+                icon: <BookOpen className="h-5 w-5 text-primary" />,
+              },
+              {
+                title: "Vaults overview",
+                href: "/vault/about",
+                description: "How our automated strategies are structured and governed.",
+                icon: <Zap className="h-5 w-5 text-primary" />,
+              },
+              {
+                title: "Self-custody setup",
+                href: "/self-custody/about",
+                description: "Operational playbook for holding keys securely.",
+                icon: <Wallet className="h-5 w-5 text-primary" />,
+              },
+              {
+                title: "Fees & risk",
+                href: "/vault/fees",
+                description: "Performance fees, disclosures, and risk framework.",
+                icon: <ShieldCheck className="h-5 w-5 text-primary" />,
+              },
+            ].map((item) => (
+              <Link key={item.title} href={item.href}>
+                <Card className="h-full transition-all hover:-translate-y-1 hover:shadow-md">
+                  <CardHeader className="flex flex-row items-center justify-between space-y-0">
+                    <CardTitle className="text-lg">{item.title}</CardTitle>
+                    {item.icon}
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-sm">{item.description}</CardDescription>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Products */}
+      <section className="py-12">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto mb-8 text-center space-y-2">
+            <Badge variant="outline" className="mx-auto w-fit">Products</Badge>
+            <h2 className="text-3xl font-semibold tracking-tight">What you can build with</h2>
+            <p className="text-muted-foreground">
+              Go deeper into automated vaults or design your own secure custody workflows.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="group h-full border border-border/80">
+              <CardHeader className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <Zap className="h-5 w-5 text-primary" />
+                  <CardTitle className="text-2xl">Automated Vaults</CardTitle>
+                </div>
+                <CardDescription>
+                  Self-executing strategies across overcollateralized lending markets.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <ul className="text-sm text-muted-foreground space-y-2">
+                  <li className="flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4 text-primary" />
+                    How vault architecture, contracts, and roles fit together.
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4 text-primary" />
+                    Performance fee model and the reporting cadence.
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4 text-primary" />
+                    Access points for liquidity providers and withdrawals.
+                  </li>
+                </ul>
+                <div className="flex gap-2">
+                  <Link href="/vault/about">
+                    <Button size="sm">
+                      View docs
+                      <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                  <Link href="/vault/architecture">
+                    <Button size="sm" variant="outline">
+                      Architecture
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group h-full border border-border/80">
+              <CardHeader className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <Users className="h-5 w-5 text-primary" />
+                  <CardTitle className="text-2xl">Self-Custody</CardTitle>
+                </div>
+                <CardDescription>
+                  Frameworks to hold, recover, and operate safely without intermediaries.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <ul className="text-sm text-muted-foreground space-y-2">
+                  <li className="flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4 text-primary" />
+                    Recommended wallet setup and key management patterns.
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4 text-primary" />
+                    Recovery planning with paper keys and multisig options.
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4 text-primary" />
+                    Operational security practices for day-to-day usage.
+                  </li>
+                </ul>
+                <div className="flex gap-2">
+                  <Link href="/self-custody/about">
+                    <Button size="sm">
+                      View docs
+                      <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                  <Link href="/self-custody/recovery">
+                    <Button size="sm" variant="outline">
+                      Recovery
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Muscadine */}
+      <section className="py-10 bg-muted/40">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto mb-8 text-center space-y-2">
+            <Badge variant="outline" className="mx-auto w-fit">Why Muscadine</Badge>
+            <h2 className="text-3xl font-semibold tracking-tight">Built for security and clarity</h2>
+            <p className="text-muted-foreground">
+              The essentials that guide every product and document we publish.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            <Card className="h-full">
+              <CardHeader className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <ShieldCheck className="h-5 w-5 text-primary" />
+                  <CardTitle>Security first</CardTitle>
+                </div>
+                <CardDescription>
+                  Overcollateralized markets, auditable contracts, and clear operational controls.
+                </CardDescription>
+              </CardHeader>
+            </Card>
+            <Card className="h-full">
+              <CardHeader className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <FileText className="h-5 w-5 text-primary" />
+                  <CardTitle>Radical transparency</CardTitle>
+                </div>
+                <CardDescription>
+                  Open-source docs, explicit risk disclosures, and straightforward fee math.
+                </CardDescription>
+              </CardHeader>
+            </Card>
+            <Card className="h-full">
+              <CardHeader className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <BarChart3 className="h-5 w-5 text-primary" />
+                  <CardTitle>Efficiency built-in</CardTitle>
+                </div>
+                <CardDescription>
+                  Lean 2% performance fee, automation to reduce overhead, and simple entry points.
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Updates & resources */}
+      <section className="py-12">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto mb-8 text-center space-y-2">
+            <Badge variant="outline" className="mx-auto w-fit">Resources</Badge>
+            <h2 className="text-3xl font-semibold tracking-tight">Stay current</h2>
+            <p className="text-muted-foreground">
+              Track roadmap milestones, view contributor notes, and find shortcuts.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link href="/roadmap/features">
+              <Card className="h-full hover:shadow-md transition-all">
+                <CardHeader className="flex items-start justify-between space-y-0">
+                  <div>
+                    <CardTitle className="text-lg">Roadmap</CardTitle>
+                    <CardDescription>What is shipping next and why.</CardDescription>
+                  </div>
+                  <Sparkles className="h-5 w-5 text-primary" />
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground">
+                  View feature pipeline, governance updates, and upcoming releases.
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/overview/contributors">
+              <Card className="h-full hover:shadow-md transition-all">
+                <CardHeader className="flex items-start justify-between space-y-0">
+                  <div>
+                    <CardTitle className="text-lg">Contributors</CardTitle>
+                    <CardDescription>Who maintains what.</CardDescription>
+                  </div>
+                  <Users className="h-5 w-5 text-primary" />
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground">
+                  Contact the right owners for vaults, custody, and risk documentation.
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/overview/quick-links">
+              <Card className="h-full hover:shadow-md transition-all">
+                <CardHeader className="flex items-start justify-between space-y-0">
+                  <div>
+                    <CardTitle className="text-lg">Quick links</CardTitle>
+                    <CardDescription>Fast jump-offs across docs.</CardDescription>
+                  </div>
+                  <ArrowRight className="h-5 w-5 text-primary" />
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground">
+                  Bookmarks for common tasks: funding, withdrawals, disclosures, and FAQs.
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </PageLayout>

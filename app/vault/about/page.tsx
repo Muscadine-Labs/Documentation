@@ -1,31 +1,31 @@
-import { PageLayout } from "@/components/PageLayout";
-import { Footer } from "@/components/Footer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Shield, TrendingUp, DollarSign, Building2, Target, Zap, Layers, Coins, Bitcoin, Zap as ZapIcon } from "lucide-react";
+
+import { Footer } from "@/components/Footer";
+import { PageLayout } from "@/components/PageLayout";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function VaultsAboutPage() {
   return (
     <PageLayout 
       title="About Muscadine Vaults"
-      description="Muscadine Vaults are a curated suite of on-chain yield products built on Morpho Vault infrastructure — designed to bring professional-grade income strategies to decentralized finance."
+      description="On-chain, overcollateralized yield strategies built on Morpho Vaults — transparent fees, clear roles, and self-custodied access."
     >
 
-      {/* Introduction Section */}
-      <section className="py-8 bg-muted/30">
+      <section className="py-10 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <Badge variant="outline" className="mb-4">Professional-Grade DeFi</Badge>
-              <h2 className="text-3xl font-bold mb-6">About Muscadine Vaults</h2>
+              <h2 className="text-3xl font-semibold tracking-tight mb-6">About Muscadine Vaults</h2>
             </div>
             
             <div className="mb-12">
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-left">
-                By leveraging Morpho's transparent and efficient vault architecture, we make it simple for individuals and institutions to earn real yield on their digital assets, without intermediaries or hidden risk.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                Built on Morpho vault infrastructure, Muscadine vaults deploy capital into overcollateralized markets with transparent roles, clear fees, and on-chain verification.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed text-left">
-                When you deposit assets into a Muscadine Vault, your funds are automatically deployed across trustless, overcollateralized lending markets to generate optimized returns. Each vault is managed by smart contracts that allocate capital, harvest rewards, and rebalance positions in real time — so your assets are always working efficiently on-chain.
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Deposits stay in your custody; contracts allocate, harvest, and rebalance automatically. Fees are simple: performance-based, no management, no withdrawal penalties.
               </p>
             </div>
 
@@ -34,12 +34,12 @@ export default function VaultsAboutPage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Shield className="h-6 w-6 text-primary" />
-                    <CardTitle>Full Custody & Transparency</CardTitle>
+                    <CardTitle>Full custody & transparency</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    You retain full custody and transparency at every step, while the system handles the complexity behind the scenes.
+                    You retain custody and can verify every action on-chain; the system handles allocation and reporting.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -48,12 +48,12 @@ export default function VaultsAboutPage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Zap className="h-6 w-6 text-primary" />
-                    <CardTitle>Automated Management</CardTitle>
+                    <CardTitle>Automated management</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Smart contracts automatically allocate capital, harvest rewards, and rebalance positions in real time for optimal efficiency.
+                    Smart contracts allocate, harvest, and rebalance in real time for efficient yield capture.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -62,17 +62,16 @@ export default function VaultsAboutPage() {
         </div>
       </section>
 
-      {/* Our Vaults Section */}
       <section className="py-8">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="mb-12">
               <div className="text-center">
                 <Badge variant="outline" className="mb-4">Our Vaults</Badge>
-                <h2 className="text-3xl font-bold mb-6">Three Distinct Investment Strategies</h2>
+                <h2 className="text-3xl font-semibold tracking-tight mb-6">Three vaults, three profiles</h2>
               </div>
               <p className="text-xl text-muted-foreground mb-8 text-left">
-                We currently offer three Muscadine Vaults — USDC, cbBTC, and ETH — each designed to fit a distinct investor profile.
+                Three options aligned to risk/return preferences. All overcollateralized, all transparent.
               </p>
             </div>
             
@@ -86,7 +85,7 @@ export default function VaultsAboutPage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Focuses on stable, low-volatility yield for capital preservation. Ideal for conservative investors seeking steady returns.
+                    Stable, lower-volatility yield for capital preservation; ideal for conservative positions.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -100,7 +99,7 @@ export default function VaultsAboutPage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Offers yield exposure to Bitcoin through Coinbase's wrapped, Base-native asset. Perfect for Bitcoin holders seeking additional yield.
+                    Yield exposure to Bitcoin via Base-native cbBTC; for BTC holders seeking on-chain yield.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -114,7 +113,7 @@ export default function VaultsAboutPage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Provides native Ethereum yield strategies, compounding rewards from blue-chip lending and staking markets.
+                    Native ETH strategies compounding rewards from blue-chip lending/staking markets.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -123,13 +122,12 @@ export default function VaultsAboutPage() {
         </div>
       </section>
 
-      {/* Mission Section */}
       <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-6">
               <Badge variant="outline" className="mb-4">Our Mission</Badge>
-              <h2 className="text-3xl font-bold mb-6">Restoring What Finance Should Be</h2>
+              <h2 className="text-3xl font-semibold tracking-tight mb-6">Restoring what finance should be</h2>
             </div>
             
             <div className="mb-12">
@@ -137,7 +135,7 @@ export default function VaultsAboutPage() {
                 At Muscadine Labs, we created these vaults to restore what finance should be: transparent, aligned, and empowering.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-left">
-                Our mission is to make financial self-sovereignty practical — combining the rigor of institutional risk management with the freedom of decentralized ownership.
+                Our mission is to make financial self-sovereignty practical — combining institutional risk discipline with decentralized ownership.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed text-left">
                 Built on the security of Morpho Vaults and deployed on Base, Muscadine Vaults give investors a trusted gateway to DeFi income — clear, efficient, and always under your control.
@@ -149,7 +147,7 @@ export default function VaultsAboutPage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Building2 className="h-6 w-6 text-primary" />
-                    <CardTitle>Institutional Rigor</CardTitle>
+                    <CardTitle>Institutional rigor</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -163,7 +161,7 @@ export default function VaultsAboutPage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Target className="h-6 w-6 text-primary" />
-                    <CardTitle>Self-Sovereignty</CardTitle>
+                    <CardTitle>Self-sovereignty</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -177,13 +175,12 @@ export default function VaultsAboutPage() {
         </div>
       </section>
 
-      {/* How It Works Section */}
       <section className="py-8">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <Badge variant="outline" className="mb-4">How It Works</Badge>
-              <h2 className="text-3xl font-bold mb-6">Simple Process, Professional Results</h2>
+              <h2 className="text-3xl font-semibold tracking-tight mb-6">Simple process, professional results</h2>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -191,7 +188,7 @@ export default function VaultsAboutPage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Target className="h-6 w-6 text-primary" />
-                    <CardTitle>Simple Process</CardTitle>
+                    <CardTitle>Simple process</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -200,7 +197,7 @@ export default function VaultsAboutPage() {
                       <span className="text-primary font-semibold text-sm">1</span>
                     </div>
                     <div>
-                      <p className="font-medium">Deposit Assets</p>
+                    <p className="font-medium">Deposit assets</p>
                       <p className="text-sm text-muted-foreground">Deposit USDC, cbBTC, or ETH into your chosen vault</p>
                     </div>
                   </div>
@@ -209,7 +206,7 @@ export default function VaultsAboutPage() {
                       <span className="text-primary font-semibold text-sm">2</span>
                     </div>
                     <div>
-                      <p className="font-medium">Automatic Deployment</p>
+                    <p className="font-medium">Automatic deployment</p>
                       <p className="text-sm text-muted-foreground">Funds are automatically deployed across trusted lending markets</p>
                     </div>
                   </div>
@@ -218,7 +215,7 @@ export default function VaultsAboutPage() {
                       <span className="text-primary font-semibold text-sm">3</span>
                     </div>
                     <div>
-                      <p className="font-medium">Optimized Returns</p>
+                    <p className="font-medium">Optimized returns</p>
                       <p className="text-sm text-muted-foreground">Smart contracts harvest rewards and rebalance positions</p>
                     </div>
                   </div>
@@ -227,7 +224,7 @@ export default function VaultsAboutPage() {
                       <span className="text-primary font-semibold text-sm">4</span>
                     </div>
                     <div>
-                      <p className="font-medium">Withdraw Anytime</p>
+                    <p className="font-medium">Withdraw anytime</p>
                       <p className="text-sm text-muted-foreground">Maintain full control and withdraw your assets whenever needed</p>
                     </div>
                   </div>
@@ -238,7 +235,7 @@ export default function VaultsAboutPage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <Shield className="h-6 w-6 text-primary" />
-                    <CardTitle>Built on Security</CardTitle>
+                    <CardTitle>Built on security</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -246,28 +243,28 @@ export default function VaultsAboutPage() {
                     <div className="flex items-start space-x-3">
                       <Shield className="h-5 w-5 text-primary mt-0.5" />
                       <div>
-                        <p className="font-medium">Morpho Vault Infrastructure</p>
+                    <p className="font-medium">Morpho vault infrastructure</p>
                         <p className="text-sm text-muted-foreground">Built on proven, secure vault architecture</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
                       <TrendingUp className="h-5 w-5 text-primary mt-0.5" />
                       <div>
-                        <p className="font-medium">Overcollateralized Markets</p>
+                        <p className="font-medium">Overcollateralized markets</p>
                         <p className="text-sm text-muted-foreground">Only trusted, overcollateralized lending markets</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
                       <ZapIcon className="h-5 w-5 text-primary mt-0.5" />
                       <div>
-                        <p className="font-medium">Base Network</p>
+                    <p className="font-medium">Base network</p>
                         <p className="text-sm text-muted-foreground">Deployed on Coinbase's Layer-2 for efficiency</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Layers className="h-5 w-5 text-primary mt-0.5" />
                       <div>
-                        <p className="font-medium">Full Transparency</p>
+                    <p className="font-medium">Full transparency</p>
                         <p className="text-sm text-muted-foreground">Complete visibility into all operations and holdings</p>
                       </div>
                     </div>

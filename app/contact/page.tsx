@@ -1,133 +1,96 @@
-import { PageLayout } from "@/components/PageLayout";
-import { Footer } from "@/components/Footer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Linkedin, Github, ExternalLink, Twitter } from "lucide-react";
+
+import { Footer } from "@/components/Footer";
+import { PageLayout } from "@/components/PageLayout";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
+const contacts = [
+  {
+    title: "Email",
+    description: "Support and general inquiries",
+    href: "mailto:muscadinelabs@gmail.com",
+    icon: Mail,
+  },
+  {
+    title: "Contact form",
+    description: "Partnerships, press, or product questions",
+    href: "https://muscadine.io/contact",
+    icon: ExternalLink,
+  },
+  {
+    title: "X (Twitter)",
+    description: "Updates and announcements",
+    href: "https://x.com/muscadinelabs",
+    icon: Twitter,
+  },
+  {
+    title: "LinkedIn",
+    description: "Company profile and hiring",
+    href: "https://www.linkedin.com/company/muscadinelabs/",
+    icon: Linkedin,
+  },
+  {
+    title: "GitHub",
+    description: "Code, issues, contracts, and docs",
+    href: "https://github.com/Muscadine-Labs",
+    icon: Github,
+  },
+];
 
 export default function ContactPage() {
   return (
-    <PageLayout 
+    <PageLayout
       title="Contact & Support"
-      description="Get in touch with Muscadine Labs for support, questions, or collaboration."
+      description="Choose the fastest route to reach us. We keep a tight surface: email, form, socials, and code."
     >
-      <section className="py-16">
+      <section className="pb-4">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold mb-6">Contact Muscadine Labs</h2>
-            <p className="text-xl text-muted-foreground">
-              Reach out to us for support, questions, or collaboration opportunities.
+          <div className="flex flex-wrap justify-center gap-3">
+            <a href="https://muscadine.io/contact" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="shadow-sm">
+                Contact form
+              </Button>
+            </a>
+            <a href="mailto:muscadinelabs@gmail.com">
+              <Button variant="outline" size="lg">
+                Email support
+              </Button>
+            </a>
+            <a href="https://github.com/Muscadine-Labs" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="lg">
+                GitHub
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-10 bg-muted/40">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center space-y-2 mb-8">
+            <Badge variant="outline" className="mx-auto w-fit">Support</Badge>
+            <h2 className="text-3xl font-semibold tracking-tight">Pick a channel</h2>
+            <p className="text-muted-foreground">
+              Use email for tickets, the form for structured requests, GitHub for code, and socials for quick updates.
             </p>
           </div>
-
-          {/* Website - Full Width */}
-          <Card className="hover:shadow-lg transition-shadow mb-8">
-            <CardHeader>
-              <div className="flex items-center space-x-3">
-                <ExternalLink className="h-6 w-6 text-primary" />
-                <CardTitle>Website</CardTitle>
-              </div>
-              <CardDescription>
-                Visit our main website
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <a 
-                href="https://muscadine.io/contact" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-primary hover:underline font-medium"
-              >
-                muscadine.io/contact
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {contacts.map((item) => (
+              <a key={item.title} href={item.href} target="_blank" rel="noopener noreferrer">
+                <Card className="h-full hover:-translate-y-1 hover:shadow-md transition-all">
+                  <CardHeader className="space-y-2">
+                    <div className="flex items-center gap-3">
+                      <item.icon className="h-5 w-5 text-primary" />
+                      <CardTitle className="text-lg">{item.title}</CardTitle>
+                    </div>
+                    <CardDescription>{item.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent className="text-sm text-muted-foreground"></CardContent>
+                </Card>
               </a>
-            </CardContent>
-          </Card>
-
-          {/* Other 4 cards in 2x2 grid */}
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-center space-x-3">
-                  <Mail className="h-6 w-6 text-primary" />
-                  <CardTitle>Email</CardTitle>
-                </div>
-                <CardDescription>
-                  General inquiries and support
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <a 
-                  href="mailto:muscadinelabs@gmail.com" 
-                  className="text-primary hover:underline font-medium"
-                >
-                  muscadinelabs@gmail.com
-                </a>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-center space-x-3">
-                  <Twitter className="h-6 w-6 text-primary" />
-                  <CardTitle>X (Twitter)</CardTitle>
-                </div>
-                <CardDescription>
-                  Follow us on X for updates
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <a 
-                  href="https://x.com/muscadinelabs" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline font-medium"
-                >
-                  @muscadinelabs
-                </a>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-center space-x-3">
-                  <Linkedin className="h-6 w-6 text-primary" />
-                  <CardTitle>LinkedIn</CardTitle>
-                </div>
-                <CardDescription>
-                  Connect with us professionally
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <a 
-                  href="https://www.linkedin.com/company/muscadinelabs/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline font-medium"
-                >
-                  Muscadine Labs LinkedIn
-                </a>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-center space-x-3">
-                  <Github className="h-6 w-6 text-primary" />
-                  <CardTitle>GitHub</CardTitle>
-                </div>
-                <CardDescription>
-                  View our open source projects
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <a 
-                  href="https://github.com/Muscadine-Labs" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline font-medium"
-                >
-                  Muscadine-Labs GitHub
-                </a>
-              </CardContent>
-            </Card>
+            ))}
           </div>
         </div>
       </section>
