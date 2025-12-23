@@ -5,7 +5,6 @@ import {
   BookOpen,
   FileText,
   ShieldCheck,
-  Sparkles,
   Users,
   Wallet,
   Zap,
@@ -23,36 +22,6 @@ export default function Home() {
       title="Muscadine Labs Documentation"
       description="Learn how to use Muscadine vaults, practice secure self-custody, and understand the risk, fee, and governance model in one place."
     >
-      {/* Hero CTAs */}
-      <section className="pb-4">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col items-center gap-4">
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/quick-links">
-                <Button size="lg" className="shadow-sm">
-                  View docs overview
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </Link>
-              <Link href="/defi/what-is-defi">
-                <Button variant="outline" size="lg">
-                  DeFi 101
-                </Button>
-              </Link>
-              <Link href="/roadmap/features">
-                <Button variant="ghost" size="lg">
-                  Roadmap
-                  <Sparkles className="h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
-            <p className="text-muted-foreground text-center max-w-3xl">
-              Start with the quick links if you want the fastest path, or jump straight into DeFi 101 if you are new. Everything else is organized by product and capability below.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Mission & Purpose */}
       <section className="py-12">
         <div className="container mx-auto px-6">
