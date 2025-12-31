@@ -4,78 +4,174 @@ import { PageLayout } from "@/components/PageLayout";
 export default function RiskDisclosuresPage() {
   return (
     <PageLayout 
-      title="Risk Disclosures"
-      description="Key risks for Muscadine vaults, self-custody, and on-chain activity."
+      title="Legal Disclaimer"
+      description="Important legal notice and risk disclosures for Muscadine services."
     >
       <section className="py-12">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-neutral dark:prose-invert max-w-none">
-              <p><strong>Last updated:</strong> October 2025</p>
+              <p><strong>Last updated:</strong> January 2026</p>
               
-              <h3>Company Information</h3>
-              <p>Muscadine Labs LLC (Wyoming) provides blockchain software, DeFi vaults, and self-custody solutions. These disclosures apply to all services.</p>
+              <h2>⚠️ IMPORTANT LEGAL NOTICE</h2>
+              <p><strong>READ THIS DISCLAIMER CAREFULLY BEFORE USING OUR SERVICES.</strong></p>
               
-              <h3>General Blockchain and DeFi Risks</h3>
+              <h2>1. Our Services</h2>
+              <p>Muscadine provides comprehensive services focused on Bitcoin security, self-custody solutions, and decentralized finance (DeFi) risk management. Our services include:</p>
               <ul>
-                <li><strong>Smart contract:</strong> Bugs or exploits can cause total loss.</li>
-                <li><strong>Market volatility:</strong> Prices can move sharply and unpredictably.</li>
-                <li><strong>Liquidity:</strong> Markets can become illiquid, blocking exits.</li>
-                <li><strong>Regulatory:</strong> Rule changes may impact access or legality.</li>
-                <li><strong>Technology:</strong> Congestion, forks, or failures can disrupt operations.</li>
-                <li><strong>Counterparty:</strong> Dependencies on third-party protocols/services.</li>
+                <li><strong>Risk Curation for Non-Custodial Vaults:</strong> We curate and manage risk for non-custodial vault services, evaluating protocols, assessing smart contract security, and providing guidance on safe DeFi participation</li>
+                <li><strong>Bitcoin Security & Self-Custody:</strong> Educational resources and guidance on implementing secure Bitcoin self-custody solutions</li>
+                <li><strong>DeFi Protocol Access:</strong> Access to curated DeFi protocols including lending, borrowing, and yield generation services</li>
+                <li><strong>Bitcoin Node Services:</strong> Access to our self-hosted Bitcoin node for enhanced privacy and transaction validation</li>
+                <li><strong>Educational Content:</strong> Comprehensive educational materials about cryptocurrency, blockchain technology, and decentralized finance</li>
+              </ul>
+              <p><strong>All information, content, and services are provided for educational and informational purposes only.</strong> We do not provide financial, investment, or legal advice.</p>
+              
+              <h2>2. No Financial Advice</h2>
+              <p>WE DO NOT PROVIDE FINANCIAL ADVICE, INVESTMENT ADVICE, OR TRADING ADVICE.</p>
+              <p>Nothing on this website or in our communications constitutes:</p>
+              <ul>
+                <li>Financial advice or recommendations</li>
+                <li>Investment advice or recommendations</li>
+                <li>Trading advice or recommendations</li>
+                <li>Tax advice or recommendations</li>
+                <li>Legal advice or recommendations</li>
               </ul>
               
-              <h3>Muscadine Vault-Specific Risks</h3>
+              <h2>3. Risk Curation for Non-Custodial Vaults</h2>
+              <p><strong>OUR RISK CURATION SERVICE:</strong> Muscadine curates risk for non-custodial vault services by evaluating, assessing, and managing risks associated with DeFi protocols and smart contracts.</p>
+              <p>We conduct thorough due diligence on protocols, analyze smart contract security, monitor protocol health, and provide risk assessments to help users make informed decisions about non-custodial vault participation.</p>
+              
+              <p><strong>What Risk Curation Includes:</strong></p>
               <ul>
-                <li><strong>Underlying protocol:</strong> Risks from AAVE, Moonwell, Morpho, etc.</li>
-                <li><strong>Liquidation:</strong> Overcollateralized loans can be liquidated.</li>
-                <li><strong>Interest rate:</strong> Lending rates fluctuate.</li>
-                <li><strong>Bridge:</strong> Moving assets across chains adds bridge risk.</li>
-                <li><strong>Strategy:</strong> Automated strategies may underperform in certain markets.</li>
-                <li><strong>Gas fees:</strong> High fees can affect execution and profitability.</li>
+                <li>Protocol evaluation and security assessment</li>
+                <li>Smart contract audit review and analysis</li>
+                <li>Liquidation risk assessment and monitoring</li>
+                <li>Protocol health monitoring and alerts</li>
+                <li>Due diligence on protocol teams and governance</li>
+                <li>Risk scoring and categorization of vault strategies</li>
+                <li>Educational guidance on protocol risks and best practices</li>
               </ul>
               
-              <h3>Self-Custody and Bitcoin Risks</h3>
+              <p><strong>CRITICAL: We do not hold, store, or custody any digital assets or cryptocurrencies.</strong> All assets remain in your control through non-custodial smart contracts. We provide risk curation and educational guidance only. Users are responsible for their own asset security and custody.</p>
+              
+              <p><strong>CRITICAL VAULT SERVICES DISCLAIMER:</strong></p>
+              <p>Despite our risk curation efforts, non-custodial vault services involve significant risks including potential total loss of assets.</p>
               <ul>
-                <li><strong>Key loss:</strong> Lost keys/phrases mean irreversible loss of funds.</li>
-                <li><strong>Hardware failure:</strong> Device issues can block access.</li>
-                <li><strong>User error:</strong> Mistyped addresses/amounts are irreversible.</li>
-                <li><strong>Security:</strong> Phishing, malware, or theft can compromise wallets.</li>
-                <li><strong>Node:</strong> Running nodes carries technical/maintenance risk.</li>
-                <li><strong>BIP-85:</strong> Requires careful implementation and backups.</li>
+                <li><strong>We do not custody, hold, or store your digital assets</strong> - All assets remain in your control through non-custodial smart contracts</li>
+                <li>Vault services are provided through third-party protocols (such as Morpho) - We do not operate these protocols</li>
+                <li>Smart contract vulnerabilities may result in total loss of funds, even after our risk assessment</li>
+                <li>Liquidation events can cause immediate loss of collateral</li>
+                <li>Protocol failures, exploits, or governance attacks may occur despite our curation efforts</li>
+                <li>Frontend attacks may compromise user interactions with vault interfaces</li>
+                <li>Our risk curation does not guarantee safety or eliminate all risks</li>
+                <li>We are not responsible for protocol failures, exploits, or losses incurred through vault participation</li>
+                <li>Users must understand DeFi risks before participating and accept full responsibility for their decisions</li>
               </ul>
               
-              <h3>Operational and Business Risks</h3>
+              <p><strong>Your Responsibility:</strong> While we curate risk and provide assessments, you are solely responsible for your decisions to participate in any non-custodial vault service. Our risk curation is a tool to help inform your decisions, not a guarantee of safety or performance.</p>
+              
+              <h2>4. User Responsibility</h2>
+              <p>By using our services, you acknowledge and agree that:</p>
               <ul>
-                <li><strong>Availability:</strong> Services may experience downtime.</li>
-                <li><strong>Compliance:</strong> We operate under applicable laws; users must too.</li>
-                <li><strong>Third-party dependencies:</strong> Reliance on external networks/protocols.</li>
-                <li><strong>Software:</strong> Provided “as is”; bugs or vulnerabilities may exist.</li>
-                <li><strong>Market shifts:</strong> DeFi market changes can affect strategies.</li>
+                <li>You are solely responsible for your financial decisions and participation in any DeFi protocol or vault service</li>
+                <li>You understand that our risk curation does not eliminate risks or guarantee safety</li>
+                <li>You will conduct your own research and due diligence before participating in any protocol or vault</li>
+                <li>You should consult with qualified financial professionals before making any financial decisions</li>
+                <li>You understand the risks associated with Bitcoin, cryptocurrency, and DeFi protocols</li>
+                <li>You will not hold Muscadine liable for any financial losses, including losses incurred despite our risk curation</li>
+                <li>You accept full responsibility for your decisions to participate in any non-custodial vault or DeFi protocol</li>
+                <li>You will maintain proper security practices for your digital assets and wallet credentials</li>
+                <li>You will verify all transaction details and protocol addresses before interacting with smart contracts</li>
               </ul>
               
-              <h3>No Guarantees or Warranties</h3>
-              <p>Services are provided “as is.” No guarantees on performance, security, availability, or protection from loss. Past results do not guarantee future outcomes.</p>
-              
-              <h3>Financial and Legal Disclaimer</h3>
+              <h2>5. Seed Phrase and Security Risks</h2>
+              <p><strong>CRITICAL SECURITY WARNING:</strong></p>
+              <p>Seed phrase compromise can result in permanent loss of all cryptocurrency holdings. Users must understand these risks:</p>
               <ul>
-                <li>Not financial, legal, or tax advice.</li>
-                <li>Consult qualified professionals and understand tax implications.</li>
-                <li>Only invest what you can afford to lose.</li>
+                <li>Seed phrases provide complete access to wallet funds</li>
+                <li>Compromise through phishing, malware, or social engineering</li>
+                <li>Physical theft of hardware wallets or written seed phrases</li>
+                <li>User error in seed phrase storage or backup</li>
+                <li>We are not responsible for lost or compromised seed phrases</li>
+                <li>Users must implement their own security measures</li>
               </ul>
               
-              <h3>User Responsibilities</h3>
+              <h2>6. No Guarantees</h2>
+              <p>We make no guarantees, warranties, or representations regarding:</p>
               <ul>
-                <li>Understand blockchain/DeFi risks.</li>
-                <li>Maintain private key security.</li>
-                <li>Verify all transactions before execution.</li>
-                <li>Ensure legal compliance.</li>
-                <li>Perform due diligence on any investment or strategy.</li>
+                <li>The accuracy, completeness, or reliability of any information or risk assessments</li>
+                <li>The success of any strategies or techniques discussed</li>
+                <li>The performance of any digital assets, investments, or DeFi protocols</li>
+                <li>The security of any wallet, custody solutions, or smart contracts</li>
+                <li>The safety or security of any protocol we curate or recommend</li>
+                <li>The elimination of risks through our risk curation services</li>
+                <li>The continued operation or security of any third-party protocol</li>
               </ul>
+              <p><strong>No Warranty:</strong> Our risk curation services and all other services are provided "as is" without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
               
-              <h3>Contact</h3>
-              <p>Questions: <a href="mailto:muscadinelabs@gmail.com">muscadinelabs@gmail.com</a></p>
+              <h2>7. Risk Disclosure</h2>
+              <p>Bitcoin, cryptocurrency, and DeFi protocol participation involve significant risks, including but not limited to:</p>
+              <ul>
+                <li><strong>DeFi Protocol Risks:</strong> Smart contract vulnerabilities, protocol exploits, governance attacks, and total loss of funds</li>
+                <li><strong>Liquidation Risks:</strong> Collateral liquidation in lending protocols can result in immediate loss of assets</li>
+                <li><strong>Volatility:</strong> Extreme price volatility and potential loss of principal</li>
+                <li><strong>Regulatory Risks:</strong> Regulatory changes and legal uncertainty affecting cryptocurrency and DeFi</li>
+                <li><strong>Technical Risks:</strong> Loss of access, wallet compromise, seed phrase loss, or technical failures</li>
+                <li><strong>Market Risks:</strong> Market manipulation, fraud, and counterparty risks</li>
+                <li><strong>Frontend Risks:</strong> Phishing attacks, DNS hijacking, and malicious browser extensions</li>
+                <li><strong>Tax Implications:</strong> Tax reporting requirements and potential tax liabilities</li>
+                <li><strong>Risk Curation Limitations:</strong> Our risk curation does not eliminate these risks and cannot guarantee safety</li>
+              </ul>
+              <p><strong>WARNING:</strong> Participation in DeFi protocols and non-custodial vaults can result in total loss of your assets. Never invest more than you can afford to lose.</p>
+              
+              <h2>8. Limitation of Liability</h2>
+              <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, MUSCADINE SHALL NOT BE LIABLE FOR:</p>
+              <ul>
+                <li>Any direct, indirect, incidental, or consequential damages</li>
+                <li>Any financial losses or investment losses</li>
+                <li>Any loss of data or digital assets</li>
+                <li>Any errors or omissions in our content, risk assessments, or protocol evaluations</li>
+                <li>Any actions taken based on our educational content, risk curation, or protocol recommendations</li>
+                <li>Any losses incurred despite our risk curation efforts or assessments</li>
+                <li>Vault liquidation events, protocol failures, or smart contract exploits</li>
+                <li>Third-party protocol failures, hacks, or governance issues</li>
+                <li>Frontend attacks, phishing attempts, or user interface compromises</li>
+                <li>User errors in transaction execution or wallet management</li>
+                <li>Inaccuracies in our risk curation analysis or protocol evaluations</li>
+              </ul>
+              <p><strong>No Liability for Risk Curation:</strong> Our risk curation services are provided for informational purposes only. We are not liable for any losses incurred through participation in any protocol, vault, or DeFi service, regardless of whether we have provided risk curation or assessment for that service.</p>
+              
+              <h2>9. No Professional Relationship</h2>
+              <p>No professional relationship (financial advisor, investment advisor, attorney, or other) is created between you and Muscadine through the use of our services. Our risk curation services and educational content are provided for informational purposes only and do not constitute financial, investment, or legal advice.</p>
+              <p>We are not your financial advisors, investment advisors, or legal counsel. You should consult with qualified professionals before making any financial or legal decisions.</p>
+              
+              <h2>10. Third-Party Content</h2>
+              <p>Our website may contain links to third-party websites or content. We are not responsible for the accuracy, completeness, or reliability of such third-party content.</p>
+              
+              <h2>11. Regulatory Compliance</h2>
+              <p>Users are responsible for ensuring compliance with all applicable laws and regulations in their jurisdiction. We do not provide legal advice regarding regulatory compliance.</p>
+              
+              <h2>12. Indemnification</h2>
+              <p>You agree to indemnify and hold harmless Muscadine from any claims, damages, or expenses arising from your use of our services or violation of these terms.</p>
+              
+              <h2>13. Governing Law</h2>
+              <p>This disclaimer is governed by the laws of the United States. Any disputes shall be resolved in the courts of the United States.</p>
+              
+              <h2>14. Severability</h2>
+              <p>If any provision of this disclaimer is found to be unenforceable, the remaining provisions shall remain in full force and effect.</p>
+              
+              <h2>15. Contact Information</h2>
+              <p>If you have questions about this legal disclaimer, please contact us:</p>
+              <p><strong>Email:</strong> <a href="mailto:muscadinelabs@gmail.com">muscadinelabs@gmail.com</a></p>
+              <p><strong>Website:</strong> <a href="https://muscadine.io">muscadine.io</a></p>
+              
+              <h2>Final Warning</h2>
+              <p>By continuing to use our services, you acknowledge that you have read, understood, and agree to be bound by this legal disclaimer. If you do not agree with any part of this disclaimer, you must not use our services.</p>
+              
+              <h2>16. Open Source</h2>
+              <p>This website and its educational content are open source. You can view the source code and contribute to the project:</p>
+              <p><strong>GitHub Repository:</strong> <a href="https://github.com/Muscadine-Labs" target="_blank" rel="noopener noreferrer">https://github.com/Muscadine-Labs</a></p>
             </div>
           </div>
         </div>

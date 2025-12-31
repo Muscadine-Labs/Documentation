@@ -11,69 +11,100 @@ export default function PrivacyPolicyPage() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-neutral dark:prose-invert max-w-none">
-              <p><strong>Last updated:</strong> October 2025</p>
+              <p><strong>Last updated:</strong> January 2026</p>
               
-              <h3>Company Information</h3>
-              <p>Muscadine Labs LLC is a Wyoming limited liability company committed to protecting user privacy while providing blockchain software development and digital asset services.</p>
-              
-              <h3>Information Collection</h3>
-              <p>We collect minimal information necessary for service operation:</p>
+              <h2>1. Information We Collect</h2>
+              <p>Muscadine ("we," "our," or "us") is committed to protecting your privacy. We collect minimal information necessary to provide our services, which include risk curation for non-custodial vaults, Bitcoin security guidance, DeFi protocol access, and educational content:</p>
               <ul>
-                <li><strong>Public blockchain data:</strong> Protocol usage to improve strategies</li>
-                <li><strong>Website analytics:</strong> Aggregate usage to improve docs and UX</li>
-                <li><strong>Communication data:</strong> Information you share when you contact us</li>
-                <li><strong>Node usage data:</strong> Anonymous stats to optimize node performance</li>
+                <li><strong>Contact Information:</strong> Email addresses provided voluntarily through contact forms or service inquiries</li>
+                <li><strong>Usage Data:</strong> Basic website analytics to improve user experience and service delivery</li>
+                <li><strong>Communication Records:</strong> Correspondence related to our services, including risk curation consultations and support requests</li>
+                <li><strong>Service Interaction Data:</strong> Information about your use of our services, such as which protocols or vaults you access through our platform (if applicable)</li>
               </ul>
               
-              <h3>What We Don't Collect</h3>
+              <p><strong>Important Privacy Note:</strong></p>
+              <p>We do <strong>not</strong> collect, store, or have access to your wallet private keys, seed phrases, or any digital assets. All non-custodial vault interactions occur directly between you and the smart contracts - we never have custody or control over your assets.</p>
+              
+              <h2>2. How We Use Your Information</h2>
+              <p>We use collected information solely for:</p>
               <ul>
-                <li>Private keys, seed phrases, or wallet credentials</li>
-                <li>Personal financial information or transaction details</li>
-                <li>Personal identification data (names, addresses, phone numbers)</li>
-                <li>Government IDs or payment card data</li>
+                <li>Providing risk curation services for non-custodial vaults and DeFi protocols</li>
+                <li>Delivering educational content about Bitcoin security, self-custody, and DeFi</li>
+                <li>Responding to inquiries about our services, including risk assessments and protocol evaluations</li>
+                <li>Improving our website, services, and educational materials</li>
+                <li>Providing access to curated DeFi protocols and Bitcoin node services</li>
+                <li>Monitoring and analyzing protocol health and risks for our risk curation services</li>
+                <li>Complying with legal obligations and regulatory requirements</li>
               </ul>
               
-              <h3>Data Usage</h3>
+              <p><strong>We do not:</strong> Sell your personal information, use your data for marketing purposes without consent, or share your information with third parties except as described in this policy.</p>
+              
+              <h2>3. Information Sharing</h2>
+              <p>We do not sell, trade, or rent your personal information to third parties. We may share information only:</p>
               <ul>
-                <li>Improve services, vault strategies, and user experience</li>
-                <li>Respond to inquiries and provide support</li>
-                <li>Optimize infrastructure performance</li>
-                <li>Comply with applicable laws and regulations</li>
-                <li>Develop new features and educational resources</li>
+                <li>With your explicit consent</li>
+                <li>To comply with legal requirements, court orders, or regulatory requests</li>
+                <li>To protect our rights, prevent fraud, or ensure service security</li>
+                <li>With service providers who assist in operating our services (under strict confidentiality agreements)</li>
+                <li>In connection with a business transfer, merger, or acquisition (with notice to users)</li>
               </ul>
               
-              <h3>Data Protection and Security</h3>
+              <p><strong>Third-Party Protocols:</strong></p>
+              <p>When you interact with third-party DeFi protocols through our curated services, those protocols may collect information according to their own privacy policies. We are not responsible for the privacy practices of third-party protocols or smart contracts.</p>
+              
+              <h2>4. Data Security</h2>
+              <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
               <ul>
-                <li>Access restricted to authorized personnel</li>
-                <li>Industry-standard encryption and security protocols</li>
-                <li>Retention only as long as necessary for legitimate purposes</li>
-                <li>No selling or transferring personal info to third parties</li>
+                <li>Encryption of data in transit using industry-standard protocols</li>
+                <li>Secure storage of collected information with access controls</li>
+                <li>Regular security assessments and updates</li>
+                <li>Limited access to personal information on a need-to-know basis</li>
               </ul>
               
-              <h3>Blockchain Transparency and Privacy</h3>
-              <p>All transactions are public on-chain (addresses, amounts, confirmations, contract calls). Users interact directly with smart contracts; we do not collect personal identification information during these interactions.</p>
+              <p><strong>Important Security Reminder:</strong></p>
+              <p>We never request your wallet private keys, seed phrases, or passwords. Never share these credentials with anyone, including Muscadine. Your digital assets remain in your control through non-custodial smart contracts.</p>
               
-              <h3>Self-Custody and User Control</h3>
-              <p>We never have access to your private keys. You maintain full control of assets at all times.</p>
+              <h2>5. Third-Party Services</h2>
+              <p>Our website may contain links to external sites. We are not responsible for the privacy practices of these third-party sites.</p>
               
-              <h3>Third-Party Services</h3>
-              <p>Integrations with third-party protocols follow those parties’ policies. We do not control their data handling.</p>
+              <h2>6. Cookies and Tracking</h2>
+              <p>We use minimal cookies for essential website functionality. You can disable cookies in your browser settings.</p>
               
-              <h3>Data Retention</h3>
-              <p>Information is retained only as long as needed for the purposes above or as required by law. When no longer needed, it is deleted or anonymized.</p>
-              
-              <h3>Your Rights</h3>
+              <h2>7. Your Rights</h2>
+              <p>You have the right to:</p>
               <ul>
-                <li>Access, correct, or delete personal information we hold</li>
-                <li>Object to certain processing</li>
-                <li>Withdraw consent where applicable</li>
+                <li>Access your personal information</li>
+                <li>Request correction of inaccurate data</li>
+                <li>Request deletion of your data</li>
+                <li>Opt-out of communications</li>
               </ul>
               
-              <h3>Policy Updates</h3>
-              <p>We may update this policy; material changes will be communicated via our site or appropriate channels.</p>
+              <h2>8. Children's Privacy</h2>
+              <p>Our services are not directed to children under 13. We do not knowingly collect personal information from children.</p>
               
-              <h3>Contact</h3>
-              <p>Questions or rights requests: <a href="mailto:muscadinelabs@gmail.com">muscadinelabs@gmail.com</a></p>
+              <h2>9. Changes to This Policy</h2>
+              <p>We may update this Privacy Policy periodically. We will notify you of any material changes by posting the new policy on this page.</p>
+              
+              <h2>10. Contact Us</h2>
+              <p>If you have questions about this Privacy Policy, please contact us:</p>
+              <p><strong>Email:</strong> <a href="mailto:muscadinelabs@gmail.com">muscadinelabs@gmail.com</a></p>
+              <p><strong>Website:</strong> <a href="https://muscadine.io">muscadine.io</a></p>
+              
+              <h2>11. Service Disclaimers</h2>
+              <p><strong>Risk Curation Services:</strong></p>
+              <p>Our risk curation for non-custodial vaults involves evaluating protocols, assessing smart contract security, and providing risk assessments. However, our curation does not guarantee safety or eliminate risks. All participation in DeFi protocols involves significant risk of total loss.</p>
+              
+              <p><strong>Important:</strong> Muscadine provides educational content and risk curation services. We do not provide financial advice, investment recommendations, or custody services. We do not custody, hold, or control your digital assets. All information and risk assessments are for educational and informational purposes only. Users are responsible for their own financial decisions and should consult with qualified professionals before making any financial decisions.</p>
+              <ul>
+                <li>We do not custody or control your digital assets</li>
+                <li>All vault interactions occur through non-custodial smart contracts</li>
+                <li>Our risk curation is informational and does not guarantee safety</li>
+                <li>You are solely responsible for your participation in any DeFi protocol</li>
+              </ul>
+              
+              <h2>12. Open Source</h2>
+              <p>This website and its educational content are open source. You can view the source code and contribute to the project:</p>
+              <p><strong>GitHub Repository:</strong> <a href="https://github.com/Muscadine-Labs" target="_blank" rel="noopener noreferrer">https://github.com/Muscadine-Labs</a></p>
             </div>
           </div>
         </div>
