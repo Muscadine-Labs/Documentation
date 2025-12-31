@@ -3,7 +3,7 @@ import { Shield, Key, HardDrive, CheckCircle, Compass } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { PageLayout } from "@/components/PageLayout";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const pillars = [
   {

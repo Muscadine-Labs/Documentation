@@ -13,7 +13,6 @@ import {
   Info,
   Building2,
   BarChart3,
-  FileText,
   Scale,
   Settings,
   BookOpen,
@@ -170,6 +169,144 @@ const navigation = {
   },
 };
 
+interface NavigationItem {
+  name: string;
+  href: string;
+  icon: React.ComponentType<{ className?: string }>;
+  subItems?: NavigationItem[];
+}
+
+interface CollapsibleSectionType {
+  name: string;
+  icon: React.ComponentType<{ className?: string }>;
+  items: NavigationItem[];
+}
+
+interface CollapsibleSectionProps {
+  sectionKey: string;
+  section: CollapsibleSectionType;
+  pathname: string;
+  expandedSections: Record<string, boolean>;
+  toggleSection: (section: string) => void;
+  onNavigate?: () => void;
+}
+
+function CollapsibleSection({ 
+  sectionKey, 
+  section, 
+  pathname, 
+  expandedSections, 
+  toggleSection, 
+  onNavigate 
+}: CollapsibleSectionProps) {
+  const isExpanded = expandedSections[sectionKey];
+  const hasActiveChild = section.items.some((item: NavigationItem) => {
+    if (item.subItems) {
+      return item.subItems.some((subItem: NavigationItem) => 
+        pathname === subItem.href || pathname.startsWith(subItem.href + "/")
+      );
+    }
+    return pathname === item.href || pathname.startsWith(item.href + "/");
+  });
+
+  return (
+    <div>
+      <button
+        onClick={() => toggleSection(sectionKey)}
+        className={`flex items-center justify-between w-full px-3 py-2 rounded-md text-sm transition-colors ${
+          hasActiveChild
+            ? "bg-sidebar-accent text-sidebar-accent-foreground"
+            : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
+        }`}
+      >
+        <div className="flex items-center space-x-3">
+          <section.icon className="h-4 w-4" />
+          <span>{section.name}</span>
+        </div>
+        {isExpanded ? (
+          <ChevronDown className="h-4 w-4" />
+        ) : (
+          <ChevronRight className="h-4 w-4" />
+        )}
+      </button>
+      {isExpanded && (
+        <nav className="ml-6 mt-2 space-y-1">
+          {section.items.map((item: NavigationItem) => {
+            const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
+            const hasActiveSubItem = item.subItems?.some((subItem: NavigationItem) => 
+              pathname === subItem.href || pathname.startsWith(subItem.href + "/")
+            );
+            const itemKey = `${sectionKey}-${item.name.toLowerCase().replace(/\s+/g, '-')}`;
+            const isItemExpanded = expandedSections[itemKey];
+
+            return (
+              <div key={item.name}>
+                {item.subItems ? (
+                  <div>
+                    <button
+                      onClick={() => toggleSection(itemKey)}
+                      className={`flex items-center justify-between w-full px-3 py-2 rounded-md text-sm transition-colors ${
+                        isActive || hasActiveSubItem
+                          ? "bg-sidebar-accent text-sidebar-accent-foreground"
+                          : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
+                      }`}
+                    >
+                      <div className="flex items-center space-x-3">
+                        <item.icon className="h-4 w-4" />
+                        <span>{item.name}</span>
+                      </div>
+                      {isItemExpanded ? (
+                        <ChevronDown className="h-4 w-4" />
+                      ) : (
+                        <ChevronRight className="h-4 w-4" />
+                      )}
+                    </button>
+                    {isItemExpanded && (
+                      <nav className="ml-6 mt-1 space-y-1">
+                        {item.subItems.map((subItem: NavigationItem) => {
+                          const isSubActive = pathname === subItem.href || pathname.startsWith(subItem.href + "/");
+                          return (
+                            <Link
+                              key={subItem.name}
+                              href={subItem.href}
+                              onClick={onNavigate}
+                              className={`flex items-center space-x-3 px-3 py-2 rounded-md text-sm transition-colors ${
+                                isSubActive
+                                  ? "bg-sidebar-accent text-sidebar-accent-foreground"
+                                  : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
+                              }`}
+                            >
+                              <subItem.icon className="h-4 w-4" />
+                              <span>{subItem.name}</span>
+                            </Link>
+                          );
+                        })}
+                      </nav>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    href={item.href}
+                    onClick={onNavigate}
+                    className={`flex items-center space-x-3 px-3 py-2 rounded-md text-sm transition-colors ${
+                      isActive
+                        ? "bg-sidebar-accent text-sidebar-accent-foreground"
+                        : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
+                    }`}
+                  >
+                    <item.icon className="h-4 w-4" />
+                    <span>{item.name}</span>
+                  </Link>
+                )}
+              </div>
+            );
+          })}
+        </nav>
+      )}
+    </div>
+  );
+}
+
 interface SidebarProps {
   onNavigate?: () => void;
 }
@@ -192,128 +329,6 @@ export function Sidebar({ onNavigate }: SidebarProps) {
       ...prev,
       [section]: !prev[section]
     }));
-  };
-
-  interface NavigationItem {
-    name: string;
-    href: string;
-    icon: React.ComponentType<{ className?: string }>;
-    subItems?: NavigationItem[];
-  }
-
-  interface CollapsibleSectionType {
-    name: string;
-    icon: React.ComponentType<{ className?: string }>;
-    items: NavigationItem[];
-  }
-
-  const CollapsibleSection = ({ sectionKey, section }: { sectionKey: string, section: CollapsibleSectionType }) => {
-    const isExpanded = expandedSections[sectionKey];
-    const hasActiveChild = section.items.some((item: NavigationItem) => {
-      if (item.subItems) {
-        return item.subItems.some((subItem: NavigationItem) => 
-          pathname === subItem.href || pathname.startsWith(subItem.href + "/")
-        );
-      }
-      return pathname === item.href || pathname.startsWith(item.href + "/");
-    });
-
-    return (
-      <div>
-        <button
-          onClick={() => toggleSection(sectionKey)}
-          className={`flex items-center justify-between w-full px-3 py-2 rounded-md text-sm transition-colors ${
-            hasActiveChild
-              ? "bg-sidebar-accent text-sidebar-accent-foreground"
-              : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
-          }`}
-        >
-          <div className="flex items-center space-x-3">
-            <section.icon className="h-4 w-4" />
-            <span>{section.name}</span>
-          </div>
-          {isExpanded ? (
-            <ChevronDown className="h-4 w-4" />
-          ) : (
-            <ChevronRight className="h-4 w-4" />
-          )}
-        </button>
-        {isExpanded && (
-          <nav className="ml-6 mt-2 space-y-1">
-            {section.items.map((item: NavigationItem) => {
-              const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
-              const hasActiveSubItem = item.subItems?.some((subItem: NavigationItem) => 
-                pathname === subItem.href || pathname.startsWith(subItem.href + "/")
-              );
-              const itemKey = `${sectionKey}-${item.name.toLowerCase().replace(/\s+/g, '-')}`;
-              const isItemExpanded = expandedSections[itemKey];
-
-              return (
-                <div key={item.name}>
-                  {item.subItems ? (
-                    <div>
-                      <button
-                        onClick={() => toggleSection(itemKey)}
-                        className={`flex items-center justify-between w-full px-3 py-2 rounded-md text-sm transition-colors ${
-                          isActive || hasActiveSubItem
-                            ? "bg-sidebar-accent text-sidebar-accent-foreground"
-                            : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
-                        }`}
-                      >
-                        <div className="flex items-center space-x-3">
-                          <item.icon className="h-4 w-4" />
-                          <span>{item.name}</span>
-                        </div>
-                        {isItemExpanded ? (
-                          <ChevronDown className="h-4 w-4" />
-                        ) : (
-                          <ChevronRight className="h-4 w-4" />
-                        )}
-                      </button>
-                      {isItemExpanded && (
-                        <nav className="ml-6 mt-1 space-y-1">
-                          {item.subItems.map((subItem: NavigationItem) => {
-                            const isSubActive = pathname === subItem.href || pathname.startsWith(subItem.href + "/");
-                            return (
-                              <Link
-                                key={subItem.name}
-                                href={subItem.href}
-                                onClick={onNavigate}
-                                className={`flex items-center space-x-3 px-3 py-2 rounded-md text-sm transition-colors ${
-                                  isSubActive
-                                    ? "bg-sidebar-accent text-sidebar-accent-foreground"
-                                    : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
-                                }`}
-                              >
-                                <subItem.icon className="h-4 w-4" />
-                                <span>{subItem.name}</span>
-                              </Link>
-                            );
-                          })}
-                        </nav>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      onClick={onNavigate}
-                      className={`flex items-center space-x-3 px-3 py-2 rounded-md text-sm transition-colors ${
-                        isActive
-                          ? "bg-sidebar-accent text-sidebar-accent-foreground"
-                          : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
-                      }`}
-                    >
-                      <item.icon className="h-4 w-4" />
-                      <span>{item.name}</span>
-                    </Link>
-                  )}
-                </div>
-              );
-            })}
-          </nav>
-        )}
-      </div>
-    );
   };
 
   return (
@@ -344,35 +359,70 @@ export function Sidebar({ onNavigate }: SidebarProps) {
         {/* Overview Section */}
         <div className="px-6 py-4">
           <nav className="space-y-2">
-            <CollapsibleSection sectionKey="overview" section={navigation.overview} />
+            <CollapsibleSection 
+              sectionKey="overview" 
+              section={navigation.overview}
+              pathname={pathname}
+              expandedSections={expandedSections}
+              toggleSection={toggleSection}
+              onNavigate={onNavigate}
+            />
           </nav>
         </div>
 
         {/* DeFi 101 Section */}
         <div className="px-6 py-4">
           <nav className="space-y-2">
-            <CollapsibleSection sectionKey="defi101" section={navigation.defi101} />
+            <CollapsibleSection 
+              sectionKey="defi101" 
+              section={navigation.defi101}
+              pathname={pathname}
+              expandedSections={expandedSections}
+              toggleSection={toggleSection}
+              onNavigate={onNavigate}
+            />
           </nav>
         </div>
 
         {/* Products Section */}
         <div className="px-6 py-4">
           <nav className="space-y-2">
-            <CollapsibleSection sectionKey="products" section={navigation.products} />
+            <CollapsibleSection 
+              sectionKey="products" 
+              section={navigation.products}
+              pathname={pathname}
+              expandedSections={expandedSections}
+              toggleSection={toggleSection}
+              onNavigate={onNavigate}
+            />
           </nav>
         </div>
 
         {/* Legal & Compliance Section */}
         <div className="px-6 py-4">
           <nav className="space-y-2">
-            <CollapsibleSection sectionKey="legalCompliance" section={navigation.legalCompliance} />
+            <CollapsibleSection 
+              sectionKey="legalCompliance" 
+              section={navigation.legalCompliance}
+              pathname={pathname}
+              expandedSections={expandedSections}
+              toggleSection={toggleSection}
+              onNavigate={onNavigate}
+            />
           </nav>
         </div>
 
         {/* Contact Section */}
         <div className="px-6 py-4">
           <nav className="space-y-2">
-            <CollapsibleSection sectionKey="contact" section={navigation.contact} />
+            <CollapsibleSection 
+              sectionKey="contact" 
+              section={navigation.contact}
+              pathname={pathname}
+              expandedSections={expandedSections}
+              toggleSection={toggleSection}
+              onNavigate={onNavigate}
+            />
           </nav>
         </div>
       </div>

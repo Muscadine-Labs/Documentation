@@ -1,4 +1,4 @@
-import { Shield, Target, Zap, Clock, Eye, Lock, ExternalLink, Wallet } from "lucide-react";
+import { Shield, Target, Zap, Clock, ExternalLink, Wallet } from "lucide-react";
 
 import { Footer } from "@/components/Footer";
 import { PageLayout } from "@/components/PageLayout";

@@ -1,4 +1,4 @@
-import { CalendarClock, Sparkles, Wrench, Zap, Bitcoin, TrendingUp, Shield } from "lucide-react";
+import { Zap, Bitcoin, TrendingUp, Shield } from "lucide-react";
 
 import { Footer } from "@/components/Footer";
 import { PageLayout } from "@/components/PageLayout";

@@ -1,11 +1,8 @@
-import Link from "next/link";
 import {
-  ArrowRight,
   Bitcoin,
   BookOpen,
   Coins,
   ShieldCheck,
-  Sparkles,
   Zap,
 } from "lucide-react";
 
