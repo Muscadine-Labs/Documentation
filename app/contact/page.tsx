@@ -3,7 +3,6 @@ import { Mail, Linkedin, Github, ExternalLink, Twitter } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { PageLayout } from "@/components/PageLayout";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const contacts = [
@@ -45,28 +44,6 @@ export default function ContactPage() {
       title="Contact & Support"
       description="Choose the fastest route to reach us. We keep a tight surface: email, form, socials, and code."
     >
-      <section className="pb-4">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-wrap justify-center gap-3">
-            <a href="https://muscadine.io/contact" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="shadow-sm">
-                Contact form
-              </Button>
-            </a>
-            <a href="mailto:muscadinelabs@gmail.com">
-              <Button variant="outline" size="lg">
-                Email support
-              </Button>
-            </a>
-            <a href="https://github.com/Muscadine-Labs" target="_blank" rel="noopener noreferrer">
-              <Button variant="ghost" size="lg">
-                GitHub
-              </Button>
-            </a>
-          </div>
-        </div>
-      </section>
-
       <section className="py-10 bg-muted/40">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center space-y-2 mb-8">

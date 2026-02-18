@@ -22,7 +22,8 @@ import {
   Phone,
   Package,
   ChevronDown,
-  ChevronRight
+  ChevronRight,
+  Server
 } from "lucide-react";
 
 const navigation = {
@@ -100,7 +101,7 @@ const navigation = {
         ],
       },
       {
-        name: "Self-Custody Solutions",
+        name: "Self Custody",
         href: "/self-custody/about",
         icon: Shield,
         subItems: [
@@ -118,6 +119,18 @@ const navigation = {
             name: "DeFi Wallet",
             href: "/self-custody/defi-wallet",
             icon: Wallet,
+          },
+        ],
+      },
+      {
+        name: "Node",
+        href: "/node",
+        icon: Server,
+        subItems: [
+          {
+            name: "About",
+            href: "/node",
+            icon: Info,
           },
         ],
       },
@@ -318,7 +331,8 @@ export function Sidebar({ onNavigate }: SidebarProps) {
     defi101: false,
     products: true,
     'products-vaults': false,
-    'products-self-custody-solutions': false,
+    'products-self-custody': false,
+    'products-node': false,
     'products-roadmap': false,
     legalCompliance: false,
     contact: false,

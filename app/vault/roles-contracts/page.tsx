@@ -107,71 +107,9 @@ export default function RolesContractsPage() {
             <div className="text-center mb-8">
               <Badge variant="outline" className="mb-4">Vault Contracts</Badge>
               <h2 className="text-3xl font-semibold tracking-tight mb-4">Verified vault addresses</h2>
-              <p className="text-muted-foreground">
-                All contracts are deployed on Base, secured by multi-sig safes, and verifiable on BaseScan.
-              </p>
             </div>
 
             <div className="space-y-6 mb-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-4">V1 Vaults</h3>
-                <div className="space-y-4">
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>Muscadine USDC Vault</CardTitle>
-                    </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                    <span className="font-medium">Address:</span>
-                    <code className="bg-muted px-2 py-1 rounded text-sm break-all">0xf7e26Fa48A568b8b0038e104DfD8ABdf0f99074F</code>
-                  </div>
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                    <span className="font-medium">Explorer:</span>
-                    <a href="https://basescan.org/address/0xf7e26Fa48A568b8b0038e104DfD8ABdf0f99074F" target="_blank" rel="noopener noreferrer" className="flex items-center text-primary hover:underline">
-                      View on BaseScan <ExternalLink className="h-4 w-4 ml-1" />
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle>Muscadine cbBTC Vault</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                    <span className="font-medium">Address:</span>
-                    <code className="bg-muted px-2 py-1 rounded text-sm break-all">0xAeCc8113a7bD0CFAF7000EA7A31afFD4691ff3E9</code>
-                  </div>
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                    <span className="font-medium">Explorer:</span>
-                    <a href="https://basescan.org/address/0xAeCc8113a7bD0CFAF7000EA7A31afFD4691ff3E9" target="_blank" rel="noopener noreferrer" className="flex items-center text-primary hover:underline">
-                      View on BaseScan <ExternalLink className="h-4 w-4 ml-1" />
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle>Muscadine WETH Vault</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                    <span className="font-medium">Address:</span>
-                    <code className="bg-muted px-2 py-1 rounded text-sm break-all">0x21e0d366272798da3A977FEBA699FCB91959d120</code>
-                  </div>
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                    <span className="font-medium">Explorer:</span>
-                    <a href="https://basescan.org/address/0x21e0d366272798da3A977FEBA699FCB91959d120" target="_blank" rel="noopener noreferrer" className="flex items-center text-primary hover:underline">
-                      View on BaseScan <ExternalLink className="h-4 w-4 ml-1" />
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-                </div>
-              </div>
-
               <div>
                 <h3 className="text-xl font-semibold mb-4">V2 Vaults</h3>
                 <div className="space-y-4">
@@ -180,9 +118,12 @@ export default function RolesContractsPage() {
                       <CardTitle>Muscadine USDC Prime</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-3">
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                         <span className="font-medium">Address:</span>
-                        <code className="bg-muted px-2 py-1 rounded text-sm break-all">0x89712980Cb434eF5aE4AB29349419eb976B0b496</code>
+                        <div className="text-right">
+                          <div className="text-sm text-muted-foreground mb-1">Base</div>
+                          <code className="bg-muted px-2 py-1 rounded text-sm break-all">0x89712980Cb434eF5aE4AB29349419eb976B0b496</code>
+                        </div>
                       </div>
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                         <span className="font-medium">Explorer:</span>
@@ -198,9 +139,12 @@ export default function RolesContractsPage() {
                       <CardTitle>Muscadine WETH Prime</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-3">
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                         <span className="font-medium">Address:</span>
-                        <code className="bg-muted px-2 py-1 rounded text-sm break-all">0xD6DCAd2f7Da91FBb27BdA471540d9770c97a5a43</code>
+                        <div className="text-right">
+                          <div className="text-sm text-muted-foreground mb-1">Base</div>
+                          <code className="bg-muted px-2 py-1 rounded text-sm break-all">0xD6DCAd2f7Da91FBb27BdA471540d9770c97a5a43</code>
+                        </div>
                       </div>
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                         <span className="font-medium">Explorer:</span>
@@ -216,13 +160,84 @@ export default function RolesContractsPage() {
                       <CardTitle>Muscadine cbBTC Prime</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-3">
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                         <span className="font-medium">Address:</span>
-                        <code className="bg-muted px-2 py-1 rounded text-sm break-all">0x99dcd0D75822BA398F13B2A8852B07c7e137EC70</code>
+                        <div className="text-right">
+                          <div className="text-sm text-muted-foreground mb-1">Base</div>
+                          <code className="bg-muted px-2 py-1 rounded text-sm break-all">0x99dcd0D75822BA398F13B2A8852B07c7e137EC70</code>
+                        </div>
                       </div>
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                         <span className="font-medium">Explorer:</span>
                         <a href="https://basescan.org/address/0x99dcd0D75822BA398F13B2A8852B07c7e137EC70" target="_blank" rel="noopener noreferrer" className="flex items-center text-primary hover:underline">
+                          View on BaseScan <ExternalLink className="h-4 w-4 ml-1" />
+                        </a>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-4">V1 Vaults</h3>
+                <div className="space-y-4">
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Muscadine USDC Vault</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                        <span className="font-medium">Address:</span>
+                        <div className="text-right">
+                          <div className="text-sm text-muted-foreground mb-1">Base</div>
+                          <code className="bg-muted px-2 py-1 rounded text-sm break-all">0xf7e26Fa48A568b8b0038e104DfD8ABdf0f99074F</code>
+                        </div>
+                      </div>
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <span className="font-medium">Explorer:</span>
+                        <a href="https://basescan.org/address/0xf7e26Fa48A568b8b0038e104DfD8ABdf0f99074F" target="_blank" rel="noopener noreferrer" className="flex items-center text-primary hover:underline">
+                          View on BaseScan <ExternalLink className="h-4 w-4 ml-1" />
+                        </a>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Muscadine cbBTC Vault</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                        <span className="font-medium">Address:</span>
+                        <div className="text-right">
+                          <div className="text-sm text-muted-foreground mb-1">Base</div>
+                          <code className="bg-muted px-2 py-1 rounded text-sm break-all">0xAeCc8113a7bD0CFAF7000EA7A31afFD4691ff3E9</code>
+                        </div>
+                      </div>
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <span className="font-medium">Explorer:</span>
+                        <a href="https://basescan.org/address/0xAeCc8113a7bD0CFAF7000EA7A31afFD4691ff3E9" target="_blank" rel="noopener noreferrer" className="flex items-center text-primary hover:underline">
+                          View on BaseScan <ExternalLink className="h-4 w-4 ml-1" />
+                        </a>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Muscadine WETH Vault</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                        <span className="font-medium">Address:</span>
+                        <div className="text-right">
+                          <div className="text-sm text-muted-foreground mb-1">Base</div>
+                          <code className="bg-muted px-2 py-1 rounded text-sm break-all">0x21e0d366272798da3A977FEBA699FCB91959d120</code>
+                        </div>
+                      </div>
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <span className="font-medium">Explorer:</span>
+                        <a href="https://basescan.org/address/0x21e0d366272798da3A977FEBA699FCB91959d120" target="_blank" rel="noopener noreferrer" className="flex items-center text-primary hover:underline">
                           View on BaseScan <ExternalLink className="h-4 w-4 ml-1" />
                         </a>
                       </div>
@@ -324,41 +339,6 @@ export default function RolesContractsPage() {
                 </CardContent>
               </Card>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle>Muscadine Hot Wallet</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                    <span className="font-medium">Address:</span>
-                    <code className="bg-muted px-2 py-1 rounded text-sm break-all">0xf35B121bA32cBeaA27716abEfFb6B65a55f9B333</code>
-                  </div>
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                    <span className="font-medium">Explorer:</span>
-                    <a href="https://basescan.org/address/0xf35B121bA32cBeaA27716abEfFb6B65a55f9B333" target="_blank" rel="noopener noreferrer" className="flex items-center text-primary hover:underline">
-                      View on BaseScan <ExternalLink className="h-4 w-4 ml-1" />
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle>Muscadine Smart Wallet</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                    <span className="font-medium">Address:</span>
-                    <code className="bg-muted px-2 py-1 rounded text-sm break-all">0x0D5A708B651FeE1DAA0470431c4262ab3e1D0261</code>
-                  </div>
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                    <span className="font-medium">Explorer:</span>
-                    <a href="https://basescan.org/address/0x0D5A708B651FeE1DAA0470431c4262ab3e1D0261" target="_blank" rel="noopener noreferrer" className="flex items-center text-primary hover:underline">
-                      View on BaseScan <ExternalLink className="h-4 w-4 ml-1" />
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>

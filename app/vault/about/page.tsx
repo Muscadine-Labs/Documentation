@@ -1,4 +1,4 @@
-import { Shield, TrendingUp, DollarSign, Building2, Target, Zap, Layers, Coins, Bitcoin, Zap as ZapIcon } from "lucide-react";
+import { Shield, TrendingUp, DollarSign, Target, Zap, Layers, Coins, Bitcoin, Zap as ZapIcon, ExternalLink } from "lucide-react";
 
 import { Footer } from "@/components/Footer";
 import { PageLayout } from "@/components/PageLayout";
@@ -22,14 +22,37 @@ export default function VaultsAboutPage() {
             
             <div className="mb-12">
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                Built on Morpho vault infrastructure, Muscadine vaults deploy capital into overcollateralized markets with transparent roles, clear fees, and on-chain verification.
+                Built on Morpho vault infrastructure, Muscadine vaults deploy capital into overcollateralized markets with transparent roles, clear fees, and on-chain verification. Deposits stay in your custody while contracts allocate, harvest, and rebalance automatically — performance-based fees, no management or withdrawal penalties.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Deposits stay in your custody; contracts allocate, harvest, and rebalance automatically. Fees are simple: performance-based, no management, no withdrawal penalties.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-12">
+                We created these vaults to restore what finance should be: transparent, aligned, empowering. Our mission is financial self-sovereignty — institutional risk discipline with decentralized ownership. Deployed on Ethereum and Base, Muscadine Vaults offer a trusted gateway to DeFi income, always under your control.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 gap-8">
+              <a
+                href="https://app.muscadine.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <Card className="hover:shadow-lg transition-shadow h-full hover:bg-primary/5 cursor-pointer">
+                  <CardHeader>
+                    <div className="flex items-center space-x-3">
+                      <Zap className="h-6 w-6 text-primary" />
+                      <CardTitle className="flex items-center gap-2">
+                        Launch App <ExternalLink className="h-4 w-4" />
+                      </CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription>
+                      Access Muscadine vaults — deposit, manage, and withdraw your assets.
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </a>
+
               <Card className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex items-center space-x-3">
@@ -40,20 +63,6 @@ export default function VaultsAboutPage() {
                 <CardContent>
                   <CardDescription>
                     You retain custody and can verify every action on-chain; the system handles allocation and reporting.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3">
-                    <Zap className="h-6 w-6 text-primary" />
-                    <CardTitle>Automated management</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Smart contracts allocate, harvest, and rebalance in real time for efficient yield capture.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -114,59 +123,6 @@ export default function VaultsAboutPage() {
                 <CardContent>
                   <CardDescription>
                     Native ETH strategies compounding rewards from blue-chip lending/staking markets.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-8 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-6">
-              <Badge variant="outline" className="mb-4">Our Mission</Badge>
-              <h2 className="text-3xl font-semibold tracking-tight mb-6">Restoring what finance should be</h2>
-            </div>
-            
-            <div className="mb-12">
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8 text-left">
-                At Muscadine Labs, we created these vaults to restore what finance should be: transparent, aligned, and empowering.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-left">
-                Our mission is to make financial self-sovereignty practical — combining institutional risk discipline with decentralized ownership.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed text-left">
-                Built on the security of Morpho Vaults and deployed on Base, Muscadine Vaults give investors a trusted gateway to DeFi income — clear, efficient, and always under your control.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3">
-                    <Building2 className="h-6 w-6 text-primary" />
-                    <CardTitle>Institutional rigor</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    We combine the rigor of institutional risk management with the freedom of decentralized ownership, ensuring professional-grade strategies.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3">
-                    <Target className="h-6 w-6 text-primary" />
-                    <CardTitle>Self-sovereignty</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Making financial self-sovereignty practical through transparent, efficient, and always controllable DeFi income strategies.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -291,6 +247,14 @@ export default function VaultsAboutPage() {
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 ERC-4626 provides a standardized interface for yield-bearing vaults, making our vaults compatible with a wide range of DeFi protocols and tools. Each deposit mints shares that appreciate as yield accrues, providing transparent and portable value representation.
               </p>
+              <a
+                href="https://docs.morpho.org/get-started/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+              >
+                For more information about Morpho vaults <ExternalLink className="h-4 w-4" />
+              </a>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">

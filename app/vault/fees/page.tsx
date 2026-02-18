@@ -7,10 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 export default function FeesPage() {
   return (
-    <PageLayout 
-      title="Fees & Economics"
-      description="Simple: 5% performance fee on profits earned. No management fees, no withdrawal penalties."
-    >
+    <PageLayout title="Fees & Economics">
 
       <section className="py-10 bg-muted/30">
         <div className="container mx-auto px-6">
@@ -22,7 +19,7 @@ export default function FeesPage() {
             
             <div className="mb-12">
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                We only charge when you earn. The 5% performance fee applies to profits realized by the vault. No management, withdrawal, or hidden fees.
+                We only charge when you earn. Performance fees range from no fees up to 5% depending on the vault and structure. No management, withdrawal, or hidden fees.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Every dollar you deposit stays in your custody and is verifiable on-chain.
@@ -34,12 +31,12 @@ export default function FeesPage() {
                 <CardHeader>
                   <div className="flex items-center space-x-3">
                     <TrendingUp className="h-6 w-6 text-primary" />
-                    <CardTitle>5% Performance Fee</CardTitle>
+                    <CardTitle>Up to 5% Performance Fee</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Taken only on profits actually earned by the vault. No fees on deposits or withdrawals.
+                    Depending on the vault and structure, fees range from no fees to 5% on profits actually earned. No fees on deposits or withdrawals.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -121,7 +118,7 @@ export default function FeesPage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Just 5% performance fee, reflecting the ethos of decentralized finance: transparent, efficient, and fair.
+                    Up to 5% performance fee depending on vault and structure (from no fees to 5%), reflecting the ethos of decentralized finance: transparent, efficient, and fair.
                   </CardDescription>
                 </CardContent>
               </Card>

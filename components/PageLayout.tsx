@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 interface PageLayoutProps {
   children: ReactNode;
   title: string;
-  description: string;
+  description?: string;
   className?: string;
 }
 
@@ -15,9 +15,11 @@ export function PageLayout({ children, title, description, className = "" }: Pag
           <h1 className="text-5xl font-bold tracking-tight mb-6">
             {title}
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            {description}
-          </p>
+          {description && (
+            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              {description}
+            </p>
+          )}
         </div>
       </section>
       {children}

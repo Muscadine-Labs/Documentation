@@ -1,10 +1,9 @@
 import Link from "next/link";
-import { ArrowRight, Globe, Mail, ShieldCheck, Sparkles, SquareGanttChart } from "lucide-react";
+import { BarChart3, Globe, Mail, Server, Shield, ShieldCheck, Wallet } from "lucide-react";
 
 import { Footer } from "@/components/Footer";
 import { PageLayout } from "@/components/PageLayout";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const externalLinks = [
@@ -15,6 +14,30 @@ const externalLinks = [
     icon: Globe,
   },
   {
+    title: "App",
+    description: "Deposit, manage, and withdraw from Muscadine vaults",
+    href: "https://app.muscadine.io/",
+    icon: Wallet,
+  },
+  {
+    title: "Node",
+    description: "Connect to our self-hosted Bitcoin node for secure transactions",
+    href: "https://muscadine.io/node",
+    icon: Server,
+  },
+  {
+    title: "Self-custody",
+    description: "How to achieve self custody with BIP-85 and key management",
+    href: "https://muscadine.io/self-custody",
+    icon: Shield,
+  },
+  {
+    title: "Analytics",
+    description: "Vault risk, configuration, and performance (Muscadine Curator)",
+    href: "https://curator.muscadine.io/",
+    icon: BarChart3,
+  },
+  {
     title: "Contact",
     description: "Support, partnerships, and press",
     href: "https://www.muscadine.io/contact",
@@ -23,11 +46,6 @@ const externalLinks = [
 ];
 
 const docLinks = [
-  {
-    title: "Docs home",
-    description: "Start from the main documentation landing",
-    href: "/",
-  },
   {
     title: "DeFi 101",
     description: "Basics before diving into vaults",
@@ -44,9 +62,9 @@ const docLinks = [
     href: "/self-custody/about",
   },
   {
-    title: "Roadmap",
-    description: "What is shipping next",
-    href: "/roadmap/features",
+    title: "Node",
+    description: "Connect to our self-hosted Bitcoin node",
+    href: "/node",
   },
   {
     title: "Risk & legal",
@@ -61,31 +79,6 @@ export default function QuickLinksPage() {
       title="Documentation Quick Links"
       description="The fastest path to the right Muscadine docs and resources."
     >
-      <section className="pb-4">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/">
-              <Button size="lg">
-                Docs home
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
-            <Link href="/roadmap/features">
-              <Button variant="outline" size="lg">
-                Roadmap
-                <Sparkles className="h-4 w-4" />
-              </Button>
-            </Link>
-            <Link href="/overview/contributors">
-              <Button variant="ghost" size="lg">
-                Contributors
-                <SquareGanttChart className="h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <section className="py-10 bg-muted/40">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center space-y-2 mb-8">
@@ -93,7 +86,7 @@ export default function QuickLinksPage() {
             <h2 className="text-3xl font-semibold tracking-tight">Primary destinations</h2>
             <p className="text-muted-foreground">Company endpoints outside this docs site.</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {externalLinks.map((link) => (
               <a
                 key={link.title}

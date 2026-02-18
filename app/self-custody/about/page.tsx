@@ -1,4 +1,4 @@
-import { Shield, Key, HardDrive, CheckCircle, Compass } from "lucide-react";
+import { Shield, Key, HardDrive, CheckCircle, Compass, ExternalLink } from "lucide-react";
 
 import { Footer } from "@/components/Footer";
 import { PageLayout } from "@/components/PageLayout";
@@ -59,9 +59,17 @@ export default function SelfCustodyAboutPage() {
             <div className="text-center space-y-2 mb-8">
               <Badge variant="outline" className="mx-auto w-fit">Principles</Badge>
               <h2 className="text-3xl font-semibold tracking-tight">A simple self-custody playbook</h2>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground mb-6">
                 Four pillars cover the lifecycle: holding keys, segmenting risk, backing up, and operating under pressure.
               </p>
+              <a
+                href="https://muscadine.io/self-custody"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+              >
+                Learn Self Custody <ExternalLink className="h-4 w-4" />
+              </a>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               {pillars.map((item) => (

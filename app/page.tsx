@@ -4,6 +4,7 @@ import {
   BarChart3,
   BookOpen,
   FileText,
+  Server,
   ShieldCheck,
   Users,
   Wallet,
@@ -51,7 +52,7 @@ export default function Home() {
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold">Self-Custody Solutions</h3>
+                <h3 className="text-xl font-semibold">Self Custody</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   We also provide self-custody solutions, building generational systems for families/clients to be able to truly custody their own assets with no third party — unlike a bank, broker, or exchange where they hold your assets. This removes the friction for most people on the knowledge required to make these systems.
                 </p>
@@ -79,7 +80,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-3 max-w-3xl mx-auto justify-center">
             {[
               {
                 title: "DeFi 101",
@@ -98,12 +99,6 @@ export default function Home() {
                 href: "/self-custody/about",
                 description: "Operational playbook for holding keys securely.",
                 icon: <Wallet className="h-5 w-5 text-primary" />,
-              },
-              {
-                title: "Fees & risk",
-                href: "/vault/fees",
-                description: "Performance fees, disclosures, and risk framework.",
-                icon: <ShieldCheck className="h-5 w-5 text-primary" />,
               },
             ].map((item) => (
               <Link key={item.title} href={item.href}>
@@ -129,11 +124,11 @@ export default function Home() {
             <Badge variant="outline" className="mx-auto w-fit">Products</Badge>
             <h2 className="text-3xl font-semibold tracking-tight">What you can build with</h2>
             <p className="text-muted-foreground">
-              Go deeper into automated vaults or design your own secure custody workflows.
+              Go deeper into automated vaults, secure custody workflows, or connect to our Bitcoin node.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             <Card className="group h-full border border-border/80">
               <CardHeader className="space-y-1">
                 <div className="flex items-center gap-2">
@@ -202,9 +197,40 @@ export default function Home() {
                       <ArrowRight className="h-4 w-4" />
                     </Button>
                   </Link>
-                  <Link href="/self-custody/recovery">
-                    <Button size="sm" variant="outline">
-                      Recovery
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group h-full border border-border/80">
+              <CardHeader className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <Server className="h-5 w-5 text-primary" />
+                  <CardTitle className="text-2xl">Node</CardTitle>
+                </div>
+                <CardDescription>
+                  Self-hosted Bitcoin node for secure transactions and enhanced privacy.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <ul className="text-sm text-muted-foreground space-y-2">
+                  <li className="flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4 text-primary" />
+                    Validate transactions without trusting third parties.
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4 text-primary" />
+                    Connect your wallet or Electrum client for enhanced privacy.
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4 text-primary" />
+                    Access the Bitcoin network through a trusted, non-custodial service.
+                  </li>
+                </ul>
+                <div className="flex gap-2">
+                  <Link href="/node">
+                    <Button size="sm">
+                      View docs
+                      <ArrowRight className="h-4 w-4" />
                     </Button>
                   </Link>
                 </div>
