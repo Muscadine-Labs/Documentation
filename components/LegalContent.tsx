@@ -62,7 +62,7 @@ export function LegalContent({ className = "", sourceUrl }: LegalContentProps) {
         const doc = parser.parseFromString(html, "text/html");
         
         // Try to find the main content area
-        let contentElement = 
+        const contentElement =
           doc.querySelector("main") ||
           doc.querySelector("article") ||
           doc.querySelector('[role="main"]') ||
